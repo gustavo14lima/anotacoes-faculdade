@@ -1,0 +1,9 @@
+02/02
+    Lógica é a capacidade do pensamento em atuar em qualquer forma ou operação para determinar o que é verdadeiro e o que é falso. Já a lógica de programação é a utilização de 
+    pensament lógico para atingir um objetivo no final da sequência; as sequências possuem diversas intruções que são executadas em cada etapa até o final do fluxo. Intrudução é
+    a ação/atividade a ser executada pelo computador, precisam ser ordenadas sequencialmente e de maneira lógica para obter o resultado esperado, existe uma sequência lógica para
+    executar qualquer processo. Algoritmo defini a execução de uma tarefa ou resulução de um problema através de uma sequência lógica finita; no algoritmo temos a entrada, 
+    processamento e saida de dados. Diagrama de atividades focaliza um fluxo de atividades que acontece em um processamento, ela é necessário antes da implementação de código, pois
+    com ela entende-se a lógica/como será executado, ajudando a visualizar os processos e a localizar problemas/erros. Simbologia básica de um diagrama: retangulo = atividade/ação;
+    seta = fluxo, mostra a sequência da atividade; losango = condicional (if/else); seta com texto = fluxo com descrição, por exemplo, se algo for maior que algo; bolinha verde = 
+    inicio da sequência; bolinha vermelha = final da sequência
