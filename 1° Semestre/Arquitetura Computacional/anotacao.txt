@@ -1,0 +1,15 @@
+04/02/2026
+    O cérebro humano é similar a um supercomputador, por ser capaz de realizar multplas tarefas ao mesmo tempo, realizar calculos, processamento, controlar diferentes partes do
+    corpo e por ter um centro de trafico aereo; Neuronios seriam como processadores, captando, processando e enviando informações; Sinapses são as conexões entre os processadores
+    responsavel pela transmissão de informação de um neuronio para outro; O lobulo frontal é como se fosse o modulo central, responsavel pela tomada de decisão, realização de calculos
+    complexos e resolução de problemas. Computadores são maquinas que ajudam a resolver problemas seguindo um conjunto de passos (especificando o que o computador deve fazer); Os
+    computadores deve fazer as seguintes operações básicas: entrada, processamento, saida e (as vezes) armazenamento de dados. O sistema computacional é o conjunto de componentes 
+    integrados para funcionar como se fosse apenas um, com o objetivo principal manipular dados, para ter uma informação util; por ter uma grande diversidade de tamanho, componentes
+    e desempenho, é necessário categoriar os tipos de computador. Ambito geral: computadores de escolas/escritorios que tem como objetivo realizar grande varaiedade de tarefas.
+    Ambito especifico: computadores para realizar tarefas muito especficias e reduzidas. Computadores Cientificos: computadores para realizar calculos e pesquisas cientificas.
+    Computadores comercial: equipamentos de escritorios, realização rapida e seguras de tarefas. O hardware (toda a parte física do sistema computacional) é o conjuto de 
+    perifericos de um sistema computacional, sendo externos (perifericos de entrada e saida) e internos (componentes necessários para o funcionamento correto de um computador).
+    Software é uma sequencias de intruções lógicas que alimenta o processamento, em outras palavras, são toda a parte programavel de um sistema (SO, Linguagem Programação e etc.).
+    Firmware: Software realizado por uma Linguagem de Programação de baixo nivel que é responsavel pelo gerenciamento do sistema de hardware, como por exemplo, a BIOS. O sistema 
+    operacional é um conjunto de software que interpreta códigos e gera uma interface entre o usuário e o PC; ele assume o controle o PC só se ele estiver armazenado em disco (para 
+    que a BIOS o localize); O sistema operacional também é responsavel pelo gerenciamento e controle de softwares que o usuário executa.
