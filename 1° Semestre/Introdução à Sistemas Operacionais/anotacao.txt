@@ -1,0 +1,7 @@
+04/02/2026
+    Sistemas Operacionais (SO) é um programa que controla a execução de outros programas, ele é executado o tempo inteiro enquanto o computador estiver ligado, ele aloca serviços e 
+    recursos. Kernel: nucleo do SO, ele inicia o processo de detecção de todo o hardware necessário para o funcionamento do computador; Middleware: software que fornece serviços e 
+    recursos comuns, ele engloba tudo (comunicação entre aplicações); Shell: interpretador de programas, ele que proporciona interagir com o Kernel. Em outras palavras, o usuário
+    envia comandos por um terminal, que são interpretados pelo Shell, que o Shell envia o comando para o Kernel para comunicar com o hardware. O SO atua como um mediador entre o 
+    software e o hardware, ele facilita a comunicação e funcionamento entre diferentes componentes do sistema (gerencia todos os hardware e dispositivos), fornece uma interface 
+    amigável e permite a execução de multiplas tarefas ao mesmo tempo.
