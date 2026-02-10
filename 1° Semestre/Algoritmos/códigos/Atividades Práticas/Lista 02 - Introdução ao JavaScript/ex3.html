@@ -1,0 +1,50 @@
+<!-- 
+3. Futebol 
+
+Crie uma página que solicite ao usuário:
+
+    ✅ Um campo para inserir o Nome do Time
+    ✅ Um campo para inserir a Quantidade de Títulos que o clube possui
+    ✅ Um botão com o texto "Amo meu time"
+    ✅ Ao clicar no botão, uma caixa de alerta deve exibir a mensagem:
+    "O time X tem Y títulos"
+    (onde X é o nome do time e Y é a quantidade de títulos informada)
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+
+<body>
+
+    <!-- Campo para inserir o nome do time -->
+    <div class="nomeTime">
+        <label for="nomeTime">Insira o nome do time</label>
+        <input type="text" id="nomeTime">
+    </div>
+
+    <!-- Campoi para inserir a quantidade de títulos que o club tem -->
+    <div class="qtdTitulos">
+        <label for="qtdTitulos">Insira a quantidade de títulos que o club possui</label>
+        <input type="number" id="qtdTitulos">
+    </div>
+
+    <!-- Botão -->
+    <button onclick="futebol()">Mostrar</button>
+
+</body>
+
+<script>
+    function futebol() {
+        alert(`O time ${nomeTime.value} tem ${qtdTitulos.value} títulos`);
+    };
+
+</script>
+
+</html>

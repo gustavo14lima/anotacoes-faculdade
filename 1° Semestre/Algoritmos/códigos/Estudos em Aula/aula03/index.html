@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Tag de Paragráfo -->
+    <p>André Ricardo é homossexual</p>
+
+    <!-- Paragráfo vazio para ser preenchido com JavaScript -->
+    <p id="mostrarNome"></p>
+
+    <!-- Tag de Botão -->
+    <!-- onclick="saudacao()" -> ao clicar no botão, executa a função -->
+    <button onclick="saudacao()">Clique Aqui!</button>
+</body>
+
+<!-- Tag para utilizar o JavaScrpit -->
+<script>
+    // Criando uma função
+    function saudacao() {
+        // alert -> caixão do navegador
+        alert('André Ricardo é Gay');
+
+        // Estou pegando o elemento com ID 'mostrarNome' e alterando por outro valor
+        mostrarNome.innerHTML = "Deu certo?";
+    };
+
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!-- 
+1. Cadastro de Local e Nascimento 
+
+Crie um programa que contenha:
+
+    ✅ Um campo para inserir a Cidade Natal
+    ✅ Um campo para inserir o Ano de Nascimento
+    ✅ Um botão com o texto "Cadastrar"
+    ✅ Ao clicar no botão, uma caixa de alerta deve exibir a mensagem:
+    "Você nasceu na cidade de X em Y"
+    (onde X é a cidade informada e Y o ano de nascimento)
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <!-- Campo da cidade natal -->
+    <div class="cidadeNatal">
+        <label for="cidadeNatal">Insira a sua Cidade Natal</label>
+        <input type="text"id="cidadeNatal">
+    </div>
+
+    <!-- Campo do ano de nascimento -->
+    <div class="anoNascimento">
+        <label for="anoNascimento">Insira o seu Ano de Nascimento</label>
+        <input type="text" id="anoNascimento">
+    </div>
+
+    <!-- Botão para cadastro -->
+    <button onclick="localNascimento()">Cadastrar</button>
+
+</body>
+
+<script>
+    function localNascimento() {
+        alert(`Você nasceu na cidade ${cidadeNatal.value} em ${anoNascimento.value}`);
+    };
+
+</script>
+
+</html>

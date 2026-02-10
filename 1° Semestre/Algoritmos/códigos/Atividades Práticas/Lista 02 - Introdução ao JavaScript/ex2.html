@@ -1,0 +1,47 @@
+<!-- 
+2. Calculadora de Peso e Altura 
+
+Crie uma página que solicite ao usuário:
+
+    ✅ Um campo para inserir o Peso
+    ✅ Um campo para inserir a Altura
+    ✅ Um botão com o texto "Fale comigo"
+    ✅ Ao clicar no botão, uma caixa de alerta deve exibir a mensagem:
+    "Você pesa X kg e tem Y m de altura"
+    (onde X e Y são os valores digitados pelo usuário) 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    
+    <!-- Campo para inserir Peso -->
+    <div class="peso">
+        <label for="peso">Insira o seu Peso</label>
+        <input type="number" id="peso">
+    </div>
+
+    <!-- Campo para inserir Altura -->
+    <div class="altura">
+        <label for="altura">Insira a sua Altura</label>
+        <input type="number" id="altura">
+    </div>
+
+    <!-- Botão para "falar" -->
+    <button onclick="pesoAltura()">Fale comigo</button>
+
+</body>
+
+<script>
+    function pesoAltura() {
+        alert(`Você pesa ${peso.value} kg e tem ${altura.value} m de altura`);
+    };
+    
+</script>
+
+</html>
