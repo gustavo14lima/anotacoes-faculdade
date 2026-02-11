@@ -13,3 +13,11 @@
     Firmware: Software realizado por uma Linguagem de Programação de baixo nivel que é responsavel pelo gerenciamento do sistema de hardware, como por exemplo, a BIOS. O sistema 
     operacional é um conjunto de software que interpreta códigos e gera uma interface entre o usuário e o PC; ele assume o controle o PC só se ele estiver armazenado em disco (para 
     que a BIOS o localize); O sistema operacional também é responsavel pelo gerenciamento e controle de softwares que o usuário executa.
+11/02/2026
+    Ao longo do tempo o ser humano sentiu a necessidade de criar novos sistemas númericos (conjunto de regras e simbolos para representar números, definindo como os números são organizados
+    e escritos, possibilitando a contagem e calculo. Todo sistema númerico tem uma base), sendo alguns deles: decimal (base 10),binario (base 2), octal (base 8), hexadecimal (base 16).
+    Com exceção da decimal, os demais são utilizados nas areas de circuitos digitais, automação e ambientes computacionais. Sistema Decimal (base 10), vai de 0 até 9, em cada posição do 
+    algoritmo muda seu valor (5 no inicio, 5 no meio [50] e etc.); Sistema bionario (base 2) representa dois algoritmos 0 e 1, usa exponeciação na base dois; Sistema octal (base 8), ele 
+    representa três bits do sistema binario (ou seja, para representar o 3 seria 011), indo de 0 à 7; Por fim, o hexadecimal (base 16) representa quatro bits do sistema binario
+    (ou seja, para representa o 11 seria 1011), ele vai de 0 à F (sendo A o 10 e F o 15). Lembre-se, o caminho da luz é o binario, ou seja, caso eu quero ir de octal para decimal, eu baso pelo
+    binario antes (octal -> binario -> decimal ), isso serve para qualquer transformação.
