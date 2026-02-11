@@ -9,3 +9,15 @@
     informação com sentido, por exemplo, um dashboard/gráficos. Uma documentação precisa de contexto, objetivo e justificativa ; Contexto = o que será feito, em quais condições 
     e recursos será feito e como será conduzida (inicio, meio e fim, etapas, prazos e etc.), sendo essa a parte mais importante; Objetivo = o que você quer alcançar no final do 
     projeto, suas definições claras de resultados; Justificativa = apresentar um argumento sólido e convincente do por que fazer/comprar esse projeto.
+09/02/2026
+    Os projetos nascem a partir de três pilares: Problemas (95% dos casos, por que as empresas começam a perder ou parar de fazer lucro), caso queira fazer um projeto, escolher 
+    com base em um probloma se torna uma das melhores opções, por causa que é mais fácil de dialogar sobre contexto, objetivo e justificativa; Necessidade; Oportunidade. Todo 
+    projeto precisa de um inicío, meio e principalmente de um fim; Um projeto tem esses quatros principais pilares: inicalização (definição do projeto, difinir claramento o seu proposito:
+    o problema, necessidade ou oportunidade), Planejamento (uma das etapas mais importantes, pois é onde se define as regras, equipes e recursos necessários, em resumo, é o levantamento
+    de requisitos), Execução (mão na massa, onde as ideias são colocadas em prática) e Encerramento (veerifica se os objetivos foram alcançados e se o projeto está pronto para a entrega)
+    PMBOK = melhor livro de documentação, ele veio para pradronizar todas as documentações. Pilares de uma documentação: Contexto (conjunto de condições e elementos para a produção,
+    como tempo, espaço e etc. Ela é essencial, pois garanti a compreensão adequada do conteúdo/proposito do projeot. Pode assumir várias formas: situacional, linguístico, histórico-cultural
+    visual. É no contexto onde eu defino o tema e explico a situação que motiva o trabalho, focar no problema), Objetivo (o que eu pretendo alcançar com esse projeto. A melhor forma
+    de fazer o objetivo é dentro do metodo SMART, ser especifico, mensurável, realista, relevante e temporal), Justificativa (argumento convincente para fazer alguém comprar meu 
+    projeto), Escopo (trabalho necessário para fazer o trabalho, Mapeamento de todo trabalho necessário para finalizar o projeto, especifica os limites do projeto, estabelece resposabilidade
+    para cada membro e processos de verificação e aprovação)
