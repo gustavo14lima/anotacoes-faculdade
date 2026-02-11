@@ -11,4 +11,6 @@
     Um computador é responsável pelo hardware (todos os componentes físicos), sistema operacional, programa de interface do usuário (que pode ser GUI ou CLI) e as aplicações do usuário (serviços,
     jogos, aplicações e etc.). A memoria ram é responsável pelo armazenamento temporario e ela armazena tudo o que está na tela do usuário, assim, reduzido o tempo de fazer a requisão para 
     o HD ou SSD (enquanto o computador estiver ligado). A BIOS é responsável por fazer a chegagem de todos os componentes (hardwares), verificando sse estão funcionamento corretamente 
-    (ou como deveria), depois dessa verificação, ela "passa" a bola para o sistema operacional.
+    (ou como deveria), depois dessa verificação, ela "passa" a bola para o sistema operacional. A atualização de hardware e sistemas operacionais em uma empresa é de suma importância
+    en necessidade por conta das atualizações que corrigem falhas, bugs, segurança e etc. Algums beneficios são: redução de custo, aumento da facilidade na administração dos recursos de TI,
+    maior velocidade na resolução de problemas e falhas, diminui parasitas e perda de exercução em trabalho e defini claramente os processos.
