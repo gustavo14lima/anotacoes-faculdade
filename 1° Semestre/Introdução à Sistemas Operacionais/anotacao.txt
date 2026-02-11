@@ -5,3 +5,10 @@
     envia comandos por um terminal, que são interpretados pelo Shell, que o Shell envia o comando para o Kernel para comunicar com o hardware. O SO atua como um mediador entre o 
     software e o hardware, ele facilita a comunicação e funcionamento entre diferentes componentes do sistema (gerencia todos os hardware e dispositivos), fornece uma interface 
     amigável e permite a execução de multiplas tarefas ao mesmo tempo.
+11/02/2026
+    Infraestrutura significa disponibilizar e sustentar (ou estrtuturar) algo ou algum serviço. Em uma Infraestrutura de TI, segue-se os três principais pliares: Servidor(onde ocorre
+    o processamento), Storage (onde se armazena) e Roteador/Switch (é a rede). Esses três pilares são responsável por sustentar um sistema e um depende do outro (um não vive sem o outro).
+    Um computador é responsável pelo hardware (todos os componentes físicos), sistema operacional, programa de interface do usuário (que pode ser GUI ou CLI) e as aplicações do usuário (serviços,
+    jogos, aplicações e etc.). A memoria ram é responsável pelo armazenamento temporario e ela armazena tudo o que está na tela do usuário, assim, reduzido o tempo de fazer a requisão para 
+    o HD ou SSD (enquanto o computador estiver ligado). A BIOS é responsável por fazer a chegagem de todos os componentes (hardwares), verificando sse estão funcionamento corretamente 
+    (ou como deveria), depois dessa verificação, ela "passa" a bola para o sistema operacional.
