@@ -2,3 +2,16 @@
     Dados são registros brutos; Informação são dados contextualizados; O conhecimento é o meu saber sobre um dado em determinado contexto, em outras palavras, é o que eu sei desse
     contexto; Por fim, a sabedoria é agir dentro de um objetivo, é uma ação (é a capacidade de aplicar o conhecimento acumulado para realização de tomada de decisão estrategicas,
     eticas e eficazes).
+12/02/2026
+    Os bancos de dados são importantes por causa da necessidade das empresas de precisar ter seus dados precisos atualizados e armazenados, pelo mercado precisar de dados abundantes e complexos.
+    Assim, surge a necessidade de ferramentas de gerenciamento, extração rápido e precisa de informações. A solução foi o SGBD (Sistema Gerenciador de Banco de Dados). Os primeiros programas de 
+    computador foi para armazenar e manipular dados, gravando em disco seguindo uma propria estrutura. Mas, cada profissional tinha uma estrutura propria, ou seja, se o profissional 1, que usa-se
+    a estrutura A, não conseguiria acessar o arquivo de estrutura B do profissional 2 e nem acessando os dados, pois precisaria conhecer a estrutura B. Com isso, criaram um programa em que conhecesse
+    a estrutura de dados, fornecer dados que cada arquivo precisasse e armazenasse adquadamente os dados, eles não precisavam conhecer os detalhes de dados nos programas, não precisava modificar a 
+    estrutura. Assim, surge o Sistema Gerenciador de Banco de Dados, com o tempo, surgiram alguns padrões para se escrever a estrutura e o conceto de metadados (em poucas palavras, seria como o tipo de 
+    dado, (id INT -> INT é o metadado)). Um banco de daods é a coleção de dados coerente e logicamente relacionados com algum significado associado, armazenando, projetando e manipulando atendendo um
+    proposito e audiencia especifico. Representa algum aspecto do mundo real. Redundancia = algo duplicado (menos redundancia deixa o sistema e código melhor). Necessarios para se usar um SGBD = 
+    compartilhamento de dados (principal motivo), controle de redundancia, consistencia e integridade, acesso de multiplos usuarios, controle de acesso e segurança, recuperação e restauração e consultas
+    especificas. SQL = linguagem estruturada para consulta (linguagem padrão para manipular banco de dados, diversos SGBD utilizam SQL); NoSQL = Não apenas SQL (banco de dados não relacionais, usando
+    principalmente em Big Data e IA). Principais diferenças: SQL é verticalmente escalavel e o NoSQL é horizontalmente escalavel. NoSQL os dados são "jogados" em difenretes lugares e o SQL "monta" como
+    se fosse um CSV, por exemplo. NoSQL ele sempre acrescenta colunhas ao invés de linhas.
