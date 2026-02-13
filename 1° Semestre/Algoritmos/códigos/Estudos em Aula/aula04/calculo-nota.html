@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Nota</title>
+</head>
+<body>
+
+    <input type="number" id="nota1">
+    <input type="number" id="nota2">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado">Esperando calculo...</p>
+    
+</body>
+
+<script>
+    // variaveis com let só existem no escopo de criação (entre as chaves)
+    function calcular() {
+
+        // nesse exemplo, eu só posso usar n1 e n2 dentro dessa função
+        // let é de escopo global
+        let n1 = Number(nota1.value);
+        let n2 = Number(nota2.value);
+
+        let media = (n1 + n2) / 2
+
+        resultado.innerHTML = `Sua nota é: ${media}`
+    };
+
+
+</script>
+
+</html>

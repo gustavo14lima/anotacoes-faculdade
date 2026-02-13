@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computador</title>
+</head>
+<body>
+    
+    <h1>Bora contar!</h1>
+    <button onclick="contar()">Contar!!!</button>
+
+    <h2 id="idContagem">0</h2>
+
+</body>
+
+<script>
+    
+    // aqui, mesmo o contador sendo um let, ele é global, funciona em todas as funções e escopos
+    let contador = 0;
+
+    function contar() {
+        contador += 1;
+        idContagem.innerHTML = contador;
+    };
+
+</script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Operadores (InnerHTML)</title>
+</head>
+<body>
+    
+    <h1>Operadores Matemáticos</h1>
+    <input type="number" id="idNum01">
+    <input type="number" id="idNum02">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <h3 id="resultado">Calculando...</h3>
+
+</body>
+
+<script>
+    function calcular() {
+        let num1 = Number(idNum01.value);
+        let num2 = Number(idNum02.value);
+        
+        // innerHTML pode receber tags HTML!!!
+        let quebraLinha = "<br>";
+
+        let soma = (num1 + num2)
+        let sub = (num1 - num2)
+        let multi = (num1 * num2)
+
+        // Interpolação
+        resultado.innerHTML = 
+            `
+            Soma: ${soma + quebraLinha}
+            Subtração: ${sub + quebraLinha}
+            Multiplicaçao: ${multi + quebraLinha}
+            `;
+
+    };
+
+</script>
+
+</html>

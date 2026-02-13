@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Operadores (alert)</title>
+</head>
+<body>
+    
+    <h1>Operadores Matemáticos</h1>
+    <input type="number" id="idNum01">
+    <input type="number" id="idNum02">
+
+    <button onclick="calcular()">Calcular</button>
+
+</body>
+
+<script>
+    // função -> nome precisa ser um verbo, 'fazer algo'. Melhor para não confundir com uma variável
+    function calcular() {
+        
+        // Criando uma variavel do tipo let
+        
+        // Precisamos colocar a função Number para avisar ao JavaScript que será exibido como número, e não como um texto
+        // Colocamos amboso os números entre parenteses para não concatenar, e sim somar
+        let num1 = Number(idNum01.value);
+        let num2 = Number(idNum02.value);
+        
+        alert("A soma é: " + (num1 + num2));
+        alert("A subtração é: " + (num1 + num2));
+        alert("A multiplicação é: " + (num1 * num2));
+        alert("A divisão é: " + (num1 / num2));
+    };
+
+</script>
+
+</html>
