@@ -1,0 +1,65 @@
+<!-- 
+13. Cálculo de Gastos com Transporte
+
+Crie um programa o qual:   
+
+a) Solicite o valor da passagem de ônibus;  
+
+b) Solicite a quantidade de viagens que o usuário faz por mês;  
+
+c) Solicite a distância do trabalho dele até sua casa (em km);  
+
+d) Ao clicar em "Calcular VT" calcule e exiba na tela quanto o usuário gastará por mês com transporte com uma frase como esta:  
+
+   Você vai gastar R$X por mês com transporte.  
+
+Obs: considere que uma viagem de Uber (99, cabify, etc) custa R$0,75 por km (ou seja, uma viagem de 10km custará R$7,50).  
+
+Obs: considere que o número de viagens de Uber (99, cabify, etc) que o usuário faz por mês é de 10% do número de viagens de ônibus (ou seja, se ele indicar que faz 50 viagens, considere 45 de ônibus e 5 de transporte de aplicativo).   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Gastos com Transporte</title>
+</head>
+<body>
+    
+    <div>
+        <label for="idValorPassagem">Insira o valor da passagem de ônibus: </label>
+        <input type="number" id="idValorPassagem">
+    </div>
+    <div>
+        <label for="idQuantidadeViagensOnibus">Insira a quantidade de viagens por mês: </label>
+        <input type="number" id="idQuantidadeViagensOnibus">
+    </div>
+    <div>
+        <label for="idDistanciaDoTrabalho">Insira q distância do trabalho até sua casa (em km): </label>
+        <input type="number" id="idDistanciaDoTrabalho">
+    </div>
+    <button onclick="calcularVT()">Calcular VT</button>
+    <h3 id="idResultado"></h3>
+
+</body>
+
+<script>
+    let valorPassagem = Number(idValorPassagem.value);
+    let valorAplicativoPorKm = 0.75;
+    let quantidadeViagensOnibus = Number(idQuantidadeViagensOnibus.value);
+    let distanciaDoTrabalho = Number(idDistanciaDoTrabalho.value);
+    let quantidadeViagensAplicativo = quantidadeViagensOnibus * 0.10;
+
+    function calcularVT() {
+        quantidadeViagensOnibus -= quantidadeViagensAplicativo;
+        let custoOnibus = quantidadeViagensOnibus * valorPassagem;
+        let custoAplicativoKm = distanciaDoTrabalho * valorAplicativoPorKm;
+        let custoAplicativo = custoAplicativoKm * quantidadeViagensAplicativo;
+
+        idResultado.innerHTML = `Você vai gastar R$${custoOnibus + custoAplicativo} por mês com transporte.`
+    }
+
+</script>
+
+</html>

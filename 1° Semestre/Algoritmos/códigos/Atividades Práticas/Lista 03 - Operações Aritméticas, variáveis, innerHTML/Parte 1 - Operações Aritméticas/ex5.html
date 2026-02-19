@@ -1,0 +1,62 @@
+<!-- 
+5. Cálculo da Média na SPTech 
+
+Ajude um aluno a calcular sua média final da sprint!
+
+    Solicite as notas das avaliações "Continuada" e "Pesquisa e Inovação".
+
+    Solicite o nome do aluno.
+
+    Calcule a média considerando:
+
+        40% da "Continuada" + 60% de "Pesquisa e Inovação".
+
+    Exiba a mensagem:
+
+        "A média de NOME será de MEDIA" 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média na SPTech</title>
+</head>
+<body>
+    <div class="notaContinuada">
+        <label for="idNotaContinuada">Insira a nota da avaliação continuada: </label>
+        <input type="number" id="idNotaContinuada">
+    </div>
+    <div class="notaPI">
+        <label for="idNotaPI">Insira a nota da avaliação em Pesquisa e Inovação: </label>
+        <input type="number" id="idNotaPI">
+    </div>
+    <div class="nomeAluno">
+        <label for="idNomeAluno">Insira o nome do aluno: </label>
+        <input type="text" id="idNomeAluno">
+    </div>
+
+    <button onclick="calcularMedia()">Calcular média</button>
+
+    <p id="resultadoMedia"></p>
+</body>
+
+<script>
+    function calcularMedia() {
+        let notaContinuada = Number(idNotaContinuada.value);
+        let notaPI = Number(idNotaPI.value);
+        let nomeAluno = idNomeAluno.value;
+
+        // calculo da porcentagem de cada nota
+        notaContinuada *= 0.40
+        notaPI *= 0.60
+
+        let media = notaContinuada + notaPI;
+
+        resultadoMedia.innerHTML = `A média de ${nomeAluno} será de ${media}`;
+    };
+
+</script>
+
+</html>

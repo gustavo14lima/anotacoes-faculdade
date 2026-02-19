@@ -1,0 +1,61 @@
+<!-- 
+12. Divisão Justa da Pizza (Com Gorjeta)
+
+Todo mundo gosta de pizza! É um prato super democrático, pois existem sabores veganos, vegetarianos, sem glúten, "low carb" (pouco carboidrato), doces etc.   
+
+Crie um programa o qual:  
+
+a) Solicite o sabor e o preço da pizza;  
+
+b) Solicite a quantidade de amigos que vão comer;  
+
+c) Ao clicar num botão "Ver valor por amigo", calcule e exiba na tela uma frase como esta:  
+
+    Cada amigo vai colaborar com R$X para a pizza de Y.  
+
+Obs: inclua no valor da pizza a caixinha do entregador que é sempre 10% do valor da pizza.  
+
+Obs²: Y é o sabor da pizza;   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão Justa da Pizza (Com Gorjeta)</title>
+</head>
+<body>
+    
+    <div>
+        <label for="idSaborPizza">Insira o sabor da pizza: </label>
+        <input type="text" id="idSaborPizza">
+    </div>
+    <div>
+        <label for="idPrecoPizza">Insira o preço da pizza: </label>
+        <input type="number" id="idPrecoPizza">
+    </div>
+    <div>
+        <label for="idQuantidadeAmigos">Insira a quantidade de amigos: </label>
+        <input type="number" id="idQuantidadeAmigos">
+    </div>
+    <button onclick="calcularPrecoPorAmigo()">Ver valor por amigo</button>
+    <h3 id="idResultado"></h3>
+
+</body>
+
+<script>
+    let saborPizza = idSaborPizza.value;
+    let valorPizza = Number(idPrecoPizza.value);
+    let quantidadeAmigos = Number(idQuantidadeAmigos.value);
+
+    let caixinhaEntragador = valorPizza * 0.10;
+    valorPizza += caixinhaEntragador;
+
+    function calcularPrecoPorAmigo() {
+        idResultado.innerHTML = `Cada amigo vai colaborar com R$${valorPizza / quantidadeAmigos} para a pizza de ${saborPizza}.`;
+    };
+
+</script>
+
+</html>

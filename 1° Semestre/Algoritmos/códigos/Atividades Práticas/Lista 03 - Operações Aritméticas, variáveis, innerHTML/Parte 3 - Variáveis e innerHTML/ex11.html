@@ -1,0 +1,62 @@
+<!-- 
+11. Tabuada Interativa
+
+Crie um programa o qual:  
+
+a) Solicite ao usuário um número para ver sua "tabuada";  
+
+b) Ao clicar em "Ver Tabuada", aparece na tela algo como isso:  
+
+   3 x 1 = 3  
+
+   3 x 2 = 6  
+
+   3 x 3 = 9  
+
+  (e assim por diante... até x 9)  
+
+   3 x 9 = 27  
+
+  No exemplo, o usuário digitou 3 no item a).   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Interativa</title>
+</head>
+<body>
+    
+    <div>
+        <label for="idNumeroTabuada">Insira um número para ver a sua "tabuada": </label>
+        <input type="number" id="idNumeroTabuada">
+    </div>
+    <button onclick="calcuarTabuada()">Ver Tabuada</button>
+    <h3 id="idResultado"></h3>
+
+</body>
+
+<script>
+
+    let numeroTabuada = Number(idNumeroTabuada.value);
+
+    function calcuarTabuada() {
+        idResultado.innerHTML = `
+        ${numeroTabuada} x 1 = ${numeroTabuada * 1} <br>
+        ${numeroTabuada} x 2 = ${numeroTabuada * 2} <br>
+        ${numeroTabuada} x 3 = ${numeroTabuada * 3} <br>
+        ${numeroTabuada} x 4 = ${numeroTabuada * 4} <br> 
+        ${numeroTabuada} x 5 = ${numeroTabuada * 5} <br> 
+        ${numeroTabuada} x 6 = ${numeroTabuada * 6} <br>
+        ${numeroTabuada} x 7 = ${numeroTabuada * 7} <br>
+        ${numeroTabuada} x 8 = ${numeroTabuada * 8} <br> 
+        ${numeroTabuada} x 9 = ${numeroTabuada * 9} <br>
+        ${numeroTabuada} x 10 = ${numeroTabuada * 10}
+        `;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,63 @@
+<!-- 
+6. Calculadora Básica 
+
+Crie um programa que solicite dois números ao usuário.
+
+    Adicione botões para cada operação aritmética.
+
+    Ao clicar em um botão, exiba na página a operação correspondente:
+
+        "A soma entre X e Y é Z"
+
+        "A diferença entre X e Y é Z"
+
+        "O produto entre X e Y é Z"
+
+        "A razão entre X e Y é Z" 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+</head>
+<body>
+    
+    <div class="primeiroNumero">
+        <label for="idPrimeiroNumero">Insira o seu primeiro número: </label>
+        <input type="number" id="idPrimeiroNumero">
+    </div>
+    <div class="segundoNumero">
+        <label for="idSegundoNumero">Insira o seu segundo número: </label>
+        <input type="number" id="idSegundoNumero">
+    </div>
+    <button onclick="calcularOperacoes()">Calcular</button>
+
+    <h3 id="soma"></h3>
+    <h3 id="diferenca"></h3>
+    <h3 id="produto"></h3>
+    <h3 id="razao"></h3>
+
+</body>
+
+<script>
+    function calcularOperacoes() {
+        let primeiroNumero = Number(idPrimeiroNumero.value);
+        let segundoNumero = Number(idSegundoNumero.value);
+
+        let operacaoSoma = primeiroNumero + segundoNumero;
+        let operacaoDiferenca = primeiroNumero - segundoNumero;
+        let operacaoProduto = primeiroNumero * segundoNumero;
+        let operacaoRazao = primeiroNumero / segundoNumero;
+
+        soma.innerHTML = `A soma entre ${primeiroNumero} e ${segundoNumero} é ${operacaoSoma}`;
+        diferenca.innerHTML = `A diferença entre ${primeiroNumero} e ${segundoNumero} é ${operacaoDiferenca}`;
+        produto.innerHTML = `A produto entre ${primeiroNumero} e ${segundoNumero} é ${operacaoProduto}`;
+        razao.innerHTML = `A razão entre ${primeiroNumero} e ${segundoNumero} é ${operacaoRazao}`;
+    };
+
+</script>
+
+</html>

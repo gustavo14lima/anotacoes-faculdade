@@ -1,0 +1,66 @@
+<!-- 
+14. Transformações Saiyajin e Poder de Luta
+
+Na franquia de desenhos animados “Dragon Ball”, existe a raça guerreira “Saiyajin”, que pode se transformar para obter diferentes níveis de poder. 
+
+Crie um programa que demonstre como o poder de guerreiros Sayajins aumenta na medida em que se transformam:  
+
+a) Solicite o "ki base" (força base) do guerreiro Sayajin;  
+
+b) Abaixo, deve haver o texto "Transformar em...";  
+
+c) Abaixo, devem haver os botões "SSJ", "SSJ2", "SSJ3", lado a lado entre si;  
+
+d) Ao clicar num dos botões, é calculado o novo ki do Sayajin conforme a regra de cada transformação:  
+
+    SSJ: ki base x 50  
+
+    SSJ2: ki base x 100  
+
+    SSJ3: ki base x 200  
+
+e) O valor do novo ki deve aparecer abaixo com uma frase como esta:  
+
+    Após se transformar em X, o ki desse Sayajin passa a ser de Y 
+
+    Onde X é o nome da transformação (SSJ, SSJ2 ou SSJ3) e Y é o valor calculado em d)   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformações Saiyajin e Poder de Luta</title>
+</head>
+<body>
+    
+    <div>
+        <label for="idKiBase">Insira a quantidade de ki base do guerreiro Sayajin</label>
+        <input type="number" id="idKiBase">
+    </div>
+    <h3 id="idResultado">Transformar em...</h3>
+    <button onclick="calcularSSJ()">SSJ</button>
+    <button onclick="calcularSSJ2()">SSJ2</button>
+    <button onclick="calcularSSJ3()">SSJ3</button>
+</body>
+
+<script>
+    let kiBase = Number(idKiBase.value);
+
+    function calcularSSJ() {
+        let kiSSJ = kiBase * 50;
+        idResultado.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${kiSSJ}`;
+    };
+    function calcularSSJ2() {
+        let kiSSJ2 = kiBase * 100;
+        idResultado.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${kiSSJ2}`;
+    };
+    function calcularSSJ3() {
+        let kiSSJ3 = kiBase * 200;
+        idResultado.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${kiSSJ3}`;
+    };
+    
+</script>
+
+</html>

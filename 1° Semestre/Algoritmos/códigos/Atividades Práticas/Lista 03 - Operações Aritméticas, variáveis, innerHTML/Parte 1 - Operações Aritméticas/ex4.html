@@ -1,0 +1,47 @@
+<!-- 
+ 4. O Ki dos Sayajins! 
+
+Crie um programa para calcular o ki de um guerreiro Sayajin nas diferentes formas de poder.
+
+    Solicite o nome do guerreiro e seu ki normal.
+
+    Ao clicar no botão "Ver ki em cada forma", exiba alertas mostrando:
+
+        "O ki de NOME na forma Super Sayajin é KIx50"
+
+        "O ki de NOME na forma Super Sayajin 2 é KIx100"
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ki dos Sayajins! </title>
+</head>
+<body>
+    
+    <div class="nomeGuerreiro">
+        <label for="idNomeGuerreiro">Insira o nome do guerreiro: </label>
+        <input type="text" id="idNomeGuerreiro">
+    </div>
+    <div class="kiGuerreiro">
+        <label for="idKiGuerreiro">Insira a quantidade de ki do guerreiro na fase normal: </label>
+        <input type="number" id="idKiGuerreiro">
+    </div>
+    <button onclick="mostrarKiPorTransformacoes()">Ver ki em cada forma</button>
+
+</body>
+
+<script>
+    function mostrarKiPorTransformacoes() {
+        let nomeGuerreiro = idNomeGuerreiro.value;
+        let kiGuerreiro = Number(idKiGuerreiro.value);
+
+        alert(`O ki de ${nomeGuerreiro} na sua forma Super Sayajin é ${kiGuerreiro * 50}`);
+        alert(`O ki de ${nomeGuerreiro} na sua forma Super Sayajin 2 é ${kiGuerreiro * 100}`);
+    };
+    
+</script>
+
+</html>

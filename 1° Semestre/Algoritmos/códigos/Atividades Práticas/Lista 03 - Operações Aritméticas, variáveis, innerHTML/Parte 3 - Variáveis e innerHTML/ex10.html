@@ -1,0 +1,92 @@
+<!-- 
+10. Analisador de Resultados Eleitorais
+
+Crie um programa o qual:  
+
+a) Solicite a quantidade de votos que o "Candidato A" teve na eleição  
+
+b) Solicite a quantidade de votos que o "Candidato B" teve na eleição  
+
+c) Solicite a quantidade de votos brancos que houveram na eleição  
+
+d) Solicite a quantidade de votos nulos que houveram na eleição  
+
+e) Ao clicar em "Resultado da Eleição", exibir textos  conforme o exemplo abaixo:  
+
+    Total de votos: 200  
+
+    Candidato A: 40% (80 votos)  
+
+    Candidato B: 35% (70 votos)  
+
+    Inválidos: 25% (50 votos)  
+
+A quantidade de votos "Inválidos" é a soma de brancos e nulos - valores colhidos nos itens c) e d) -  
+
+Não se preocupe em mostrar primeiro o "vencedor". Não temos como saber isso com o que aprendemos na programação até aqui ;)   
+
+Mostre os candidatos na ordem que quiser.  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Resultados Eleitorais</title>
+</head>
+<body>
+    
+    <div class="candidatoA">
+        <label for="idCandidatoA">Insira a quantidade de votos do Candidato A: </label>
+        <input type="number" id="idCandidatoA">
+    </div>
+    <div class="candidatoB">
+        <label for="idCandidatoB">Insira a quantidade de votos do Candidato B: </label>
+        <input type="number" id="idCandidatoB">
+    </div>
+    <div class="votosBrancos">
+        <label for="idVotosBrancos">Insira a quantidade de votos brancos: </label>
+        <input type="number" id="idVotosBrancos">
+    </div>
+    <div class="votosNulos">
+        <label for="idVotosNulos">Insira a quantidade de votos nulos: </label>
+        <input type="number" id="idVotosNulos">
+    </div>
+
+    <button onclick="calcularEleicao()">Resultado da Eleição</button>
+    <h3 id="idExibicaoCalculo"></h3>
+
+</body>
+
+    <script>
+        let candidatoA = Number(idCandidatoA.value);
+        let candidatoB = Number(idCandidatoB.value);
+        let votosBrancos = Number(idVotosBrancos.value);
+        let votosNulos = Number(idVotosNulos.value);
+        
+        let totalVotos = candidatoA + candidatoB + votosBrancos + votosNulos;
+        let votosInvalidos = votosBrancos + votosNulos;
+
+        function calcularEleicao() {
+            let porcentagemVotosA = candidatoA / totalVotos;
+            porcentagemVotosA *= 100;
+            let porcentagemVotosB = candidatoB / totalVotos;
+            porcentagemVotosB *= 100;
+            let porncetagemVotosInvalidos = votosInvalidos / totalVotos;
+            porncetagemVotosInvalidos *= 100;
+
+            idExibicaoCalculo.innerHTML = `
+            Total de votos: ${totalVotos}  <br>
+
+            Candidato A: ${porcentagemVotosA}% (${candidatoA} votos)  <br>
+
+            Candidato B: ${porcentagemVotosB}% (${candidatoB} votos)  <br>
+
+            Inválidos: ${porncetagemVotosInvalidos}% (${votosInvalidos} votos)    <br>
+            `;
+        };
+
+    </script>
+
+</html>

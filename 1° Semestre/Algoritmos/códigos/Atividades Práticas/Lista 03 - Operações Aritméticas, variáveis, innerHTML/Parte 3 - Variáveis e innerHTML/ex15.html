@@ -1,0 +1,48 @@
+<!-- 
+15. Calculadora de IMC
+
+Crie um programa o qual:  
+
+a) Solicite o peso e a altura do usuário;  
+
+b) Ao clicar num botão "Calcular IMC":  
+
+    b.1) Calcule e exiba seu IMC na tela (não num alert), abaixo do botão;  
+
+Obs: Pesquise a fórmula simples de IMC na internet;   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <div>
+        <label for="idMassaCorporal">Insira o valor da sua massa corporal: </label>
+        <input type="number" id="idMassaCorporal">
+    </div>
+    <div>
+        <label for="idAltura">Insira o valor da sua altura: </label>
+        <input type="number" id="idAltura">
+    </div>
+
+    <button onclick="calcularIMC()"> Calcular IMC</button>
+    <h3 id="idResultado"></h3>
+</body>
+
+<script>
+    let massaCorporal = Number(idMassaCorporal.value);
+    let altura = Number(idAltura.value);
+
+    function calcularIMC() {
+        let IMC = massaCorporal/(altura**2)
+
+        idResultado.innerHTML = `Seu IMC é: ${IMC}`;
+    };
+
+</script>
+
+</html>
