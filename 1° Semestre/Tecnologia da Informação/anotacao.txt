@@ -16,8 +16,23 @@
     o problema, necessidade ou oportunidade), Planejamento (uma das etapas mais importantes, pois é onde se define as regras, equipes e recursos necessários, em resumo, é o levantamento
     de requisitos), Execução (mão na massa, onde as ideias são colocadas em prática) e Encerramento (veerifica se os objetivos foram alcançados e se o projeto está pronto para a entrega)
     PMBOK = melhor livro de documentação, ele veio para pradronizar todas as documentações. Pilares de uma documentação: Contexto (conjunto de condições e elementos para a produção,
-    como tempo, espaço e etc. Ela é essencial, pois garanti a compreensão adequada do conteúdo/proposito do projeot. Pode assumir várias formas: situacional, linguístico, histórico-cultural
+    como tempo, espaço e etc. Ela é essencial, pois garanti a compreensão adequada do conteúdo/proposito do projeto. Pode assumir várias formas: situacional, linguístico, histórico-cultural
     visual. É no contexto onde eu defino o tema e explico a situação que motiva o trabalho, focar no problema), Objetivo (o que eu pretendo alcançar com esse projeto. A melhor forma
     de fazer o objetivo é dentro do metodo SMART, ser especifico, mensurável, realista, relevante e temporal), Justificativa (argumento convincente para fazer alguém comprar meu 
-    projeto), Escopo (trabalho necessário para fazer o trabalho, Mapeamento de todo trabalho necessário para finalizar o projeto, especifica os limites do projeto, estabelece resposabilidade
-    para cada membro e processos de verificação e aprovação)
+    projeto), Escopo (trabalho necessário para entregar um produto, serviço ou resultado, Mapeamento de todo trabalho necessário para finalizar o projeto, especifica os limites do 
+    projeto, estabelece resposabilidade para cada membro e processos de verificação e aprovação)
+23/02/2026
+    Escopo nada mais é que uma declaração com todo o trabalho necessário e que será realizado para fazer o projeto, incluindo informações como objetivo, limites, entregas e etc. Em resumo
+    a sua principal resposabilidade é definir o trabalho que será realizado, estabelecer limites, gerenciar mudanças e fornecer uma base para o planejamento do projeto. Alguns pontos para 
+    declarar um escopo: entender o problema que está tentando resolver, definir os entregaveis, identificar os recursos disponiveis e quais são os limites do meu projeto (como tempo e 
+    orçamento), cronograma e saber quais são e como resolver os riscos do projeto. No escopo, deve especificar: um resumo do projeto (contexto, motivação), definir os resultados esperados
+    com o final do projeto, apresentar os requisitos (criterios tecnicos e funcionais) que precisam ser atendidos para o projeto funcionar corretamente, apresentar o que está dentro e fora 
+    do scopo do projeto, fazer um cronograma (apresentar uma visão geral das principais fases e atividades do projeto, com definição de tempo, dia de inicio e fim), listar todos os recursos
+    necessários, como humanos, materiais, tecnologicos e etc., apresentar riscos que podem atrapalhar o andamento do projeto e mostrar o que cada um vez, sendo pessoa até organizção. Diagrama
+    é uma represetação gráfica para demonstrar um esquema, utilizando palavras chaves e setas/linhas para conectar tudo. Premissa está atrelada a algum risco, ela é todo fator que precisa
+    ser considerado como verdadeiro, como por exemplo, um risco, assumir que um risco é verdadeiro para que se possa planejar uma solução na premissa. Restrições são limitações que podem 
+    impedir a execução do projeto/ impedimentos que que afetam o desempenho ou o resultado de um projeto. As principais Restrições são: prazo, escopo e custos. Milestone é um ponto significante
+    do projeto, datas importantes dentro do cronograma, que representam pontos chaves na trajetoria do projeto, mostrando avanços importantes. A equipe de projetos é o grupo de pessoas resposaveis
+    por planejar, executar e acompanhar todas as atividades durante todo o projeto. Eles são liderados por um gestor de projeto que organiza tudo, tarefas, prazos e etc. Pontos chaves para a 
+    organização da equipe: quem participa, suas habilidades, premissas e restrições. Orçamento = recursos financeiros para fazer o projeto. Sustentação = processo que garante que o sistema continua
+    funcionando de forma estavel, segura e continua após sua implementação, em resumo, é o que mantém o projeto vivo e funcionando após ser entregue (é como se fosse a manutenção depois que ser entregue)
