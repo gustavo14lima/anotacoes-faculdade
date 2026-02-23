@@ -3,15 +3,26 @@
     contexto; Por fim, a sabedoria é agir dentro de um objetivo, é uma ação (é a capacidade de aplicar o conhecimento acumulado para realização de tomada de decisão estrategicas,
     eticas e eficazes).
 12/02/2026
-    Os bancos de dados são importantes por causa da necessidade das empresas de precisar ter seus dados precisos atualizados e armazenados, pelo mercado precisar de dados abundantes e complexos.
-    Assim, surge a necessidade de ferramentas de gerenciamento, extração rápido e precisa de informações. A solução foi o SGBD (Sistema Gerenciador de Banco de Dados). Os primeiros programas de 
-    computador foi para armazenar e manipular dados, gravando em disco seguindo uma propria estrutura. Mas, cada profissional tinha uma estrutura propria, ou seja, se o profissional 1, que usa-se
-    a estrutura A, não conseguiria acessar o arquivo de estrutura B do profissional 2 e nem acessando os dados, pois precisaria conhecer a estrutura B. Com isso, criaram um programa em que conhecesse
-    a estrutura de dados, fornecer dados que cada arquivo precisasse e armazenasse adquadamente os dados, eles não precisavam conhecer os detalhes de dados nos programas, não precisava modificar a 
-    estrutura. Assim, surge o Sistema Gerenciador de Banco de Dados, com o tempo, surgiram alguns padrões para se escrever a estrutura e o conceto de metadados (em poucas palavras, seria como o tipo de 
-    dado, (id INT -> INT é o metadado)). Um banco de daods é a coleção de dados coerente e logicamente relacionados com algum significado associado, armazenando, projetando e manipulando atendendo um
-    proposito e audiencia especifico. Representa algum aspecto do mundo real. Redundancia = algo duplicado (menos redundancia deixa o sistema e código melhor). Necessarios para se usar um SGBD = 
-    compartilhamento de dados (principal motivo), controle de redundancia, consistencia e integridade, acesso de multiplos usuarios, controle de acesso e segurança, recuperação e restauração e consultas
-    especificas. SQL = linguagem estruturada para consulta (linguagem padrão para manipular banco de dados, diversos SGBD utilizam SQL); NoSQL = Não apenas SQL (banco de dados não relacionais, usando
-    principalmente em Big Data e IA). Principais diferenças: SQL é verticalmente escalavel e o NoSQL é horizontalmente escalavel. NoSQL os dados são "jogados" em difenretes lugares e o SQL "monta" como
+    Os bancos de dados são importantes por causa da necessidade das empresas de precisar ter seus dados precisos atualizados e armazenados, pelo mercado precisar de dados abundantes e
+    complexos. Assim, surge a necessidade de ferramentas de gerenciamento, extração rápido e precisa de informações. A solução foi o SGBD (Sistema Gerenciador de Banco de Dados). Os 
+    primeiros programas de computador foi para armazenar e manipular dados, gravando em disco seguindo uma propria estrutura. Mas, cada profissional tinha uma estrutura propria, ou
+    seja, se o profissional 1, que usa-se a estrutura A, não conseguiria acessar o arquivo de estrutura B do profissional 2 e nem acessando os dados, pois precisaria conhecer a 
+    estrutura B. Com isso, criaram um programa em que conhecesse a estrutura de dados, fornecer dados que cada arquivo precisasse e armazenasse adquadamente os dados, eles não 
+    precisavam conhecer os detalhes de dados nos programas, não precisava modificar a estrutura. Assim, surge o Sistema Gerenciador de Banco de Dados, com o tempo, surgiram alguns
+    padrões para se escrever a estrutura e o conceto de metadados (em poucas palavras, seria como o tipo de dado, (id INT -> INT é o metadado)). Um banco de daods é a coleção de 
+    dados coerente e logicamente relacionados com algum significado associado, armazenando, projetando e manipulando atendendo um proposito e audiencia especifico. Representa algum
+    aspecto do mundo real. Redundancia = algo duplicado (menos redundancia deixa o sistema e código melhor). Necessarios para se usar um SGBD = compartilhamento de dados (principal motivo), 
+    controle de redundancia, consistencia e integridade, acesso de multiplos usuarios, controle de acesso e segurança, recuperação e restauração e consultas especificas. SQL = linguagem 
+    estruturada para consulta (linguagem padrão para manipular banco de dados, diversos SGBD utilizam SQL); NoSQL = Não apenas SQL (banco de dados não relacionais, usando principalmente
+    em Big Data e IA). Principais diferenças: SQL é verticalmente escalavel e o NoSQL é horizontalmente escalavel. NoSQL os dados são "jogados" em difenretes lugares e o SQL "monta" como
     se fosse um CSV, por exemplo. NoSQL ele sempre acrescenta colunhas ao invés de linhas.
+19/02/2026
+    Modelagem de dados serve para conhecer melhor o contexto e representar os dados do négocio, projetar o banco de dados, provomer o compartilhamento de dados e integridade do sistema. 
+    Tipos de SGBG: hierárquico (primeiro a ser reconhecido como modelo de dados, representa e estrutura as informações hierarquicamente, cada nó na árvore representa um registro, cada 
+    ligação é entre dois registros), em rede (extenção e sucessor do modelo hierárquico, ou seja, eliminou o hierárquico, um registro pode ser envolvido em várias associações, 
+    representado gráficamente por grafos, padronizado pela CODASYL), relacional (surgiu para aumentar a independencia dos dados e para promover um conjunto de funções para armazenar e 
+    recupera os dados, é flexivel e adquado para solucionar vários problemas, estrutura fundamental é a relação entre as tabelas, relação constituida entre um ou mais atributos) e Orientado
+    a objetos (uso de linguagens de programção orientado a objetos, surgiu motivado na função de limites de armazenamento e representação semantica imposta no relacional). Principais conceitos:
+    DDL (Data Definition Languagem) - grupo de instruções SQL para criar, alterar ou eliminar tabelas: CREATE, ALTER e DROP. DML (Data Manipulation Languagem) - grupo de instruções SQL para manipular 
+    tabelas, inserindo, atualizando, excluindo e consultado dados: INSERT, UPDATE, DELETE, SELECT. DCL (Data Control Languagem) - permissões e outros conceitos: GRANT (fornece os privilegios)
+    e REVOKE (retira os privilegios).
