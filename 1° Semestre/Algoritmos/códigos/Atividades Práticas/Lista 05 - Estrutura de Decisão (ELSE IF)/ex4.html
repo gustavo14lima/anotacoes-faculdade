@@ -1,0 +1,55 @@
+<!-- 
+
+4. Avaliação de Peso Infantil: Está Dentro da Faixa Saudável?
+
+Uma nutróloga deseja um programa que ajude-a no processo de avaliação do peso de crianças de 5 anos.
+
+Seu programa, ao ler o peso da criança, deve exibir uma dessas frases:
+
+    Abaixo do peso (se peso até 13.5kg) 
+
+    Acima do peso (se peso maior que 21.2kg) 
+
+    Peso na média (se peso maior que 13.5kg até 21.2kg) 
+
+    Peso perfeito (se o peso for exatamente 18.3kg) 
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Peso Infantil: Está Dentro da Faixa Saudável?</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_massa_corporal">Insira a massa corporal da criança: </label>
+        <input type="number" id="id_massa_corporal" placeholder="Insira a massa corporal em Kg (quilogramas)">
+    </div>
+
+    <button onclick="calcularMassaCorporal()">Calcular Massa Corporal</button>
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function calcularMassaCorporal() {
+        let massaCorporal = Number(id_massa_corporal.value);
+
+        if (massaCorporal <= 13.5) {
+            id_resultado.innerHTML = `Abaixo do peso`;
+        } else if (massaCorporal == 18.3) {
+            id_resultado.innerHTML = `Peso Perfeito`;
+        } else if (massaCorporal<= 21.2){
+            id_resultado.innerHTML = `Peso na média`;
+        } else {
+            id_resultado.innerHTML = `Acima do peso`;
+        }
+    };
+
+</script>
+
+</html>

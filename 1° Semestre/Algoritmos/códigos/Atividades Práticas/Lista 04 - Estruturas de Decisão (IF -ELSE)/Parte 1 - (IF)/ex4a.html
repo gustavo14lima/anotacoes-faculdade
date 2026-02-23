@@ -1,0 +1,46 @@
+<!-- 
+4a. Divisão Justa da Pizza (Com Estilo)  
+
+Refaça a questão anterior de tal forma que a frase do item d) apareça na cor de letra vermelha com itálico e negrito. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão Justa de Pizza (Com Estilo)</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_valor_pizza">Insira o valor da pizza: </label>
+        <input type="number" id="id_valor_pizza">
+    </div>
+    <div>
+        <label for="id_qtd_amigos">Insira a quantidade de amigos: </label>
+        <input type="number" id="id_qtd_amigos">
+    </div>
+
+    <button onclick="calcularPizza()">Rola a pizza</button>
+
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function calcularPizza() {
+        let valorPizza = Number(id_valor_pizza.value);
+        let qtdAmigos = Number(id_qtd_amigos.value);
+
+        let valorPorAmigo = valorPizza / qtdAmigos;
+        id_resultado.innerHTML = `Cada amigo vai pagar R$${valorPorAmigo} pela pizza`;
+
+        if (valorPorAmigo > 20) {
+            id_resultado.innerHTML += `<h4 style="color:red;"><i><b>Deu ruim! Pizza muito cara!</i></b></h4>`
+        }
+    };
+
+</script>
+
+</html>

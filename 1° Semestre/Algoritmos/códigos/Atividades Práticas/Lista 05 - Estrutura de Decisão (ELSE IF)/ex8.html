@@ -1,0 +1,60 @@
+<!-- 
+
+8. Meta de Economia: Você Está no Caminho Certo?
+
+Crie um programa o qual: 
+
+a) Pergunte ao usuário qual sua meta de economia; 
+
+b) Pergunte ao usuário quanto tem guardado; 
+
+c) Ao clicar em "Analisar economia"... 
+
+d) Caso a meta tenha sido alcançada, exibir, abaixo do botão, a frase “Parabéns, meta alcançada!”.  
+
+e) Caso a meta tenha sido ultrapassada, exibir a frase anterior e também a frase “Meta ultrapassada em X” (onde X é a diferença entre a economia e a meta) 
+
+f) Caso a meta ainda não tenha sido alcançada, exibir, abaixo do botão, a frase “Força! Ainda em busca da meta! Falta X” (onde X é a diferença entre a meta e a economia) 
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta de Economia: Você Está no Caminho Certo?</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_meta_economia">Insira a sua meta economia: </label>
+        <input type="number" id="id_meta_economia">
+    </div>
+    <div>
+        <label for="id_valor_guardado">Insira quanto dinheiro guardado você tem: </label>
+        <input type="number" id="id_valor_guardado">
+    </div>
+
+    <button onclick="analisarEconomia()">Analisar economia...</button>
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function analisarEconomia() {
+        let metaEconomia = Number(id_meta_economia.value);
+        let valorGuardado = Number(id_valor_guardado.value);
+
+        if (metaEconomia == valorGuardado){
+            id_resultado.innerHTML = `Parabéns, meta alcançada!`;
+        } else if (metaEconomia < valorGuardado){
+            id_resultado.innerHTML = `Meta ultrapassada em R$${valorGuardado - metaEconomia}`;
+        } else {
+            id_resultado.innerHTML = `Força! Ainda em busca da meta! Falta R$${metaEconomia - valorGuardado}`;
+        }
+    };
+
+</script>
+
+</html>

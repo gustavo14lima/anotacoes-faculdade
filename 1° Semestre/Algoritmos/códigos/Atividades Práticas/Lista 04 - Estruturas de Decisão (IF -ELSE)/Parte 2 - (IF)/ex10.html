@@ -1,0 +1,53 @@
+<!-- 
+10. Situação Financeira da Conta Bancária
+
+Crie um programa que faça:  
+
+a) Pergunte ao usuário o valor de seu saldo na conta do banco 
+
+b) Ao clicar no botão "Verificar finanças": 
+
+    b1) Caso o saldo em conta for igual a zero (==0), exiba esta frase na cor preta na tela: "Conta zerada".  
+
+    b2) Caso o saldo seja negativo (<0), exiba esta frase na cor vermelha na tela: "Está devendo!".   
+
+    b3) Caso o saldo seja positivo (>0), exiba esta frase na cor azul: "Saldo positivo! sorriso"   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação Financeira da Conta Bancária</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_saldo">Insira o valor do seu saldo na conta do banco: </label>
+        <input type="number" id="id_saldo">
+    </div>
+
+    <button onclick="verificarFinancas()">Verificar finanças</button>
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function verificarFinancas() {
+        let saldo = Number(id_saldo.value);
+
+        if (saldo == 0){
+            id_resultado.innerHTML = `<h4 style = "color: black;"> Conta zerada </h4>`
+        }
+        if (saldo < 0) {
+            id_resultado.innerHTML = `<h4 style = "color: red;"> Está devendo! </h4>`
+        }
+        if (saldo > 0) {
+            id_resultado.innerHTML = `<h4 style = "color: blue;"> Saldo positivo! sorriso </h4>`
+        }
+    };
+
+</script>
+
+</html>

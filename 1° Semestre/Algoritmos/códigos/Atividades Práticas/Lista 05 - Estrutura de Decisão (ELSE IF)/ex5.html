@@ -1,0 +1,55 @@
+<!-- 
+
+5. Classificação de Alunos: Como Está Seu Desempenho?
+
+Crie um programa o qual:
+
+a) Solicite a nota do aluno;
+
+b) Ao clicar em "Classificar aluno", exiba uma dessas mensagens em um alert:
+
+      "Aluno precisa de muita ajuda", caso a nota for menor que 5.
+      "Aluno na média", caso a nota for entre 5 até 7.
+      "Aluno na acima da média", caso a nota for maior que 7 até 9.5.
+      "Aluno fora da curva", caso a nota for maior que 9.5.
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Alunos: Como Está Seu Desempenho?</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_nota">Insira a nota do aluno: </label>
+        <input type="number" id="id_nota">
+    </div>
+
+    <button onclick="classificarAluno()">Classificar aluno</button>
+
+</body>
+
+<script>
+    function classificarAluno() {
+        let nota = Number(id_nota.value);
+
+        if(nota < 5){
+            alert(`Aluno precisa de muita ajuda`);
+        } else if (nota <= 7){
+            alert(`Aluno na média`);
+        } else if (nota <= 9.5) {
+            alert(`Aluno na acima da média`);
+        } else if (nota <= 10){
+            alert(`Aluno fora da curva`);
+        } else {
+            alert(`Erro ao adicionar a nota...`);
+        }
+    };
+
+</script>
+
+</html>

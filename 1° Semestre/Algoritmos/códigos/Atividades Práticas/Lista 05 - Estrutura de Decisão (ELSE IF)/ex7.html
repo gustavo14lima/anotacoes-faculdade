@@ -1,0 +1,75 @@
+<!-- 
+
+7. Consumo de Calorias: Sua Dieta Está Saudável?
+
+Uma nutricionista precisa ajudar seus pacientes em com suas dietas. Ajude-a criando um programa o qual: 
+
+a) Pergunte quantos pães franceses o usuário tem comido por dia; 
+
+b) Pergunte quantos pacotes de bolacha recheada o usuário tem comido por dia; 
+
+c) Pergunte quantos copos de achocolatado o usuário tem tomado por dia; 
+
+d) Ao clicar em "Verificar calorias", calcule quantas calorias o usuário tem consumido com base nas 3 informações. Considere que um pão francês tem 50 calorias, um pacote de bolacha, 80 e um copo de achocolatado, 70. 
+
+e) Após fazer o cálculo, exiba uma dessas frases, abaixo do botão: 
+
+   "Parabéns, vai ficar em forma!", caso as calorias sejam menores do que 200. 
+
+   "Cuidado, vai ficar menos saudável !" caso as calorias sejam entre 200 e 400. 
+
+   "Alerta crítico de saúde !!!", caso as calorias sejam mais de 400. 
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de Calorias: Sua Dieta Está Saudável?</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_qtd_pao">Insira a quantidade de pães franceses que come por dia: </label>
+        <input type="number" id="id_qtd_pao">
+    </div>
+    <div>
+        <label for="id_qtd_biscoito">Insira a quantidade de pacotes de biscoito recheado que come por dia: </label>
+        <input type="number" id="id_qtd_biscoito">
+    </div>
+    <div>
+        <label for="id_qtd_achocolatado">Insira a quantidade de copos de achocolatado que toma por dia: </label>
+        <input type="number" id="id_qtd_achocolatado">
+    </div>
+
+    <button onclick="verificarCalorias()">Verificar calorias</button>
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function verificarCalorias() {
+        let qtdPao = Number(id_qtd_pao.value);
+        let qtdBiscoito = Number(id_qtd_biscoito.value);
+        let qtdAchocolatado = Number(id_qtd_achocolatado.value);
+
+        let caloriaTotalPao = qtdPao * 50;
+        let caloriaTotalBiscoito = qtdBiscoito * 80;
+        let caloriaTotalAchocolatado = qtdAchocolatado * 70;
+
+        let caloriasTotal = caloriaTotalPao + caloriaTotalBiscoito + caloriaTotalAchocolatado;
+
+        if (caloriasTotal < 200){
+            id_resultado.innerHTML = `Parabéns, vai ficar em forma!`;
+        } else if (caloriasTotal < 400) {
+            id_resultado.innerHTML = `Cuidado, vai ficar menos saudável !`;
+        } else {
+            id_resultado.innerHTML = `Alerta crítico de saúde !!!`;
+        }
+    };
+
+</script>
+
+</html>

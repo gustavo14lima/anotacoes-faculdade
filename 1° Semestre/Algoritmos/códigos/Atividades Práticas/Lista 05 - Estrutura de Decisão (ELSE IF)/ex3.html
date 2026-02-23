@@ -1,0 +1,59 @@
+<!-- 
+
+3. Sensação Térmica: Como o Corpo Humano Percebe a Temperatura
+
+Para o ser humano, a temperatura é... 
+
+    Congelante (até menos de 14ºC) 
+
+    Com Frio (entre 14ºC e 21ºC) 
+
+    Confortável (mais de 21ºC até 24ºC) 
+
+    Com Calor (mais de 24ºC até 31ºC) 
+
+    Calor escaldante (mais de 31ºC) 
+
+Crie um programa que, ao ler uma temperatura, exiba uma dessas situações acima. 
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensação Térmica: Como o Corpo Humano Percebe a Temperatura</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_temperatura">Insira a temperatura, e veja como o corpo humano a percebe: </label>
+        <input type="number" id="id_temperatura" placeholder="Insira a temperatura em °C">
+    </div>
+
+    <button onclick="verificandoTemperatura()">Veja clicando aqui</button>
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function verificandoTemperatura() {
+        let temperatura = Number(id_temperatura.value);
+
+        if(temperatura <= 14) {
+            id_resultado.innerHTML = `Congelante`;
+        } else if (temperatura <= 21) {
+            id_resultado.innerHTML = `Com Frio`;
+        } else if (temperatura <= 24){
+            id_resultado.innerHTML = `Confortável`;
+        } else if (temperatura <= 31) {
+            id_resultado.innerHTML = `Com Calor`;
+        } else {
+            id_resultado.innerHTML = `Calor escaldante`;
+        }
+    };
+
+</script>
+
+</html>

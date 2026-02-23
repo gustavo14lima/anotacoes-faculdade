@@ -1,0 +1,57 @@
+<!-- 
+
+6. Times Paulistas: O Canto da Sua Torcida!
+
+Crie um programa o qual: 
+a) Pergunte qual dos seguintes times de São Paulo o usuário torce (São Paulo, Palmeiras, Corinthians, Santos); 
+b) Ao clicar em "Fale sobre esse time", exiba abaixo: 
+
+   "Salve o Corinthians" -> com fundo preto e letra branca, se for Corinthians 
+   "Salve o alviverde imponente" -> com fundo verde e letra branca, se for Palmeiras 
+   "Agora quem dá a bola é o Santos" -> com fundo branco e letra preta, se for Santos 
+   "Salve o Tricolor paulista" -> com fundo preto e letra vermelha, se for São Paulo
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times Paulistas: O Canto da Sua Torcida!</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_time">Insira um time de São Paulo, precisa estar neste lista: <br>
+        São Paulo <br> Palmeiras <br> Corinthians <br> Santos <br>
+        </label>
+        <input type="text" id="id_time" placeholder="Escreva assim como está na lista">
+    </div>
+    <button onclick="mostrarHinoTime()">Fale sobre esse time</button>
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function mostrarHinoTime() {
+        let time = id_time.value;
+
+        if (time == 'Corinthians') {
+            id_resultado.innerHTML = `<h4 style="background-color: #000; color: #FFF;">Salve o Corinthians</h4>`
+        } else if (time == 'Palmeiras') {
+            id_resultado.innerHTML = `<h4 style="background-color: #0F0; color: #FFF;">Salve o alviverde imponente</h4>`;
+        } else if (time == 'Santos') {
+            id_resultado.innerHTML = `<h4 style="background-color: #FFF; color: #000;"> Agora quem dá a bola é o Santos</h4>`;
+        } else if (time == 'São Paulo') {
+            id_resultado.innerHTML = `<h4 style="background-color: #000; color: #F00;">Salve o Tricolor paulista</h4>`;
+        } else {
+            id_resultado.innerHTML = `Time inválido, insira outro time`
+        }
+    };
+
+</script>
+
+
+
+</html>

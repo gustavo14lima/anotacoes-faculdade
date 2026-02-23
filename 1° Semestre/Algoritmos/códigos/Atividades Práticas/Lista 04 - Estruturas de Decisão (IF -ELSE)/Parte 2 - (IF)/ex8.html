@@ -1,0 +1,59 @@
+<!-- 
+8. Peso Médio no Elevador
+
+Crie um programa que controle o peso médio dentro de um elevador:  
+
+a) Solicite a quantidade de homens que entraram no elevador 
+
+b) Solicite a quantidade de mulheres que entraram no elevador 
+
+c) Ao clicar em "Analisar peso", calcule o peso estimado sendo: homens x 80 somado com mulheres x 60 
+
+d) Exiba na página a mensagem "Este elevador suporta 800 Kg e o peso estimado desta lotação é de XXXkg"  
+
+e) Se o peso estimado for maior que 800, exibir também a mensagem "Será necessário que alguém desça para que o elevador se movimente" - na cor azul.  
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso Médio no Elevador</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_qtd_homens">Insira a quantidade de homens que entraram no elevador: </label>
+        <input type="number" id="id_qtd_homens">
+    </div>
+    <div>
+        <label for="id_qtd_mulheres">Insira a quantidade de mulheres que entraram no elevador: </label>
+        <input type="number" id="id_qtd_mulheres">
+    </div>
+
+    <button onclick="analisarPeso()">Analisar peso</button>
+
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function analisarPeso() {
+        let qtdHomens = Number(id_qtd_homens.value);
+        let qtdMulheres = Number(id_qtd_mulheres.value);
+
+        let pesoHomens = qtdHomens * 80;
+        let pesoMulheres = qtdMulheres * 60;
+
+        id_resultado.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${pesoHomens + pesoMulheres}kg`;
+
+        if ((pesoHomens + pesoMulheres) > 800) {
+            id_resultado.innerHTML += `<h4 style = "color: blue;">Será necessário que alguém desça para que o elevador se movimente</h4>`;
+        };
+    };
+
+</script>
+
+</html>

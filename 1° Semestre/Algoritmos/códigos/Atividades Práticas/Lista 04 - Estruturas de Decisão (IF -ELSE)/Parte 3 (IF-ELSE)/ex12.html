@@ -1,0 +1,47 @@
+<!-- 
+
+12. Crie um programa o qual:  
+
+a) Solicite o peso total num elevador  
+
+b) Ao clicar num botão "Ligar elevador"...  
+
+c) Caso o peso seja menor que 500, exiba um alert com a frase "Elevador vai se mover"  
+
+d) Caso o peso seja a partir de 500, exiba um alert com "Alguém precisa descer do elevador"   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_peso">Insira o peso total em um elevador: </label>
+        <input type="number" id="id_peso">
+    </div>
+
+    <button onclick="ligarElevador()">Ligar elevador... </button>
+
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function ligarElevador() {
+        let peso = Number(id_peso.value);
+
+        if (peso < 500) {
+            alert(`Elevador vai se mover`);
+        } else {
+            alert(`Alguém precisa descer do elevador`);
+        }
+
+    }
+</script>
+
+</html>

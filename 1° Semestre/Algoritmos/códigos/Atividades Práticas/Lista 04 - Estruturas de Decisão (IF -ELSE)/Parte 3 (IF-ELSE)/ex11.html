@@ -1,0 +1,78 @@
+<!-- 
+
+11. Crie um programa o qual:  
+
+a) Solicite a quantidade de filhos que o usuário tem  
+
+b) Tenha um botão "Analisar família". Ao clicar nele...  
+
+c) Caso tenha 1 ou mais filhos, exiba na tela, abaixo do botão, a frase "Não tem TV" 
+
+d) Caso tenha 2 ou mais filhos, exiba na tela, abaixo da frase em c), a frase "Não tem internet" 
+
+e) Caso tenha 3 ou mais filhos, exiba na tela, abaixo da frase em d), a frase "Não tem video game" 
+
+f) Caso tenha 4 ou mais filhos, exiba na tela, abaixo da frase em e), a frase "Não tem Netflix" 
+
+    OBS: Ou seja, caso o usuário informe que tenha, por exemplo,  4 ou mais filhos, devem aparecer as seguintes frases:  
+
+          Não tem TV  
+
+          Não tem internet  
+
+          Não tem video game  
+
+          Não tem Netflix  
+
+    Se tiver 2 filhos, deve exibir apenas "Não tem TV" e "Não tem internet", de acordo com as validações descritas acima  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_qtd_filhos">Insira a quantidade de filhos que você tem: </label>
+        <input type="number" id="id_qtd_filhos">
+    </div>
+
+    <button onclick="analisarFamilia()">Analisar família</button>
+
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function analisarFamilia() {
+        let qtdFilhos = Number(id_qtd_filhos.value);
+        
+        let frase1 = `Não tem TV <br>`;
+        let frase2 = frase1 + `Não tem internet <br>`;
+        let frase3 = frase2 + `Não tem video game <br>`;
+        let frase4 = frase3 + `Não tem Netflix <br>`;
+
+        if (qtdFilhos == 0) {
+            id_resultado.innerHTML = `Niceeee`;
+        }
+        if (qtdFilhos == 1){
+            id_resultado.innerHTML = frase1;
+        }
+        if (qtdFilhos == 2){
+            id_resultado.innerHTML = frase2;
+        }
+        if (qtdFilhos == 3){
+            id_resultado.innerHTML = frase3;
+        } 
+        if (qtdFilhos > 4) {
+            id_resultado.innerHTML = frase4;
+        }
+        
+    }
+</script>
+
+</html>

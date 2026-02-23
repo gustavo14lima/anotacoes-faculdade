@@ -1,0 +1,51 @@
+<!-- 
+3. Média Escolar de Paty
+
+Paty é muito estudiosa e sua meta é sempre ser uma aluna fora de série. Na faculdade onde estuda, os "fora de série" são os alunos com média acima de 9,4. Portanto, para ajudá-la, crie um programa o qual:  
+
+a) Pergunte o valor de 3 notas  
+
+b) Ao clicar num botão "Analisar desempenho", calcule a média entre as notas e exiba na tela a frase "Sua média foi de X", onde X é a média calculada  
+
+c) Somente caso a média for acima de 9,4 exibir também a frase "Parabéns, você é fora de série!"   
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Escolar de Paty</title>
+</head>
+<body>
+    
+    <input type="number"  id="id_nota1" placeholder="Insira a nota do aluno 1">
+    <br>
+    <input type="number"  id="id_nota2" placeholder="Insira a nota do aluno 2">
+    <br>
+    <input type="number"  id="id_nota3" placeholder="Insira a nota do aluno 3">
+    <br>
+    <button onclick="analisarDesempenho()">Analisar desempenho</button>
+
+    <h4 id="id_resultado"></h4>
+
+</body>
+
+<script>
+    function analisarDesempenho() {
+        let nota1 = Number(id_nota1.value);
+        let nota2 = Number(id_nota2.value);
+        let nota3 = Number(id_nota3.value);
+
+        let media = (nota1 + nota2 + nota3) / 3;
+
+        id_resultado.innerHTML = `Sua média foi de ${media}`;
+
+        if(media > 9.4){
+            id_resultado.innerHTML += ` <br> Parabéns, você é fora de série!`;
+        }
+    };
+
+</script>
+
+</html>

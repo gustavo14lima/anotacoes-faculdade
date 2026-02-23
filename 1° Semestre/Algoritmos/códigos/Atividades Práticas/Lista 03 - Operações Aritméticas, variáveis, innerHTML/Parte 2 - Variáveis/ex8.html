@@ -35,13 +35,16 @@ OBS: o valor do saldo atual se inicia em 0, para depois ir reduzindo/incrementan
 
 <script>
     let saldoUsuario = 0;
-    let valor = Number(idValor.value);
+    // pegar o id do HTML não pode ser global, por que toda vez que você for adicionar um novo valor, terá que reiniciar a página
+    let valor;
 
     function depositar() {
+        valor = Number(idValor.value);         
         alert(`Depósito de R$${valor} efetuado! Saldo atual: R$${saldoUsuario += valor}`);
     };
 
     function retirada() {
+        valor = Number(idValor.value);         
         alert(`Retirada de R$${valor} efetuada! Saldo atual: R$${saldoUsuario -= valor}`);
     };
 

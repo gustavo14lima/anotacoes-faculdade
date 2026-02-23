@@ -1,0 +1,48 @@
+<!-- 
+5. Cálculo da Conta de Luz
+
+Na cidade de Algoritmolândia a luz custa R$ 0,85 por KWh. Crie um programa que:  
+
+a) Solicite a quantidade de KWh consumida no mês 
+
+b) Ao clicar em "Calcular conta de luz", calcule o valor da conta no mês 
+
+c) Dê um desconto de 10% somente se a quantidade for menor que 100 KWh 
+
+d) Exiba um alert com o valor da conta a ser paga.  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Conta de Luz</title>
+</head>
+<body>
+    
+    <div>
+        <label for="id_qtd_kwh">Insira a quantidade de KWh consumida por mês: </label>
+        <input type="number" id="id_qtd_kwh">
+    </div>
+    <button onclick="calcularContaLuz()">Calcular conta de luz</button>
+
+</body>
+
+<script>
+    function calcularContaLuz() {
+        let qtdKwh = Number(id_qtd_kwh.value);
+        let valorLuz = 0.85;
+
+        let valorConta = qtdKwh * valorLuz;
+
+        if(qtdKwh < 100){
+            valorConta *= 0.90;
+        }
+
+        alert(`O valor a ser pago da conta de luz é R$${valorConta}`);
+
+    }
+</script>
+
+</html>

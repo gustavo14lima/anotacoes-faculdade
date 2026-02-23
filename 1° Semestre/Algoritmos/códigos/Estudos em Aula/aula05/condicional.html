@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional</title>
+</head>
+<body>
+    <!-- usamod o for, para falar que o label está fazendo referencia ao input, ou seja, se eu clicar no label, o input será selecionado -->
+    <label for="id_idade">Insira a usa idade: </label>
+    <input type="number" id="id_idade" placeholder="Digite sua idade">
+    <button onclick="calcular()">Calcular</button>
+
+    <br><br>
+
+    <label for="id_qtd_pets">Insira a quantidaded de pets que você tem: </label>
+    <input type="number" id="id_qtd_pets" placeholder="Digite a quantidade de pets">
+
+    <h3 id="id_resultado"></h3>
+    <h1 id="id_resultado_pets"></h1>
+</body>
+
+<script>
+    function calcular() {
+        let idade = Number(id_idade.value);
+        let qtd_pets = Number(id_qtd_pets.value);
+
+        // condicional
+        // se a condição de dentro desses parenteses for atentida, faça o que está no bloco de código da chave
+        // if sempre retorna verdadeiro (entra no bloquinho) ou falso (não entra no bloquinho)
+        if (idade >= 18){
+            console.log(`entrei no if`);
+            id_resultado.innerHTML = `Você é maior de idade! Pode votar!`;
+        } 
+        // else -> se não, se a condição dentro dos parenteses do if não for atentida, faça o que está no bloco de código abaixo
+        else {
+            console.log(`entrei no else`);
+            id_resultado.innerHTML = `Você é menor de idade! Não pode votar!`;
+        };
+        
+        
+        if (qtd_pets >= 3) {
+            id_resultado_pets.innerHTML = `Oloko, quantos pets. Que legal!` 
+        }
+        
+        // adicionando mais de um texto no innerHTML (somando o texto ao invés de sobrescrever)
+        id_resultado_pets.innerHTML += `<br> Fim!!!`;
+    };
+
+</script>
+
+</html>
