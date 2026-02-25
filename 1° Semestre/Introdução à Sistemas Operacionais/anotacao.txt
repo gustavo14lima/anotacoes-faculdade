@@ -14,3 +14,7 @@
     (ou como deveria), depois dessa verificação, ela "passa" a bola para o sistema operacional. A atualização de hardware e sistemas operacionais em uma empresa é de suma importância
     en necessidade por conta das atualizações que corrigem falhas, bugs, segurança e etc. Algums beneficios são: redução de custo, aumento da facilidade na administração dos recursos de TI,
     maior velocidade na resolução de problemas e falhas, diminui parasitas e perda de exercução em trabalho e defini claramente os processos.
+25/02/2026
+    A virtualização é uma tecnologia que permite a criação de ambientes virtuais, como um computador físico, dentro do seu computador. Com isso, é possivel executar vários SO diferentes no mesmo
+    hardware, apenas dividindo os recursos físicos entre as maquinas virtuais. Isso resultra em uma maior eficiência no uso dos recursos e flexibilidade para desenvolvimento, teste e produção de 
+    diferentes sistemas e aplicativos em um único servidor físico. As máquinas virtuais (VMs) são ambientes virtuais que simulam um computador físico em forma de software.
