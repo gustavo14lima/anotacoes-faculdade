@@ -21,3 +21,19 @@
     representa três bits do sistema binario (ou seja, para representar o 3 seria 011), indo de 0 à 7; Por fim, o hexadecimal (base 16) representa quatro bits do sistema binario
     (ou seja, para representa o 11 seria 1011), ele vai de 0 à F (sendo A o 10 e F o 15). Lembre-se, o caminho da luz é o binario, ou seja, caso eu quero ir de octal para decimal, eu baso pelo
     binario antes (octal -> binario -> decimal ), isso serve para qualquer transformação.
+25/02/2026
+    A CPU (unidade central de processamento) é como se fosse um cérebro humano, pois é ele que interpreta intruções e coordena a execução de tarefa. Para fazer parte do sistema, a CPU 
+    precisa estar conectada na placa mãe a partir do soquete, que pode-se assimilar a tomada e a CPU o conector (cabo do carregador). Essa conexão com a placa mãe garante a comunicação 
+    do processador com a placa mãe, possibilitando que todo sistema trabalhe de forma integrada. O Clock Interno é a frequencia com que o processador executa seus ciclos de operações, medido
+    em Hz (Hertz). Podemos representar ele como um coração, a cada batida é uma instrução processada por segundo, quanto mais rapido o coração, mais instruções processadas por segundo (e ele tambémm
+    mantem o computador vivo). Cada ciclo é como se fosse uma oportunidade de realizar uma tarefa/ação, em outras palavras, determina quantas operações podem ser realizadas por segundo. 
+    O overclock aumenta a velocidade do clock, mas cuidado, aumentar a frequência também exige maior consumo de energia e gera mais calor, que além disso, preojudica a vida util do processador
+    e tem mais chances de perdas. A ULA (unidade lógica e aritmetica) é a parte do processador responsavel por realizar operações matematicas e logicas. Ela quem faz as operações matematicas 
+    (as 4 principais), com as informações recebidas pelo processador. Todos os programas de um computador, parcialmente depende da ULA. O nucleo de um processador, é um componente fisico, que realiza 
+    a tarefas simultaneas a partir da quantidade de nucles, ou seja, caso eu tenho dois nucleos, eu posso realizar duas tarefas simultaneamente sem preojudição ou perca de desempenho. Agora, o Threading 
+    é um nucleo lógico, sendo assim, um componente lógico, ele é como se fosse uma extensão/subdivisão do nucleo, geralmente, o Threading é duas vezes maior que o nucleo.
+    Algumas anotações sobre Arduinos:
+        O Arduino Uno é uma plataforma de prototipagem eletrônica de código aberto baseada em hardware e software fáceis de usar. Seus principais componentes são: o Arduino, o sensor e alguns cabos.
+        Para alimentar um Arduino, coloca-se um cabo no Arduino que é alimentado pelo computador, que é por esse mesmo cabo que "corre" os dados. O sensor utilizado em aula hoje, foi o de temperatura
+        em que, ele tem três terminais (perninhas), que da esquerda para direita = 5v, entrada analogica, aterramente (GND). O cabo de 5V é a entrada de energia e o GND é a saida, assim a energia circula.
+        "barriguinha de chop" virada para fora do Arduino, se não esquenta muito. E as cores dos fios são: 5V = vermelho, entrada analogica = colorido (qualquer um), GND = preto.
