@@ -18,3 +18,14 @@
     A virtualização é uma tecnologia que permite a criação de ambientes virtuais, como um computador físico, dentro do seu computador. Com isso, é possivel executar vários SO diferentes no mesmo
     hardware, apenas dividindo os recursos físicos entre as maquinas virtuais. Isso resultra em uma maior eficiência no uso dos recursos e flexibilidade para desenvolvimento, teste e produção de 
     diferentes sistemas e aplicativos em um único servidor físico. As máquinas virtuais (VMs) são ambientes virtuais que simulam um computador físico em forma de software.
+26/02/2026
+    Hardware é o que mantém o computador funcionamento. Sistema operacional comunica o hardware com o software. Programas de interface são em resumo duas, GLI (é que a interface gráfica) e a CLI 
+    (interface via linha de comando). Aplicações são os programas, como word, office, vscode e etc. A diferença entra a interface bonita e a interface feia é que a interface bonita o usuário consegue 
+    entender e utilizar (como por exemplo, a do Windows), agora a interface feia o usuário não entende nada, por ser apenas códigos, bibliotecas e arquivos de uma linguagem de baixo nivel. A abstração 
+    é o simplicação de focar apenas no objetivo ou conceito, ignorando detalhes complexos e desnecessarios. Em SO, a abstração de recursos é ocultar detalhes complexos de implementação dos recursos do 
+    hardware, para que programas consigam interagir com esses recursos de maneira simplificada e padronizada. No SO, a abstração de recursos é o principal objetivo, além de gerenciar recursos. Em outras 
+    palavras, a abstração de recursos é o que garante que o SO converse e interaga com o hardware, indepentende de qual modelo de hardware seja. Exemplo: no Discord, ao invés de ele ter um código para cada
+    tipo de microfone (exemplo de hardware), ele fez apenas um código, indepentende dos diversos tipos de microfones. Assim, facilitando o suporte (e a vida) dos usuários (desde os desenvolvedores até os 
+    usuários finais), aplicações e hardware. Além disso, o abstração de recursos traz essa tradução do hardware para a aplicação mostrando um interfaceamento mais amigavel ao usuário. O HAL é a camada de 
+    abstração de hardware, fica entre o hardware físico e o software, sua função é fazer a abstração, ou seja, ocultar as diferenças dos hardwares fazendo uma plataforma consistente de rodas as aplicações e 
+    esse é o arquivo mais susceptível a ataque de vírus.
