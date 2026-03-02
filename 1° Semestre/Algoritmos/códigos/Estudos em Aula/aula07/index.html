@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If ternário</title>
+</head>
+<body>
+    <h3>Qual é a reposta númerica?</h3>
+    <input type="number" id="ipt_numero">
+
+    <button onclick="adivinhar()">Adivinhe</button>
+
+    <div id="id_resultado"></div>
+</body>
+
+<script>
+    function adivinhar() {
+        let numero = Number(ipt_numero.value);
+
+        // if ternário
+        // parametro ? if : else
+        let mensagem = numero == 69 ? 'você acertou' : 'você errou'
+
+        id_resultado.innerHTML = mensagem;
+    };
+
+</script>
+
+</html>
