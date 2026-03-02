@@ -34,5 +34,23 @@
     impedir a execução do projeto/ impedimentos que que afetam o desempenho ou o resultado de um projeto. As principais Restrições são: prazo, escopo e custos. Milestone é um ponto significante
     do projeto, datas importantes dentro do cronograma, que representam pontos chaves na trajetoria do projeto, mostrando avanços importantes. A equipe de projetos é o grupo de pessoas resposaveis
     por planejar, executar e acompanhar todas as atividades durante todo o projeto. Eles são liderados por um gestor de projeto que organiza tudo, tarefas, prazos e etc. Pontos chaves para a 
-    organização da equipe: quem participa, suas habilidades, premissas e restrições. Orçamento = recursos financeiros para fazer o projeto. Sustentação = processo que garante que o sistema continua
+    organização da equipe: quem participa, suas habilidades, premissas e restrições. Orçamento = recursos financeiros para fazer o projeto. Sustentação = processo que garante que o sistema continua,
     funcionando de forma estavel, segura e continua após sua implementação, em resumo, é o que mantém o projeto vivo e funcionando após ser entregue (é como se fosse a manutenção depois que ser entregue)
+02/03/2026
+    Em um Escopo, deve ter pelo menos um breve resumo do projeto, um macro cronograma e alguns recursos necessários. Diagrama de solução é uma represetação gráfica do projeto. 
+    Budget são os meus recursos financeiros para eu realizar o meu projeto. A documentação é uma fonte confiavel das informações do projeto, é nela onde podemos encontrar tudo 
+    relacionado ao projeto. Lembrando, o obvio não existe, na maioria das vezes o obvio precisar e deve ser dito. Resumo dos 4 principais pilares de uma documentação: Contexto 
+    (explica o projeto e problema), Objetivo (são os entregaveis do projeto), Justificativa (convencer alguém de comprar meu projeto) e Escopo (os limites do meu projeto). Os 
+    requisitos são elementos que detalham o escopo, e são elementos entregaveis que devem estar funcionando dentro do projeto. Eles definem o que deve ser entregado, como deve 
+    funcionar e quais criterios devem ser atentidos. Estabelecem as funcionalidades que devem ter no meu projeto, padrões de qualidade e desempenho, detalhes tecnicos e o que 
+    deve estar presente ou não. Os requisitos transformam uma ideia em algo concreto, mensurável e possível de ser desenvolvido com clareza e controle. A coleta de objetivos é 
+    uma parte fundamental, pois nela é onde identifico, entendo e documento as minhas necessidades para chegar no objetivo do projeto. Precisam ser claros, completos e 
+    detalhados. Lembre-se, 70% dos projetos dão errado pela má coleta de requisitos. Requisito Funcional = funções que o software deve fazer (funcionalidades, regras de negocios 
+    e etc.). Requisito Não Funcional = como o sistema deve funcionar, independente das funcionalidades (qualidades, restrições, caracteristicas, estilização e etc.). A classificação 
+    de requisitos é uma parte fundamental, pois ela facilita a entrega dos requisitos (de acordo com sua importancia e necessidade) e compreender o impacto de cada requisito.
+    Classificamos em: Essencial (a solução não pode ser entrega sem ele. Principal. 1°. Segue o ponto de vista do desenvolvedor), Importante (pode não ser entregue, mas 
+    representa um diferencial significativo) e Desejável (acrescenta valor, mas não tem impacto imediato). Por exemplo, um carro, o essencial é o motor, materia, rodas e etc., 
+    importante é ar-coondicionado, limpador de vidro trazeiro e Desejável é coisas como corzinha. BackLog é o acumulo de todos os requisitos detalhados e listados, que ainda não
+    foram concluidos. É como se fosse um repositorio de requisitos, no qual armazeno todos os meu requisitos, podendo colocar destrição e classificação, e colocando em colunas 
+    como "feito", "a fazer", "fazendo", "soliticitado", como se fosse o kanbam. Mas lembre-se, com BackLog mal escrito, as vezes é melhor nem ter um, pois podemos ter uma 
+    direção errada do que fazer ou o que precisa ser feito. 
