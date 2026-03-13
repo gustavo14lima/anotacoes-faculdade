@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício: Detector de Mensagens Suspeitas</title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_campo_texto">Insira um texto: </label>
+        <input type="text" id="ipt_campo_texto">
+    </div>
+
+    <button onclick="analisarMensagem()">Analisar mensagem</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        function analisarMensagem() {
+            let campoTexto = ipt_campo_texto.value;
+            campoTexto = campoTexto.trim();
+
+            let tamanhoTexto = campoTexto.length;
+
+            if (campoTexto == ""){
+                div_resultado.innerHTML = `Digite uma mensagem válida.`;
+            } else if(tamanhoTexto < 10) {
+                div_resultado.innerHTML = `Mensagem muito curta para análise.`;
+            }else {
+                let textoComecaEu = campoTexto.startsWith('Eu') 
+                let primeiraLetra = campoTexto[0];
+                let quartaLetra = campoTexto[3];
+                let ultimaLetra = campoTexto[tamanhoTexto - 1];
+
+                let textoMaiusculo = campoTexto.toUpperCase();
+                let textoMinusculo = campoTexto.toLowerCase();
+                
+                let indiceBob = textoMinusculo.indexOf('bob');
+                let bobAparece = indiceBob >= 0 ? `Atenção: usuário Bob mencionado na mensagem.` : `Atenção: usuário Bob não mencionado na mensagem.`;
+
+                let textoTerminaBr = campoTexto.endsWith('.br')
+                let textoTerminaCom = campoTexto.endsWith('.com')
+                let textoLink = textoTerminaBr || textoTerminaCom;
+
+                let textoPromocao = textoMinusculo.indexOf('promoção');
+                let textoGratis = textoMinusculo.indexOf('grátis');
+                let textoSpan = textoPromocao >= 0 || textoGratis >= 0;
+
+                div_resultado.innerHTML = `
+                    <br>
+                    Tamanho do texto: ${tamanhoTexto} <br>
+                    Seu texto começa com "eu": ${textoComecaEu ? "Sim" : "Não"} <br>
+                    Seu texto termina com ".com": ${textoTerminaCom ? "Sim" : "Não"} <br>
+                    Seu texto termina com ".br": ${textoTerminaBr ? "Sim" : "Não"} <br>
+                    A primeira letra do texto é: ${primeiraLetra} <br>
+                    A quarta letra do texto é: ${quartaLetra = " " ? "é um espaço" : quartaLetra} <br>
+                    A última letra do texto é: ${ultimaLetra} <br>  
+                    O índice que aparece "bob" : ${indiceBob >= 0 ? indiceBob : `nenhum`} <br>
+                    ${bobAparece} <br>
+                    Seu texto em maiúsculo: ${textoMaiusculo} <br>
+                    Seu texto em minúsculo ${textoMinusculo} <br>
+                    Sua mensagem sem espaços no início e no fim: ${campoTexto} <br>
+                    ${textoLink ? `A mensagem contém um possível link.` : `A mensagem não contém um link.`} <br>
+                    ${textoSpan ? `Possível mensagem de spam detectada.` : `A mensagem não é um spam.`} <br>
+                    ${textoComecaEu ? "A mensagem parece estar escrita em primeira pessoa." : "A mensagem não foi escrita em primeira pessoa"}                `
+
+                if (textoSpan){
+                    div_resultado.innerHTML += `<br> <br> Mensagem suspeita`; 
+                } else if(textoLink){
+                    div_resultado.innerHTML += `<br> <br> Mensagem com link`;
+                } else {
+                    div_resultado.innerHTML += `<br> <br> Mensagem comum`;
+                }
+            }
+        };
+
+    </script>
+
+</body>
+</html>

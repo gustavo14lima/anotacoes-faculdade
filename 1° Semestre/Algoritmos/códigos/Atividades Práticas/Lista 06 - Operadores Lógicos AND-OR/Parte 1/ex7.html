@@ -1,0 +1,79 @@
+<!-- 
+Melhore o exercício 4, de tal forma que: 
+
+a) Sempre que ocorrer uma falha na autenticação, deve aparecer abaixo da frase de "Falha de autenticação" uma outra frase, como esta: 
+
+            Você ainda tem 2 tentativa(s) 
+
+b) A ideia é que o usuário tem 3 tentativas de autenticação. Sempre que errar novamente na autenticação, o "contador" de tentativas reduz em 1 na tela. 
+
+c) Uma vez que se esgotarem as tentativas, deve surgir mais uma frase abaixo, que seria 
+
+     Usuário BLOQUEADO! Procure seu gerente! 
+
+d) Em caso de usuário bloqueado, não adianta nem tentar fazer uma autenticação com as credenciais corretas, que nada mais acontecerá 
+
+e) Caso o usuário autentique com sucesso, sem que tenham sido queimadas as 3 tentativas, a mensagem de autenticação aparece normalmente e a frase com a quantidade de tentativas deve sumir da tela e deve ser "reiniciada" para as próximas falhas. 
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação Segura com Tentativas Limitadas</title>
+</head>
+<body>
+    
+   
+    <div>
+        <label for="ipt_login">Insira o seu login: </label>
+        <input type="text" id="ipt_login">
+    </div>
+    <div>
+        <label for="ipt_senha">Insira a sua senha: </label>
+        <input type="text" id="ipt_senha">
+    </div>
+    <div>
+        <label for="ipt_informacao_pessoal">Insira a sua informação pessoal: </label>
+        <input type="text" id="ipt_informacao_pessoal">
+    </div>
+
+    <div id="button_autentificar">
+        <button onclick="autenticar()">Autenticar</button>
+    </div>
+    <h4 id="h4_resultado"></h4>
+    <h4 id="h4_tentativas"></h4>
+
+<script>
+
+    let contadorTentativas = 3;
+
+    function autenticar() {
+        let login = ipt_login.value;
+        let senha = ipt_senha.value;
+        let informacaoPessoal = ipt_informacao_pessoal.value;
+
+        if (login == 'ana' && senha == 'braga' && informacaoPessoal == 1949 || informacaoPessoal == 'louro josé'){
+            h4_resultado.innerHTML = `Usuário autenticado`
+            contadorTentativas = 3;
+        } else {
+            if (contadorTentativas > 0){
+                contadorTentativas -= 1;
+            }
+            h4_resultado.innerHTML = `Falha na autenticação`
+        }
+
+        h4_tentativas.innerHTML = `Você ainda tem ${contadorTentativas} tentativa(s)`
+
+        if (contadorTentativas == 0){
+            h4_tentativas.innerHTML += `<br> Usuário BLOQUEADO! Procure seu gerente!`
+            button_autentificar.innerHTML = `<button>Autenticar</button>`
+        }
+    };
+
+</script>
+
+</body>
+</html>

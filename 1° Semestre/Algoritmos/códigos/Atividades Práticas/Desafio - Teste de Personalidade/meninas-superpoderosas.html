@@ -1,0 +1,68 @@
+<!-- Equipe 6:
+    Carlos Eduardo
+    Maria Fernanda
+    Gustavo Lima
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalidade as Meninas Superpoderosas</title>
+</head>
+<body id="id_body">
+
+    <label for="ipt_inteligencia">Insira um valor para inteligência: </label>
+    <input type="number" id="ipt_inteligencia">
+
+    <br>
+
+    <label for="ipt_coragem">Insira um valor para a coragem: </label>
+    <input type="number" id="ipt_coragem">
+
+    <br>
+    <label for="ipt_coragem">Insira um valor para a sensibilidade: </label>
+    <input type="number" id="ipt_sensibilidade">
+
+    <br>
+    <label for="ipt_temperamento">Insira um valor para a temperamento: </label>
+    <input type="number" id="ipt_temperamento">
+
+    <br>
+    <button onclick="analisar()">Analisar</button>
+
+    <div id="div_resultado"></div>
+</body>
+
+<script>
+    function analisar() {
+        let inteligencia = Number(ipt_inteligencia.value);
+        let coragem = Number(ipt_coragem.value);
+        let sensibilidade = Number(ipt_sensibilidade.value);
+        let temperamento = Number(ipt_temperamento.value);
+
+        // condição florzinha
+        if((inteligencia >= 8 && coragem >= 7 && temperamento <= 6) || (inteligencia > sensibilidade && inteligencia > coragem)){
+            div_resultado.innerHTML = `<img src="https://media1.tenor.com/m/W20AikH-VmgAAAAC/daddy-daddys-girl.gif">`
+            div_resultado.innerHTML += `<br> <h4 style="color: red;">Florzinha</h4>`
+            id_body.style.backgroundColor = 'pink'
+        } // condição Lindinha
+        else if((sensibilidade >= 8 && temperamento <=5) || (sensibilidade > inteligencia && sensibilidade > coragem)){
+            div_resultado.innerHTML = `<h4 style="color: blue;">Lindinha</h4>`
+            div_resultado.innerHTML += `<img src = "https://media1.tenor.com/m/hzDgzpw1dvQAAAAC/bubbles-flying.gif">`
+            id_body.style.backgroundColor = 'lightblue'
+
+        }else // condição Docinho
+        {
+             div_resultado.innerHTML = `<span style="color:darkgreen">Docinho</span>
+             <img src ="https://media1.tenor.com/m/UliFs7K2REAAAAAC/butter-cup-power-puff.gif">`
+             id_body.style.backgroundColor = 'lightgreen'
+        }
+
+
+    };
+
+</script>
+
+</html>

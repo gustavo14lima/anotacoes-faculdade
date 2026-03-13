@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="ipt_texto">
+    <button onclick="validar()">Validar Frase</button>
+
+    <script>
+        function validar() {
+            let frase = ipt_texto.value;
+
+            // validar inicio de um texto -> estou verificando se a variavel frase começa (startsWith) com Bob
+            let contemBobInicio = frase.startsWith("Bob");
+            console.log(`O texto começa com "Bob"? ${contemBobInicio}`);
+            
+            // validar fim de um texto -> estou verificando se a variavel frase termina com bob (endsWith)
+            let contemBobFim = frase.endsWith("Bob"); 
+            console.log(`O texto termina com "Bob"? ${contemBobFim}`);
+            
+            // função para tirar o espaço no inicio e no fim da variavel
+            let fraseSemEspacoDasPontas = frase.trim();
+            console.log(`Texto sem tratamento: ${frase}`);
+            console.log(`Texto com tratamento: ${fraseSemEspacoDasPontas}`)
+
+            // verificando quantos caracteres a frase tem
+            let tamanhoFrase = frase.length; // length -> propriedade da string 
+            console.log(`O tamanho da frase é: ${tamanhoFrase}`);
+            
+            // conjunto de caracteres, uma string é um array (vetor). Que é um espaço na memória
+            // Podemos acessar um vetor através dos indices, começando em 0 
+            let primeiraLetra = frase[0]; // pegando a primeira letra da string 'frase'
+            console.log(`Primeira letra da frase: ${primeiraLetra}`);
+
+            // pegando a última letra da frase
+            let ultimaLetra = frase[tamanhoFrase - 1]; // se o tamanho total é 9, eu vou pegar o index 8 (9 - 1)
+            console.log(`A última letra da frase: ${ultimaLetra}`);
+            // caso eu extrapole o tamanho do array, resultara em um "undefined"
+
+            // substituindo "o" por "a" 
+            let substituindoLetras = frase.replace('o', 'a');
+            console.log(substituindoLetras);
+
+            // Mostrando o indice da uma palavra especifica -> pegando o indice de onde aparece "labubu" na string frase
+            // só mostra se a palavra aparece pela primeira vez, ou seja, se tiver dois "labubu" vai voltar apenas o primeiro "labubu"
+            let indiceLabubu = frase.indexOf('labubu');
+            console.log(indiceLabubu); // caso resulte no indice -1, resulta que não existe a palavra "labubu" na sua string frase
+
+            // deixando a frase com todos os seus caracteres em maiusculo
+            let fraseCaixaAlta = frase.toUpperCase();
+            console.log(`Frase em maiuculo: ${fraseCaixaAlta}`);
+
+            // deixando a frase com todos os seus caracteres em minusculo
+            let fraseCaixaBaixa = frase.toLowerCase();
+            console.log(`Frase em minusculo: ${fraseCaixaBaixa}`);
+        };
+        
+    </script>
+
+</body>
+</html>

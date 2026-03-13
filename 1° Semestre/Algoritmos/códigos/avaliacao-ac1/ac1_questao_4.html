@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Questão 4</title>
+</head>
+<body>
+   <h2>Questão 4</h2>
+   <span>Quantidade de m³ de gás consumidos:</span>
+   <input type="text" id="input_metros"> <br>
+
+   <span>Tipo de Sistema: "GN" (Gás Natural) ou "GLP" (Gás de Botijão)</span>
+   <input type="text" id="input_sistema"> <br>
+
+   <span>Valor da Taxa de Instalação Fixa em Reais: </span>
+   <input type="text" id="input_taxa"> <br>
+
+   <button onclick="calcular()">Calcular Despesa</button>
+
+   <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+/* Faça sua lógica aqui! Não altere o HTML. */
+let contador = 0;
+
+function calcular() {
+   contador += 1;
+
+   let metros = Number(input_metros.value);
+   let sistema = input_sistema.value;
+   let taxa = Number(input_taxa.value);
+
+   let valorPorMetroCubico;
+   let sistemaGas;
+
+   if (metros < 0){
+      div_mensagem.innerHTML = `A quantidade de metros não pode ser negativa...`;
+   } 
+
+   if (sistema == "GN"){
+      metros <= 20 ? valorPorMetroCubico = 6 : valorPorMetroCubico = 8
+
+      sistemaGas = "Gás Natural"
+   } else if (sistema == "GLP") {
+      metros <= 20 ? valorPorMetroCubico = 5 : valorPorMetroCubico = 7.5
+
+      sistemaGas = "Gás de Botijão"
+   } else {
+      div_mensagem.innerHTML = `Operação inválida, utilize as especificadas!`;
+   }
+
+   let valorBase = metros * valorPorMetroCubico;
+
+   let custoTotalBruto = valorBase + taxa;
+
+   let porcentual = (taxa / custoTotalBruto) * 100;
+
+   div_mensagem.innerHTML += `
+   <br> 
+   Simulação ${contador}: <br>
+   Sistema de ${sistema} - O valor final é R$ ${custoTotalBruto.toFixed(2)}. A taxa fixa de R$ ${taxa.toFixed(2)} representou ${porcentual.toFixed(2)}% do total bruto.`
+}
+</script>

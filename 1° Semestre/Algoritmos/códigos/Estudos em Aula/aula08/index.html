@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="ipt_idade">
+    <input type="number" id="ipt_qtd_pets">
+
+    <button onclick="analisar()">Analisar</button>
+
+    <div id="div_resultado"></div>
+
+<script>
+    // se o cliente é maior de idade e tem mais de 3 pets, pode pegar o crédito
+    function analisar() {
+        let idade = Number(ipt_idade.value);
+        let qtdPets = Number(ipt_qtd_pets.value);
+
+        // operador && = e (as duas condições precisam ser verdadeiras)
+        // a condição é verdadeira se a idade for maior ou igual a 18 E a quantidade de pets for maior ou igual a 3
+        if(idade >= 18 && qtdPets >= 3){
+            div_resultado.innerHTML = `Você tem direito ao crédito. Nice`
+        }
+
+        // operador || = ou (uma das condições precisa ser verdadeiras)
+        // a condição é verdadeira se a idade for maior ou igual a 18 OU a quantidade de pets for maior ou igual a 3
+        if(idade >= 18 || qtdPets >= 3){
+            div_resultado.innerHTML = `Você tem direito ao crédito. Nice`
+        }
+
+        // operador ! = diferente, negação, se for FALSE vira TRUE, se for TRUE vira FALSE
+    };
+
+</script>
+
+</body>
+</html>
