@@ -1,0 +1,182 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+<!-- Complementada por Gustavo Lima | 2026.3 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lima's Machine</title>
+</head>
+<body>
+
+    <!-- Estilização e Centralização -->
+    <style>
+        body{
+            background-color: #EEE;
+        }
+        h1{
+            text-align: center;
+        }
+
+        .container{
+            height: 75vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container .separacao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container .separacao  .sublinhado{
+            border-bottom: 1px solid #000;
+        }
+
+    </style>
+
+    <h1>Lima's Machine</h1>
+
+    <!-- Div container = elemento pai para o flex box -->
+    <div class="container">
+
+        <!-- caixa para coleta de dados de números decimais -->
+        <div class="separacao">
+            <h3>Digite um número decimal: </h3>
+            <input type="text" id="ipt_numero_decimal" placeholder="Ex: 42">
+
+            <button onclick="converterDecimal()">Converter Decimal</button>
+
+            <h3 class="sublinhado">Resultado</h3>
+
+            <h4>Octal:</h4>
+            <div id="decimalOctal"></div>
+            
+            <h4>Hexadecimal: </h4>
+            <div id="decimalHexadecimal"></div>
+
+            <h4>Binário: </h4>
+            <div id="decimalBinario"></div>
+
+        </div>
+
+        <!-- caixa para coleta de dados de números binários -->
+        <div class="separacao">
+            <h3>Digite um número binário: </h3>
+            <input type="text" id="ipt_numero_binario" placeholder="Ex: 1101">
+
+            <button onclick="converterBinario()">Converter Binário</button>
+
+            <h3 class="sublinhado">Resultado</h3>
+
+            <h4>Octal: </h4>
+            <div id="binarioOctal"></div>
+
+            <h4>Hexadecimal: </h4>
+            <div id="binarioHexadecimal"></div>
+
+            <h4>Decimal: </h4>
+            <div id="binarioDecimal"></div>
+
+
+        </div>
+
+        <!-- caixa para coleta de dados de números octais -->
+        <div class="separacao">
+            <h3>Digite um número octal: </h3>
+            <input type="text" id="ipt_numero_octal" placeholder="Ex: 423">
+
+            <button onclick="converterOctal()">Converter Octal</button>
+
+            <h3 class="sublinhado">Resultado</h3>
+
+            <h4>Decimal: </h4>
+            <div id="octalDecimal"></div>
+
+            <h4>Hexadecimal: </h4>
+            <div id="octalHexadecimal"></div>
+
+            <h4>Binário: </h4>
+            <div id="octalBinario"></div>
+        </div>
+
+        <!-- caixa para coleta de dados de números hexadecimais -->
+        <div class="separacao">
+            <h3>Digite um número hexadecimal: </h3>
+            <input type="text" id="ipt_numero_hexadecimal" placeholder="Ex: FF">
+
+            <button onclick="converterHexadecimal()">Converter Hexadecimal</button>
+
+            <h3 class="sublinhado">Resultado</h3>
+
+            <h3>Octal: </h3>
+            <div id="hexadecimalOctal"></div>
+
+            <h3>Decimal: </h3>
+            <div id="hexadecimalDecimal"></div>
+
+            <h3>Binário: </h3>
+            <div id="hexadecimalBinario"></div>
+        </div>
+
+    </div>
+
+    <!-- caso queira entender o código, ao final deste arquivo terá um comentário com todo o meu raciocínio -->
+    <script>
+        // função de converção decimal para demais bases
+        function converterDecimal() {
+            let numeroDeciml = Number(ipt_numero_decimal.value);
+
+            decimalOctal.innerHTML = numeroDeciml.toString(8);
+            decimalHexadecimal.innerHTML = numeroDeciml.toString(16).toUpperCase();
+            decimalBinario.innerHTML = numeroDeciml.toString(2);
+        };
+
+        // função de converção binária para demais bases
+        function converterBinario() {
+            let numeroBinario = parseInt(Number(ipt_numero_binario.value), 2)
+
+            binarioOctal.innerHTML = numeroBinario.toString(8);
+            binarioHexadecimal.innerHTML = numeroBinario.toString(16).toUpperCase();
+            binarioDecimal.innerHTML = numeroBinario.toString(10);
+        };
+
+        // função de converção octal para demais bases
+        function converterOctal() {
+            let numeroOctal = parseInt(Number(ipt_numero_octal.value), 8);
+
+            octalDecimal.innerHTML = numeroOctal.toString(10);
+            octalHexadecimal.innerHTML = numeroOctal.toString(16).toUpperCase();
+            octalBinario.innerHTML = numeroOctal.toString(2);
+        };
+
+        // função de converção hexadecimal para demais bases
+        function converterHexadecimal() {
+            let numeroHexadecimal = parseInt(ipt_numero_hexadecimal.value, 16);
+            
+            hexadecimalOctal.innerHTML = numeroHexadecimal.toString(8);
+            hexadecimalDecimal.innerHTML = numeroHexadecimal.toString(10);
+            hexadecimalBinario.innerHTML = numeroHexadecimal.toString(2);
+        };
+
+    </script>
+</body>
+</html>
+
+<!-- 
+Anotações:
+    .toString() -> função principal, transformar número em texto.
+        |_ Pode passar parâmetros, que define a base númerica da conversão 
+        |_ Surpreendentemente, o JavaScript já faz toda a conversão, até colocando as respectivas letras no hexadecimal
+            |_ Por exemplo, JavaScript executa divisõespor 2 até chegar ao resultado final. Isso fazendo para todas as bases.  
+
+    quando utilizamos a propriedade .value, afimamos que todo texto digitado será um número na base decimal. Por exemplo, '1010' não será representado como binário, e sim 'mil e dez'. Para resolver o problema, utilizamos a função .parseInt()            
+    
+    .parseInt() -> essa função é necessário inserir dois paramentros, o texto/número e para qual base quer converter. 
+        |_ Com essa função, podemos afirmar que os números com a propriedade .value não são mais decimais, e sim, a base indicada no segundo parametro
+
+    em resumo, para converter decimal para qualquer outra base, é melhor utilizar o .toString(), agora para converter qualquer outra base para o decimal, melhor usar o .parseInt()
+-->
