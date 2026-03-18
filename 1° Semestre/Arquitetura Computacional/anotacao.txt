@@ -37,3 +37,21 @@
         Para alimentar um Arduino, coloca-se um cabo no Arduino que é alimentado pelo computador, que é por esse mesmo cabo que "corre" os dados. O sensor utilizado em aula hoje, foi o de temperatura
         em que, ele tem três terminais (perninhas), que da esquerda para direita = 5v, entrada analogica, aterramente (GND). O cabo de 5V é a entrada de energia e o GND é a saida, assim a energia circula.
         "barriguinha de chop" virada para fora do Arduino, se não esquenta muito. E as cores dos fios são: 5V = vermelho, entrada analogica = colorido (qualquer um), GND = preto.
+18/03/2026
+    Bit é a menor unidade que um computador pode armazenar ou pocessar, sendo um valor binário (representa apenas 0 ou 1). Um byte é o conjunto de 8 bits, todo o sistema
+    operacional é orientado a bytes, ele é a unidade padrão para codificar e processar informações dentro de um SO. O computador trabalha com um conjunto de bytes, um sistema computacional/operacional não consegue trabalhar com 1 bit, ele precisa de pelo menos 1 byte para fazer um processamento. O conjunto de 8 bits sempre vai representar algum 
+    caracter no sistema operacional, por exemplo, o 01100001 pode representar o 0. Em um representação de byte, o bit com mais importância (o primeira da esquerda para a 
+    direita) representa o bit signal, no qual, ele é responsavel por representar ao computador se o número é positivo ou negativo, se o bit signal for 0, o número é positivo, se 
+    o bit signal for 1, o número é negativo. Para transformar um número de positivo para negativo, utilizamos o complemento de dois:
+        1° passo: inverter a polaridade do byte (o que é 0 vira 1 e o que é 1 vira 0)
+        2° passo: adicionar 1 no bit com menos importância (o primeiro da direita para esquerda)
+    Para inverter um número de negativo para positivo, apenas realize o mesmo processo. Quando um byte tem o seu byte signal representando algum valor (por exemplo o número 252 
+    que tem 8 bits de comprimento), deve-se adicionar um byte com todos os seus bits representando 0 (Ex: 11111100 -> 00000000 11111100). No inicio da computação, cada 
+    fabricante de computador tinha uma sequencia de 8 bits para representar um caracter, só que isso gera consequencias horriveis, o fabricante B não consegue ler o arquivo 
+    feito pelo fabricante A. Com isso surgiu a tabela ASCII 128, um código padrão americano com o papel de padronizar os caracteres com seus respectivos bytes.O bit signal é 
+    sempre representado por 0, para diferenciar números negativos de positivos, assim, com 7 bits para trabalho. Como é representado em 7 bits possibilita representar 128 caracteres no total. Atualmente, os códigos de 0 à 31 são códigos de controle, de 32 à 128, são códigos de impressão. Como a tabela ASCII 128 era um padrão americana, letras 
+    acentuadas e outro simbolos não foram definidos, com isso surgiu uma extensão da ASCII 128, utilizando o 8 bits para representar alguns elementos faltantes, assim criando a 
+    ASCII 256 (como está utilizando mais um bit, a quantidade de caracteres dobra). Essa expansão permitiu a inclusão de caracteres específicos de idiomas. Entretando, essa 
+    extensão foi um grande avanço, mas com um problema, cada regial tem seus simbolos e acentos. O Unicode seria a solução para esse problema, sendo a solução definitiva para o 
+    problema de representação de caracteres. O Unicode utiliza um número maior de bits para representar caracteres, mas em contrapartida, ele representa todos os simbolos 
+    existente, desde caracteres padrões, simbolos de outras linguas, emojis e simbolos de gráficos e matematicos. 
