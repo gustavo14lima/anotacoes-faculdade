@@ -1,0 +1,63 @@
+18/03/2026
+	caminho absoluto = /home/user/...
+	/ = diretorio raiz do Linux
+	sudo = você chama o sudo para realizar um comando com permissões root
+
+	pwd = verifica em qual diretório eu estou atualmente
+	ls = lista os arquivos e diretórios presentes no diretório atual 	
+	cd = navegação entre diretórios / muda de diretório
+		cd (cd sozinho) = navega até o diretório 'home'
+		cd .. = navega um diretório anterior ao atual (Ex: /home/user/Documentos -> /home/user)
+	mkdir directory = cria um diretório chamado 'directory'
+		mkdir -p directory1/directory2 = cria uma árvore de diretórios, ou seja, ele cria primeiro o diretório 'directory1' e em seguida, cria o 
+		diretório 'directory2' dentro do 'directory1'
+	nano = editor de texto no terminal
+	cat flie.txt = mostra o conteúdo de um arquivo, neste exemplo, mostra o conteúdo do file.txt
+	df -h = consulta a quantidade de espaço em disco restante (no meu caso, na coluna 'Sist. Arq.', a linha /dev/nvme0n1p4)
+	du -h file.txt = mostra o tamanho de um arquivo, neste exemplo, mostra o quanto o file.txt está pesando
+	htop/top = comandos de gerenciamento de tarefas no Linux
+	history = mostra todo os comandos executados pelo usuário (um Log de todos os comandos realizads pelo usuário) 
+	rm file.txt = exclui um arquivo, neste exemplo, exclui o file.txt
+		rm -r file.txt = exclui arquivos e/ou diretórios (esse é um comando muito poderoso, pois ele exclui qualquer coisa, sem perguntar se você tem 
+		certeza)
+		rm -rf file.txt = eu forço o sistema a excluir arquivos e/ou diretórios
+	rmdir directory = exclui apenas diretórios vazios
+	command --help = volta uma documentação sobre o comando escolhido
+	tree /directory = traz a árvore de diretórios do diretório escolhido
+
+	Comandos para Gerenciamento de Usuários:
+		cat /etc/passwd = lista todos os usuários do Linux, imprimindo os dados do arquivo de configuração. O formado de como as informações do usuário são entregues é:
+			username : x : userId : userGroupId : , , ,: home/username: /bin/bah
+				username = é o nome de usuário
+				x = campo de contém a senha criptografada (antigamente, a senha era exposta aqui, por isso que o arquivo /etc/passwd era um dos arquivos mais cobiçados pelos 
+				hackers)
+				userId = este é o ID do usuário (todo usuário tem um ID)
+				userGroupId = este é o ID do grupo do usuário (todo grupo tem um ID, podendo ser criado junto com um usuário ou separado)
+				, , , = esse é um campo (como podemos ver, campos são separados por dois pontos) usado para armazenar informações adicionais do usuário, como por exemplo, nome 
+				completo, informações de contato. 
+				/home/username = diretório inicial da conta do usuário, onde arquivos e dados do usuário são armazenados
+				/bin/bash = shell padrão da conta do usuário (interpretador de comandos usado para processar comandos inseridos pelo usuário no terminal)
+		id usernmae = com este comando, você pode ter o ID de qualquer usuário, além de saber em quais grupos o usuário está e quais são seus IDs
+		
+		sudo adduser username = você adiciona um novo usuário.
+			quando criamos um novo usuário, o comando automaticamente cria o ID do usuário e o ID do grupo deste usuário
+			lembre-se: não utilizar letras maiúsculas, resulta em erro
+		sudo passwd username = atribuindo uma nova senha para o usuário 'username'
+			quando criamos um novo usuário, você é obrigado a atribuir uma senha para ele, mas caso esqueça ou precisa de uma nova senha, esse comando é como um "recuperar senha"
+			posso alterar tanto a senha de um usuário em específico (sudo passwd username), quanto somente a senha do usuário proprietário da conta (passwd)
+		su username = comando para trocar de usuário, neste exemplo, eu estou trocando de usuário para o 'username'
+			para voltar ao meu usuário "padrão", eu apenas realizo o comando 'exit', que eu saio da conta 'username'
+		cat /etc/group = lista todo os grupos recém criados ou já criados
+		sudo usermod -aG group username = adicionando o usuário 'username' ao grupo 'group'
+		sudo userdel -r marcio = excluindo uma conta de uusário do sistema, garatindo que este usuário não tenha mais acesso aos arquivos
+		sudo addgroup group = adicionando u novo grupo no Linux			
+			semelhante ao adduser, quando criamos um grupo novo, é criado um novo ID para este grupo
+		sudo delgroup group = excluindo um grupo existente
+		sudo delgroup username group = removando o usuário 'username' do grupo 'group'
+		getent group grupoTeste = comando para mostrar todos os usuários que estão dentro de um grupo, neste exemplo, eu estou listando todos os usuários do grupo 'groupoTeste'
+
+		
+	Alguns usuários interresantes:
+		daemon: usado por serviços de sistema, que executam em segundo plano e não estão associados a uma interação direta com o usuário
+		bin: associado com arquivos binários essencias do sistema.
+		sys: executa determinados processos do sistema 
