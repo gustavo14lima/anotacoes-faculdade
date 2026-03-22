@@ -29,3 +29,16 @@
     usuários finais), aplicações e hardware. Além disso, o abstração de recursos traz essa tradução do hardware para a aplicação mostrando um interfaceamento mais amigavel ao usuário. O HAL é a camada de 
     abstração de hardware, fica entre o hardware físico e o software, sua função é fazer a abstração, ou seja, ocultar as diferenças dos hardwares fazendo uma plataforma consistente de rodas as aplicações e 
     esse é o arquivo mais susceptível a ataque de vírus.
+18/03/2026
+    Usuário em um sistema operacional é alguém que realiza atividades de acordo com a permissão que ele tem. Gerenciar as permissões dentro de um sistema operacional Linux é uma 
+    tarefa administrativa essencial. Permissões concedidas de maneira errada para usuários, é uma falha de segurança tremenda. Um usuário é um entendidade dentro de um sistema 
+    operacional, que pode manipular arquivos (pois, tudo em Linux se resume a arquivos). Em um sistema operacional Linux, todo usuário tem um ID. No SO Linux, os IDs são 
+    reservados da seguinte maneira: o ID 0 é reservado exclusivamente para o root, o ID 1 até 1000 são reservados para o Sistema e Aplicações, e os IDs 1000 para frente são 
+    reservados para usuários. Ou seja, a ordem seria root, sistema e padrão. No Linux, temos 3 tipos de usuários: Root User (tem acesso total no sistema Linux, usado para 
+    realizar tarefas de administração no sistema, ele não tem restrições), Padrão User (privilégios limitados, não podem realizar alterações no sistema ou em outras contas de 
+    usuários, tem apenas o acesso básico para utilização de recursos do sistema) e o Sudo User (usuário padrão que tem permissões para executar comandos como se fosse um usuário 
+    root, para utilizar comandos como que precisam de privilégios de root, deve utilizar o comando sudo antes do comando). Outra forma de utilizar o Sudo sem ser um usuário 
+    sudo, é colocar um usuário em um grupo que tenha o sudo. Os grupos são uma maneira de dar permissões específicas para mais de um usuário, usuários com as mesmas permissões. 
+    Tipos de usuários/contas no Linux: Sistema (contas para aplicações e serviços, server para executar tarefas específicas, operam com restrições específicas para aumentar a 
+    segurança e controle sobre as operações do sistema), Convidado (contas temporarias com privilégios restritos e controlados) e Grupo de Usuários (permissões são atribuitas 
+    para um conjunto de usuários, organizados em grupos lógicos com permissões idênticas). 
