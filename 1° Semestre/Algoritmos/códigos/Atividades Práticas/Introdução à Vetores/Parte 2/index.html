@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução á Vetores (Parte 2)</title>
+</head>
+<body>
+
+    <!-- Parte 1 - local onde o usuário poderá digitar os nomes que ele acredita ser o resultado da competição -->
+    <h1>Os melhores Souls Like</h1>
+    <label for="ipt_palpite1">O melhor Souls: </label>
+    <input type="text" id="ipt_palpite1" placeholder="Palpite para o 1º lugar"> <br>
+
+    <label for="ipt_palpite2">O segundo melhor Souls: </label>
+    <input type="text" id="ipt_palpite2" placeholder="Palpite para o 2º lugar"> <br>
+
+    <label for="ipt_palpite3">O terceiro melhor Souls: </label>
+    <input type="text" id="ipt_palpite3" placeholder="Palpite para o 3º lugar"> <br>
+
+    <label for="ipt_palpite4">O quarto melhor Souls: </label>
+    <input type="text" id="ipt_palpite4" placeholder="Palpite para o 4º lugar"> <br>
+
+    <label for="ipt_palpite5">O quinto melhor Souls: </label>
+    <input type="text" id="ipt_palpite5" placeholder="Palpite para o 5º lugar"> <br>
+
+    <button onclick="verificarPalpite()">Exibir resultado</button> <br>
+    <div id="div_resultado"></div> 
+
+    <br><br>
+    <!-- Parte 2 - exibindo o raking correto para o usuário -->
+    <h3>Ranking Correto</h3>
+    <button onclick="rankingCorreto()">Mostrar Ranking</button>
+    <div id="ranking_correto"></div>
+
+
+    <br><br>
+
+    <!-- Parte 2 - o usuário poderá montar sua própria lista de campeões. -->
+    <h2>Meus Campeões</h2>
+    <input type="text" id="ipt_campeoes_usuario" placeholder="Insira campeão"> <br>
+    <button onclick="adcionar()">Adicionar</button>
+    <div id="div_resultado_usuario"></div>
+
+    <br><br>
+
+    <!-- Parte 2 - seção de busca -->
+    <h2>Seção de Busca</h2>
+    <input type="text" id="ipt_buscar" placeholder="Insira um campeão para buscar">
+    <button onclick="buscarCampeao()">Pesquisar</button>
+    <div id="div_resultao_busca"></div>
+
+
+    <script>
+        // variaveis globais
+        let melhorSouls = ["Dark Souls II", "Dark Souls III", "Elden Ring", "Dark Souls I", "Elden Ring Nightreign"]
+        let campeoesUsuario = [];
+
+        let acertos = 0;
+        let erros = 0;
+        let palpitesAcertados = [];
+        let palpiteErrados = [];
+        
+        // função para verificar se o palpite do usuário está correto
+        function verificarPalpite() {
+            let primeiroPalpite = ipt_palpite1.value;
+            let segundoPalpite = ipt_palpite2.value;
+            let terceiroPalpite = ipt_palpite3.value;
+            let quartoPalpite = ipt_palpite4.value;
+            let quintoPalpite = ipt_palpite5.value;
+            
+            verificarPosicao(primeiroPalpite, melhorSouls[0]);
+            verificarPosicao(segundoPalpite, melhorSouls[1]);
+            verificarPosicao(terceiroPalpite, melhorSouls[2]);
+            verificarPosicao(quartoPalpite, melhorSouls[3]);
+            verificarPosicao(quintoPalpite, melhorSouls[4]);
+
+            div_resultado.innerHTML = `
+            Você acertou ${acertos} Souls e errou ${erros} <br>
+            Você acertou os seguintes Souls: ${acertos >= 0 ? palpitesAcertados : "Você errou todos..."} <br>
+            ${erros >= 0 ? `Você errou os seguintes Souls: ${palpiteErrados}` : "Você acertou todos!!!"}
+            `
+
+            acertos > 2 ? div_resultado.innerHTML += `Você conhece bem essa competição!` : div_resultado.innerHTML += `Você precisa acompanhar mais essa competição`
+        };
+
+        // função para reaproveitar a estrutura de decisão
+        function verificarPosicao (palpite, posicaoSouls){
+            if (palpite == posicaoSouls){
+                acertos += 1;
+                palpitesAcertados.push(palpite);
+            } else {
+                erros += 1;
+                palpiteErrados.push(palpite);
+            }
+
+        };
+
+        // função para mostrar qual é a ordem correta do ranking
+        function rankingCorreto() {
+            ranking_correto.innerHTML = `
+                1° - 🥇 <b> ${melhorSouls[0]} </b> <br>
+                2° - ${melhorSouls[1]} <br>
+                3° - ${melhorSouls[2]} <br>
+                4° - ${melhorSouls[3]} <br>
+                5° - ${melhorSouls[4]} <br>
+            `
+        };
+
+        // função que posibilita o usuário de criar seu próprio ranking
+        function adcionar() {
+            let adicionarCampeoes = ipt_campeoes_usuario.value;
+
+            campeoesUsuario.push(adicionarCampeoes);
+            div_resultado_usuario.innerHTML = `Novo campeão cadastrado. <br> ${campeoesUsuario}`
+        };
+        // usar o includes
+        function buscarCampeao() {
+            let buscar = ipt_buscar.value;
+
+            let buscarEmCampeoesUsuario = campeoesUsuario.includes(buscar);
+            let buscarEmMelhorSouls = melhorSouls.includes(buscar);
+
+            div_resultao_busca.innerHTML = `
+            ${buscarEmCampeoesUsuario ? `"${buscar}" está dentro da sua lista de campeões` : `"${buscar}" não está dentro da sua lista de campeões`} <br>
+            ${buscarEmMelhorSouls ? `"${buscar}" está dentro da lista de campeões do sistema` : `"${buscar}" não está dentro da lista de campeões do sistema`} <br>
+            ${buscarEmCampeoesUsuario && buscarEmMelhorSouls ? `"${buscar}" está dentro de ambas as listas de campeões` : `"${buscar}" não está presente em nenhuma das listas`}
+            `
+        };
+
+    </script>
+
+</body>
+</html>

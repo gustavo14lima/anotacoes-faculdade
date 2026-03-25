@@ -1,0 +1,72 @@
+<!-- 
+A cada 3 depósitos o banco dê um bônus de 1% sobre o valor acumulado após o depósito. Ex:   
+
+    1º Mês: R$ 500.00   
+
+    2º Mês: R$ 1000.00   
+
+    3º Mês: R$ 1515.00   
+
+    4º Mês: R$ 2015.00   
+
+    5º Mês: R$ 2515.00   
+
+    6º Mês: R$ 3045.15   
+
+    Total guardado: R$3045.15   
+
+Note que nos meses 3 e 6, o valor aumentou em 1% do total após o depósito.   
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_qtd_deposito">Insira a quantidade de depósitos você fez no banco: </label>
+        <input type="number" id="ipt_qtd_deposito">
+    </div>
+
+    <div>
+        <label for="ipt_valor">Insira o valor de cada depósito, sempre depositando o mesmo valor: </label>
+        <input type="number" id="ipt_valor">
+    </div>
+
+    <button onclick="acompanharGrana()">Acompanhar grana</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        let i;
+
+        function acompanharGrana() {
+            let qtdDeposito = Number(ipt_qtd_deposito.value);
+            let valor = Number(ipt_valor.value);
+            
+            let valorTotal = 0;
+            i = 1;
+            div_resultado.innerHTML = "";
+
+            for (i; i <= qtdDeposito; i++){
+                valorTotal += valor
+            
+                if (i % 3 == 0){
+                    valorTotal += (valorTotal * 0.01)
+                }
+                
+                div_resultado.innerHTML += `${i}° Mês: R$${valorTotal.toFixed(2)} <br>`;
+            }
+
+            div_resultado.innerHTML += `Total guardado: R$${valorTotal.toFixed(2)}`
+
+        };
+        
+    </script>
+
+</body>
+</html>

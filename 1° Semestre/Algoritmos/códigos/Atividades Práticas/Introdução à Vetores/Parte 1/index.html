@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução á Vetores (Parte 1)</title>
+</head>
+<body>
+    
+    <h3>Os melhores Souls Like</h3>
+    <label for="ipt_palpite1">O melhor Souls: </label>
+    <input type="text" id="ipt_palpite1" placeholder="Palpite para o 1º lugar"> <br>
+
+    <label for="ipt_palpite2">O segundo melhor Souls: </label>
+    <input type="text" id="ipt_palpite2" placeholder="Palpite para o 2º lugar"> <br>
+
+    <label for="ipt_palpite3">O terceiro melhor Souls: </label>
+    <input type="text" id="ipt_palpite3" placeholder="Palpite para o 3º lugar"> <br>
+
+    <label for="ipt_palpite4">O quarto melhor Souls: </label>
+    <input type="text" id="ipt_palpite4" placeholder="Palpite para o 4º lugar"> <br>
+
+    <label for="ipt_palpite5">O quinto melhor Souls: </label>
+    <input type="text" id="ipt_palpite5" placeholder="Palpite para o 5º lugar"> <br>
+
+    <button onclick="verificarPalpite()">Exibir resultado</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        let melhorSouls = ["Dark Souls II", "Dark Souls III", "Elden Ring", "Dark Souls I", "Elden Ring Nightreign"]
+
+        
+        function verificarPalpite() {
+            let acertos = 0;
+            let erros = 0;
+            let palpitesAcertados = [];
+            let palpiteErrados = [];
+            
+            let primeiroPalpite = ipt_palpite1.value;
+            let segundoPalpite = ipt_palpite2.value;
+            let terceiroPalpite = ipt_palpite3.value;
+            let quartoPalpite = ipt_palpite4.value;
+            let quintoPalpite = ipt_palpite5.value;
+            
+            verificarPosicao(primeiroPalpite, melhorSouls[0]);
+            verificarPosicao(segundoPalpite, melhorSouls[1]);
+            verificarPosicao(terceiroPalpite, melhorSouls[2]);
+            verificarPosicao(quartoPalpite, melhorSouls[3]);
+            verificarPosicao(quintoPalpite, melhorSouls[4]);
+            verificarPosicao('bob', 'tom');
+
+            div_resultado.innerHTML = `
+            Você acertou ${acertos} Souls e errou ${erros} <br>
+            Você acertou os seguintes Souls: ${acertos >= 0 ? palpitesAcertados : "Você errou todos..."} <br>
+            ${erros >= 0 ? `Você errou os seguintes Souls: ${palpiteErrados}` : "Você acertou todos!!!"}
+            `
+
+            acertos > 2 ? div_resultado.innerHTML += ` <br> Você conhece bem essa competição!` : div_resultado.innerHTML += ` <br> Você precisa acompanhar mais essa competição`
+        };
+
+        function verificarPosicao (palpite, posicaoSouls){
+            if (palpite == posicaoSouls){
+                acertos += 1;
+                palpitesAcertados.push(palpite);
+            } else {
+                erros += 1;
+                palpiteErrados.push(palpite);
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

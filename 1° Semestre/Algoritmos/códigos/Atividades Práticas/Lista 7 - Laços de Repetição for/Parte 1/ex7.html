@@ -1,0 +1,56 @@
+<!-- 
+Somente nos meses que ganhou o "bônus", apareça uma imagem de uma estrela bem pequena (reduza a imagem para ficar quase do tamanho da fonte) à direita do valor acumulado.      
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+
+    <div>
+        <label for="ipt_qtd_deposito">Insira a quantidade de depósitos você fez no banco: </label>
+        <input type="number" id="ipt_qtd_deposito">
+    </div>
+
+    <div>
+        <label for="ipt_valor">Insira o valor de cada depósito, sempre depositando o mesmo valor: </label>
+        <input type="number" id="ipt_valor">
+    </div>
+
+    <button onclick="acompanharGrana()">Acompanhar grana</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        let i;
+
+        function acompanharGrana() {
+            let qtdDeposito = Number(ipt_qtd_deposito.value);
+            let valor = Number(ipt_valor.value);
+            
+            let valorTotal = 0;
+            i = 1;
+            div_resultado.innerHTML = "";
+
+            for (i; i <= qtdDeposito; i++){
+                valorTotal += valor
+            
+                if (i % 3 == 0){
+                    valorTotal += (valorTotal * 0.01)
+                    div_resultado.innerHTML += ` <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTszNwXpj0op9oU1lvHXCW_yWAbZQ7Dfrgzag&s" alt="Entrela" width=16px> `
+                }
+                
+                div_resultado.innerHTML += `<br> ${i}° Mês: R$${valorTotal.toFixed(2)}`;
+            }
+
+            div_resultado.innerHTML += `<br> Total guardado: R$${valorTotal.toFixed(2)}`
+
+        };
+        
+    </script>
+
+</body>
+</html>

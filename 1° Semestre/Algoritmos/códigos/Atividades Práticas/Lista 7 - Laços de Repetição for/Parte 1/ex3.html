@@ -1,0 +1,44 @@
+<!-- 
+
+
+a) O usuário informe quantas "Coca-Cola" ele acha que já bebeu na vida   
+
+b) Ao clicar em "Ver a quantidade", devem aparecer na tela N garrafinhas (ou latas, se preferir) de "Coca-Cola" uma ao lado da outra, conforme a quantidade informada em a)   
+
+c) Para saber se seu programa está correto, teste algo assim: informe 20 e clique. Depois informe só 3 e clique novamente. Veja se vão aparecer só 3 garrafinhas (ou latas) na tela.    
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_qtd_coca_cola">Insira a quantidade de "Cola-Cola" você acha que bebeu na vida: </label>
+        <input type="number" id="ipt_qtd_coca_cola">
+    </div>
+
+    <button onclick="verQuantidade()">Ver a quantidade</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        let i;
+        
+        function verQuantidade() {
+            i = 1;
+            let qtdCocaCola = Number(ipt_qtd_coca_cola.value);
+            div_resultado.innerHTML = "";   
+
+            for(i; i <= qtdCocaCola; i++){
+                div_resultado.innerHTML += `<img src="https://assets.instabuy.app.br/ib.item.image.large/l-5be57a349db64b4bbbe2359a7af44a5d.jpeg" alt="Vidro de Coca-Cola 250ml" width="350px">`
+            }
+        };
+
+    </script>
+
+</body>
+</html>
