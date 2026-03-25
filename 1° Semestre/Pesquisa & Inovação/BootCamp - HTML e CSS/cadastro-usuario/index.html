@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cadastro">
+        <div class="cadastro_usuario">
+            <h1>Cadastre um Usuário</h1>
+
+            <div class="cadastro_nome">
+                <label for="ipt_nome">Insira o nome do usuário: </label>
+                <input type="text" id="ipt_nome" placeholder="Ex: Roberto">
+            </div>
+            <div class="cadastro_mensagem">
+                <label for="ipt_mensagem">Insira a sua mensagem: </label>
+                <input type="text" id="ipt_mensagem" placeholder="Ex: Batatinha">
+            </div>
+            <div class="cadastro_genero">
+                <label for="select_genero">Escolha um gênero: </label>
+                <select id="select_genero">
+                    <option value="select_genero_masculino">
+                        Masculino
+                    </option>
+                    <option value="select_genero_feminino">
+                        Feminino
+                    </option>
+                </select>
+            </div>
+
+            <button onclick="cadastrarUsuario()" class="button_cadastro">Cadastrar</button>
+        </div>
+    </div>
+    <div id="div_resultado"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
