@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>text
+    
+    <input type="text" id="ipt_fruta">
+    <button onclick="exibir()">Exibir</button>
+    <button onclick="adicionarFruta()">Adicionar</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        // vetor(array)
+        let frutas = ["Meão", "Maçã", "Maracuja", "Banana", "Kiwi"];
+
+        function exibir() {
+
+            let tamanho = frutas.length;
+            let primeiraFruta = frutas[0];
+            let ultimaFruta = frutas[tamanho - 1];
+
+            div_resultado.innerHTML = `
+            Sua lista tem: ${tamanho} frutas <br>
+            A primeira fruta é: ${primeiraFruta} <br>
+            A última fruta é: ${ultimaFruta} <br>
+            Frutas: ${frutas} <br>
+            `
+        };
+
+        function adicionarFruta() {
+            let fruta = ipt_fruta.value;
+            // adicionando em um array (vetor)
+            frutas.push(fruta);
+
+            div_resultado.innerHTML = `
+            <br> Array atualizado: ${frutas}
+            `
+        };
+
+    </script>
+
+</body>
+</html>
