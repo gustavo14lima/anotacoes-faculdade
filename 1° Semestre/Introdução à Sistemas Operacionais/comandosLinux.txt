@@ -49,6 +49,9 @@
 			para voltar ao meu usuário "padrão", eu apenas realizo o comando 'exit', que eu saio da conta 'username'
 		cat /etc/group = lista todo os grupos recém criados ou já criados
 		sudo usermod -aG group username = adicionando o usuário 'username' ao grupo 'group'
+			usermod (user mode)
+			-a = adiciona o usuário ao grupo
+			-G = nome do novo grupo que o usuário será adicionado
 		sudo userdel -r marcio = excluindo uma conta de uusário do sistema, garatindo que este usuário não tenha mais acesso aos arquivos
 		sudo addgroup group = adicionando u novo grupo no Linux			
 			semelhante ao adduser, quando criamos um grupo novo, é criado um novo ID para este grupo
@@ -60,4 +63,15 @@
 	Alguns usuários interresantes:
 		daemon: usado por serviços de sistema, que executam em segundo plano e não estão associados a uma interação direta com o usuário
 		bin: associado com arquivos binários essencias do sistema.
-		sys: executa determinados processos do sistema 
+		sys: executa determinados processos do sistema
+25/03/2026
+	Permissão de Acesso
+		Chmod (change mode) = altera a permissão de um arquivo ou diretório
+			Exemplo: chmod 777 flie.txt -> estou dando todas as permissões para o usuário dono, grupo dono e outros usuários para o arquivo file.txt
+					 chmod ugo+rwx directory -> estou dando todas as permissões para o usuário dono (u), grupo dono (g) e outros usuários (o) para o diretório directory
+					 	u = user owner | g = group | o = others | a = all |
+		Chown (change owner) = altera o usuário done e/ou o grupo dono de arquivos e diretórios
+			Exemplo: sudo chown user:group file.txt -> alterando o usuário e grupo dono do arquivo file.txt
+					precisa utilizar o comando sudo por causa que estamos realizando uma mudança de usuários
+					o dois pontos (:) é responsável por diferenciar o que seria o usuário do grupo. Antes dos dois pontos, é o usuário, depois do dois pontos, é o grupo.	
+						Exemplo:  sudo chown user: file.txt (altera apenas o usuário) | sudo chown :group file.txt (altera apenas o grupo)

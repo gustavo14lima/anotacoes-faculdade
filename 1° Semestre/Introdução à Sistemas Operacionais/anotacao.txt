@@ -1,34 +1,37 @@
 04/02/2026
-    Sistemas Operacionais (SO) é um programa que controla a execução de outros programas, ele é executado o tempo inteiro enquanto o computador estiver ligado, ele aloca serviços e 
-    recursos. Kernel: nucleo do SO, ele inicia o processo de detecção de todo o hardware necessário para o funcionamento do computador; Middleware: software que fornece serviços e 
-    recursos comuns, ele engloba tudo (comunicação entre aplicações); Shell: interpretador de programas, ele que proporciona interagir com o Kernel. Em outras palavras, o usuário
-    envia comandos por um terminal, que são interpretados pelo Shell, que o Shell envia o comando para o Kernel para comunicar com o hardware. O SO atua como um mediador entre o 
-    software e o hardware, ele facilita a comunicação e funcionamento entre diferentes componentes do sistema (gerencia todos os hardware e dispositivos), fornece uma interface 
-    amigável e permite a execução de multiplas tarefas ao mesmo tempo.
+    Sistemas Operacionais (SO) é um programa que controla a execução de outros programas, ele é executado o tempo inteiro enquanto o computador estiver ligado, ele aloca 
+    serviços e recursos. Kernel: nucleo do SO, ele inicia o processo de detecção de todo o hardware necessário para o funcionamento do computador; Middleware: software que 
+    fornece serviços e recursos comuns, ele engloba tudo (comunicação entre aplicações); Shell: interpretador de programas, ele que proporciona interagir com o Kernel. Em outras 
+    palavras, o usuário envia comandos por um terminal, que são interpretados pelo Shell, que o Shell envia o comando para o Kernel para comunicar com o hardware. O SO atua como 
+    um mediador entre o software e o hardware, ele facilita a comunicação e funcionamento entre diferentes componentes do sistema (gerencia todos os hardware e dispositivos), 
+    fornece uma interface amigável e permite a execução de multiplas tarefas ao mesmo tempo.
 11/02/2026
-    Infraestrutura significa disponibilizar e sustentar (ou estrtuturar) algo ou algum serviço. Em uma Infraestrutura de TI, segue-se os três principais pliares: Servidor(onde ocorre
-    o processamento), Storage (onde se armazena) e Roteador/Switch (é a rede). Esses três pilares são responsável por sustentar um sistema e um depende do outro (um não vive sem o outro).
-    Um computador é responsável pelo hardware (todos os componentes físicos), sistema operacional, programa de interface do usuário (que pode ser GUI ou CLI) e as aplicações do usuário (serviços,
-    jogos, aplicações e etc.). A memoria ram é responsável pelo armazenamento temporario e ela armazena tudo o que está na tela do usuário, assim, reduzido o tempo de fazer a requisão para 
-    o HD ou SSD (enquanto o computador estiver ligado). A BIOS é responsável por fazer a chegagem de todos os componentes (hardwares), verificando sse estão funcionamento corretamente 
-    (ou como deveria), depois dessa verificação, ela "passa" a bola para o sistema operacional. A atualização de hardware e sistemas operacionais em uma empresa é de suma importância
-    en necessidade por conta das atualizações que corrigem falhas, bugs, segurança e etc. Algums beneficios são: redução de custo, aumento da facilidade na administração dos recursos de TI,
-    maior velocidade na resolução de problemas e falhas, diminui parasitas e perda de exercução em trabalho e defini claramente os processos.
+    Infraestrutura significa disponibilizar e sustentar (ou estrtuturar) algo ou algum serviço. Em uma Infraestrutura de TI, segue-se os três principais pliares: Servidor(onde 
+    ocorre o processamento), Storage (onde se armazena) e Roteador/Switch (é a rede). Esses três pilares são responsável por sustentar um sistema e um depende do outro (um não 
+    vive sem o outro). Um computador é responsável pelo hardware (todos os componentes físicos), sistema operacional, programa de interface do usuário (que pode ser GUI ou CLI) 
+    e as aplicações do usuário (serviços, jogos, aplicações e etc.). A memoria ram é responsável pelo armazenamento temporario e ela armazena tudo o que está na tela do usuário, 
+    assim, reduzido o tempo de fazer a requisão para o HD ou SSD (enquanto o computador estiver ligado). A BIOS é responsável por fazer a chegagem de todos os componentes 
+    (hardwares), verificando sse estão funcionamento corretamente (ou como deveria), depois dessa verificação, ela "passa" a bola para o sistema operacional. A atualização de 
+    hardware e sistemas operacionais em uma empresa é de suma importância en necessidade por conta das atualizações que corrigem falhas, bugs, segurança e etc. Algums beneficios 
+    são: redução de custo, aumento da facilidade na administração dos recursos de TI, maior velocidade na resolução de problemas e falhas, diminui parasitas e perda de exercução 
+    em trabalho e defini claramente os processos.
 25/02/2026
-    A virtualização é uma tecnologia que permite a criação de ambientes virtuais, como um computador físico, dentro do seu computador. Com isso, é possivel executar vários SO diferentes no mesmo
-    hardware, apenas dividindo os recursos físicos entre as maquinas virtuais. Isso resultra em uma maior eficiência no uso dos recursos e flexibilidade para desenvolvimento, teste e produção de 
-    diferentes sistemas e aplicativos em um único servidor físico. As máquinas virtuais (VMs) são ambientes virtuais que simulam um computador físico em forma de software.
+    A virtualização é uma tecnologia que permite a criação de ambientes virtuais, como um computador físico, dentro do seu computador. Com isso, é possivel executar vários SO 
+    diferentes no mesmo hardware, apenas dividindo os recursos físicos entre as maquinas virtuais. Isso resultra em uma maior eficiência no uso dos recursos e flexibilidade para 
+    desenvolvimento, teste e produção de diferentes sistemas e aplicativos em um único servidor físico. As máquinas virtuais (VMs) são ambientes virtuais que simulam um 
+    computador físico em forma de software.
 26/02/2026
-    Hardware é o que mantém o computador funcionamento. Sistema operacional comunica o hardware com o software. Programas de interface são em resumo duas, GLI (é que a interface gráfica) e a CLI 
-    (interface via linha de comando). Aplicações são os programas, como word, office, vscode e etc. A diferença entra a interface bonita e a interface feia é que a interface bonita o usuário consegue 
-    entender e utilizar (como por exemplo, a do Windows), agora a interface feia o usuário não entende nada, por ser apenas códigos, bibliotecas e arquivos de uma linguagem de baixo nivel. A abstração 
-    é o simplicação de focar apenas no objetivo ou conceito, ignorando detalhes complexos e desnecessarios. Em SO, a abstração de recursos é ocultar detalhes complexos de implementação dos recursos do 
-    hardware, para que programas consigam interagir com esses recursos de maneira simplificada e padronizada. No SO, a abstração de recursos é o principal objetivo, além de gerenciar recursos. Em outras 
-    palavras, a abstração de recursos é o que garante que o SO converse e interaga com o hardware, indepentende de qual modelo de hardware seja. Exemplo: no Discord, ao invés de ele ter um código para cada
-    tipo de microfone (exemplo de hardware), ele fez apenas um código, indepentende dos diversos tipos de microfones. Assim, facilitando o suporte (e a vida) dos usuários (desde os desenvolvedores até os 
-    usuários finais), aplicações e hardware. Além disso, o abstração de recursos traz essa tradução do hardware para a aplicação mostrando um interfaceamento mais amigavel ao usuário. O HAL é a camada de 
-    abstração de hardware, fica entre o hardware físico e o software, sua função é fazer a abstração, ou seja, ocultar as diferenças dos hardwares fazendo uma plataforma consistente de rodas as aplicações e 
-    esse é o arquivo mais susceptível a ataque de vírus.
+    Hardware é o que mantém o computador funcionamento. Sistema operacional comunica o hardware com o software. Programas de interface são em resumo duas, GLI (é que a interface 
+    gráfica) e a CLI (interface via linha de comando). Aplicações são os programas, como word, office, vscode e etc. A diferença entra a interface bonita e a interface feia é 
+    que a interface bonita o usuário consegue entender e utilizar (como por exemplo, a do Windows), agora a interface feia o usuário não entende nada, por ser apenas códigos, 
+    bibliotecas e arquivos de uma linguagem de baixo nivel. A abstração é o simplicação de focar apenas no objetivo ou conceito, ignorando detalhes complexos e desnecessarios. 
+    Em SO, a abstração de recursos é ocultar detalhes complexos de implementação dos recursos do hardware, para que programas consigam interagir com esses recursos de maneira 
+    simplificada e padronizada. No SO, a abstração de recursos é o principal objetivo, além de gerenciar recursos. Em outras palavras, a abstração de recursos é o que garante 
+    que o SO converse e interaga com o hardware, indepentende de qual modelo de hardware seja. Exemplo: no Discord, ao invés de ele ter um código para cada tipo de microfone 
+    (exemplo de hardware), ele fez apenas um código, indepentende dos diversos tipos de microfones. Assim, facilitando o suporte (e a vida) dos usuários (desde os até os 
+    usuários finais), aplicações e hardware. Além disso, o abstração de recursos traz essa tradução do hardware para a aplicação mostrando um interfaceamento mais amigavel ao 
+    usuário. O HAL é a camada de abstração de hardware, fica entre o hardware físico e o software, sua função é fazer a abstração, ou seja, ocultar as diferenças dos hardwares 
+    fazendo uma plataforma consistente de rodas as aplicações e esse é o arquivo mais susceptível a ataque de vírus.
 18/03/2026
     Usuário em um sistema operacional é alguém que realiza atividades de acordo com a permissão que ele tem. Gerenciar as permissões dentro de um sistema operacional Linux é uma 
     tarefa administrativa essencial. Permissões concedidas de maneira errada para usuários, é uma falha de segurança tremenda. Um usuário é um entendidade dentro de um sistema 
@@ -41,4 +44,23 @@
     sudo, é colocar um usuário em um grupo que tenha o sudo. Os grupos são uma maneira de dar permissões específicas para mais de um usuário, usuários com as mesmas permissões. 
     Tipos de usuários/contas no Linux: Sistema (contas para aplicações e serviços, server para executar tarefas específicas, operam com restrições específicas para aumentar a 
     segurança e controle sobre as operações do sistema), Convidado (contas temporarias com privilégios restritos e controlados) e Grupo de Usuários (permissões são atribuitas 
-    para um conjunto de usuários, organizados em grupos lógicos com permissões idênticas). 
+    para um conjunto de usuários, organizados em grupos lógicos com permissões idênticas).  
+25/03/2026
+    O principal motivo para a criação de grupos seria a praticidade de permissionar (dar permissões) para mais de um usuário, assim facilitando e evitando atualizações 
+    desnecessárias, e a proteção de dadaos e informações (uma vez que, com as permissões atribuidas de forma errada, um usuário pode ter acesso a arquivos que ele não deveria, 
+    ou pode sair acabando e quebrando tudo), dar mais segurança aos arquivos Linux. Sem elas, os arquivos ficam vulneráveis a alterações e ataques mal intecionados. Em arquivos 
+    Linux, temos três níveis de permissionamento: o usuário dono do arquivo, o grupo do dono do arquivo e outros (outros usuários que não entram nos parametros das outras 
+    permissionamento). Utilizando o comando ls -l ira resultar isso:
+        -rw-r-xr-- 1 gustavo gustavo 7,7K mar 25 17:30 anotacao.txt
+    O primeiro caractere representa se ele é um diretório (d) ou um arquivo (-). Agora, os usuários e grupos são separados por conjunto de três caracteres:
+        - | rw- | r-x | r--     - = se é arquivo ou diretório | rwx = usuário dono | r-x = grupo do dono | r-- = outros usuários
+    Para dar permissões utilizamos ou números ou letras para representar a permissão:
+        r = read (ler o arquivo). Pode ser representado pelo número 4 ou pela letra r (+r)
+        w = write (escrever, editar, atualizar e etc.). Podendo ser representado pelo número 2 ou pela letra w (+r)
+        x = execution (executar algo). Repreentado pelo número 1 ou pela letra x (+x)
+        (os números são de acordo com as bases do sistema número octal: 2⁰ é o x que é igual a 1; 2¹ é o w que é igual a 2; e o 2³ que é o r que é igual a 4)
+    A sessão de um usuário é toda a sua interação com o sistema, desde o momento em que o usuário faz o login até o momento em que ele faz o logout. Mas a uma má pratica ao 
+    entrar em várias contas, uma encima da outra, você cria muitas sessões (assim utilizando um número grande de memoria RAM) e "tranca" um usuário em uma sessão (você não pode 
+    fazer mais nada com o usuário, como por exemplo, não consegue excluir ele, pois ele está dentro de uma sessão, mesmo se eu não esteja utilizando ela). A solução para este 
+    problema seria, ao invés de toda vez que for trocar de usuário, ao invés de utilizar o su, utilize o exit (ele sai da sessão, e volta uma sessão. Caso esteje na sessão 2, 
+    ele volta para a sessão 1), assim trabalhando com no máximo duas sessões. 
