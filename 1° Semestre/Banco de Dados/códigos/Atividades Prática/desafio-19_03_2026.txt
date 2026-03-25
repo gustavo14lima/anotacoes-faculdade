@@ -1,0 +1,8 @@
+No banco de dados, quero guardar a informação de familia. Familia tem: mãe, pai, avóes maternos e avós paternos (sem irmãos).
+Quero guardar isso no banco de dados.
+Como faço isso sem fazer um monte de tabelas?
+
+Pessoa	
+	nome
+	genero
+	cpf 
