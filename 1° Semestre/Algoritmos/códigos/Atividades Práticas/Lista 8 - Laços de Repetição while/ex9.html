@@ -1,0 +1,61 @@
+<!-- 
+Crie um programa o qual:
+ 
+
+a) Solicite um intervalo crescente de valores numéricos    
+
+b) Ao clicar num botão "S2 Pares"...   
+
+c) Exiba, debaixo do botão, todos os números pares contidos no intervalo.  
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. Pares no Intervalo  </title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_numero_inicial">Insira o número inicial do seu intervalo: </label>
+        <input type="number" id="ipt_numero_inicial">
+    </div>
+    <div>
+        <label for="ipt_numero_final">Insira o número final do seu intervalo: </label>
+        <input type="number" id="ipt_numero_final">
+    </div>
+
+    <button onclick="mostrarParesIntervalo()">S2 Pares</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        function mostrarParesIntervalo() {
+            let numeroInicial = Number(ipt_numero_inicial.value);
+            let numeroFinal = Number(ipt_numero_final.value);
+
+            if(numeroInicial < 0 || numeroFinal < 0){
+                alert('Os números informados precisam ser maior que 0')
+            } else {
+                if (numeroInicial >= numeroFinal){
+                    alert('Os números informados são incorretos para realizar a operação')
+                } else {
+                    while(numeroInicial < numeroFinal){
+                        if (numeroInicial % 2 == 0){
+                            div_resultado.innerHTML += `Número Par: ${numeroInicial} <br>`;
+                        };
+    
+                        numeroInicial ++;
+                    };
+                }
+            }
+
+        };
+
+    </script>
+
+
+</body>
+</html>
