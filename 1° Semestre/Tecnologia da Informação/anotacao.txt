@@ -1,5 +1,5 @@
 02/02/2026
-    tecnologia é a utilização de tecnicas, habilidades, metodos e processos para criar coisas uteis/soluções; Ajuda a resolver problemas, tarefas do dia a dia e descobertas 
+    tecnologia é a utilização de tecnicas, habilidades, métodos e processos para criar coisas uteis/soluções; Ajuda a resolver problemas, tarefas do dia a dia e descobertas 
     cientificas. Informação é a transmissão de conhecimento independente da forma, resultado do processamento e manipulação de dados; Ocorre a manipulação de dados brutos para 
     conteúdos estruturados, assim gerando um conhecimento para quem o recebe. A teconlogia da informação é o conjunto de recursos, tecnicas e sistemas utilizando computador para 
     realizar todo tipo de tarefa com dados e informações; a tecnologia da informação é uma área nova do mercado, com cerca de 50 anos, assim as empresas querem investir por não 
@@ -12,30 +12,33 @@
 09/02/2026
     Os projetos nascem a partir de três pilares: Problemas (95% dos casos, por que as empresas começam a perder ou parar de fazer lucro), caso queira fazer um projeto, escolher 
     com base em um probloma se torna uma das melhores opções, por causa que é mais fácil de dialogar sobre contexto, objetivo e justificativa; Necessidade; Oportunidade. Todo 
-    projeto precisa de um inicío, meio e principalmente de um fim; Um projeto tem esses quatros principais pilares: inicalização (definição do projeto, difinir claramento o seu proposito:
-    o problema, necessidade ou oportunidade), Planejamento (uma das etapas mais importantes, pois é onde se define as regras, equipes e recursos necessários, em resumo, é o levantamento
-    de requisitos), Execução (mão na massa, onde as ideias são colocadas em prática) e Encerramento (veerifica se os objetivos foram alcançados e se o projeto está pronto para a entrega)
-    PMBOK = melhor livro de documentação, ele veio para pradronizar todas as documentações. Pilares de uma documentação: Contexto (conjunto de condições e elementos para a produção,
-    como tempo, espaço e etc. Ela é essencial, pois garanti a compreensão adequada do conteúdo/proposito do projeto. Pode assumir várias formas: situacional, linguístico, histórico-cultural
-    visual. É no contexto onde eu defino o tema e explico a situação que motiva o trabalho, focar no problema), Objetivo (o que eu pretendo alcançar com esse projeto. A melhor forma
-    de fazer o objetivo é dentro do metodo SMART, ser especifico, mensurável, realista, relevante e temporal), Justificativa (argumento convincente para fazer alguém comprar meu 
-    projeto), Escopo (trabalho necessário para entregar um produto, serviço ou resultado, Mapeamento de todo trabalho necessário para finalizar o projeto, especifica os limites do 
-    projeto, estabelece resposabilidade para cada membro e processos de verificação e aprovação)
+    projeto precisa de um inicío, meio e principalmente de um fim; Um projeto tem esses quatros principais pilares: inicalização (definição do projeto, difinir claramento o seu 
+    proposito: o problema, necessidade ou oportunidade), Planejamento (uma das etapas mais importantes, pois é onde se define as regras, equipes e recursos necessários, em 
+    resumo, é o levantamento de requisitos), Execução (mão na massa, onde as ideias são colocadas em prática) e Encerramento (veerifica se os objetivos foram alcançados e se o 
+    projeto está pronto para a entrega) PMBOK = melhor livro de documentação, ele veio para pradronizar todas as documentações. Pilares de uma documentação: Contexto (conjunto 
+    de condições e elementos para a produção, como tempo, espaço e etc. Ela é essencial, pois garanti a compreensão adequada do conteúdo/proposito do projeto. Pode assumir 
+    várias formas: situacional, linguístico, histórico-cultural visual. É no contexto onde eu defino o tema e explico a situação que motiva o trabalho, focar no problema), 
+    Objetivo (o que eu pretendo alcançar com esse projeto. A melhor forma de fazer o objetivo é dentro do método SMART, ser especifico, mensurável, realista, relevante e 
+    temporal), Justificativa (argumento convincente para fazer alguém comprar meu projeto), Escopo (trabalho necessário para entregar um produto, serviço ou resultado, 
+    Mapeamento de todo trabalho necessário para finalizar o projeto, especifica os limites do projeto, estabelece resposabilidade para cada membro e processos de verificação e 
+    aprovação)
 23/02/2026
-    Escopo nada mais é que uma declaração com todo o trabalho necessário e que será realizado para fazer o projeto, incluindo informações como objetivo, limites, entregas e etc. Em resumo
-    a sua principal resposabilidade é definir o trabalho que será realizado, estabelecer limites, gerenciar mudanças e fornecer uma base para o planejamento do projeto. Alguns pontos para 
-    declarar um escopo: entender o problema que está tentando resolver, definir os entregaveis, identificar os recursos disponiveis e quais são os limites do meu projeto (como tempo e 
-    orçamento), cronograma e saber quais são e como resolver os riscos do projeto. No escopo, deve especificar: um resumo do projeto (contexto, motivação), definir os resultados esperados
-    com o final do projeto, apresentar os requisitos (criterios tecnicos e funcionais) que precisam ser atendidos para o projeto funcionar corretamente, apresentar o que está dentro e fora 
-    do scopo do projeto, fazer um cronograma (apresentar uma visão geral das principais fases e atividades do projeto, com definição de tempo, dia de inicio e fim), listar todos os recursos
-    necessários, como humanos, materiais, tecnologicos e etc., apresentar riscos que podem atrapalhar o andamento do projeto e mostrar o que cada um vez, sendo pessoa até organizção. Diagrama
-    é uma represetação gráfica para demonstrar um esquema, utilizando palavras chaves e setas/linhas para conectar tudo. Premissa está atrelada a algum risco, ela é todo fator que precisa
-    ser considerado como verdadeiro, como por exemplo, um risco, assumir que um risco é verdadeiro para que se possa planejar uma solução na premissa. Restrições são limitações que podem 
-    impedir a execução do projeto/ impedimentos que que afetam o desempenho ou o resultado de um projeto. As principais Restrições são: prazo, escopo e custos. Milestone é um ponto significante
-    do projeto, datas importantes dentro do cronograma, que representam pontos chaves na trajetoria do projeto, mostrando avanços importantes. A equipe de projetos é o grupo de pessoas resposaveis
-    por planejar, executar e acompanhar todas as atividades durante todo o projeto. Eles são liderados por um gestor de projeto que organiza tudo, tarefas, prazos e etc. Pontos chaves para a 
-    organização da equipe: quem participa, suas habilidades, premissas e restrições. Orçamento = recursos financeiros para fazer o projeto. Sustentação = processo que garante que o sistema continua,
-    funcionando de forma estavel, segura e continua após sua implementação, em resumo, é o que mantém o projeto vivo e funcionando após ser entregue (é como se fosse a manutenção depois que ser entregue)
+    Escopo nada mais é que uma declaração com todo o trabalho necessário e que será realizado para fazer o projeto, incluindo informações como objetivo, limites, entregas e etc. 
+    Em resumo a sua principal resposabilidade é definir o trabalho que será realizado, estabelecer limites, gerenciar mudanças e fornecer uma base para o planejamento do 
+    projeto. Alguns pontos para declarar um escopo: entender o problema que está tentando resolver, definir os entregaveis, identificar os recursos disponiveis e quais são os 
+    limites do meu projeto (como tempo e orçamento), cronograma e saber quais são e como resolver os riscos do projeto. No escopo, deve especificar: um resumo do projeto 
+    (contexto, motivação), definir os resultados esperados com o final do projeto, apresentar os requisitos (criterios tecnicos e funcionais) que precisam ser atendidos para o 
+    projeto funcionar corretamente, apresentar o que está dentro e fora do scopo do projeto, fazer um cronograma (apresentar uma visão geral das principais fases e atividades do 
+    projeto, com definição de tempo, dia de inicio e fim), listar todos os recursos necessários, como humanos, materiais, tecnologicos e etc., apresentar riscos que podem 
+    atrapalhar o andamento do projeto e mostrar o que cada um vez, sendo pessoa até organizção. Diagrama é uma represetação gráfica para demonstrar um esquema, utilizando 
+    palavras chaves e setas/linhas para conectar tudo. Premissa está atrelada a algum risco, ela é todo fator que precisa ser considerado como verdadeiro, como por exemplo, um 
+    risco, assumir que um risco é verdadeiro para que se possa planejar uma solução na premissa. Restrições são limitações que podem impedir a execução do projeto/ impedimentos 
+    que que afetam o desempenho ou o resultado de um projeto. As principais Restrições são: prazo, escopo e custos. Milestone é um ponto significante do projeto, datas  dentro 
+    do cronograma, que representam pontos chaves na trajetoria do projeto, mostrando avanços importantes. A equipe de projetos é o grupo de pessoas resposaveis por planejar, 
+    executar e acompanhar todas as atividades durante todo o projeto. Eles são liderados por um gestor de projeto que organiza tudo, tarefas, prazos e etc. Pontos chaves para a 
+    organização da equipe: quem participa, suas habilidades, premissas e restrições. Orçamento = recursos financeiros para fazer o projeto. Sustentação = processo que garante 
+    que o sistema continua, funcionando de forma estavel, segura e continua após sua implementação, em resumo, é o que mantém o projeto vivo e funcionando após ser entregue (é 
+    como se fosse a manutenção depois que ser entregue)
 02/03/2026
     Em um Escopo, deve ter pelo menos um breve resumo do projeto, um macro cronograma e alguns recursos necessários. Diagrama de solução é uma represetação gráfica do projeto. 
     Budget são os meus recursos financeiros para eu realizar o meu projeto. A documentação é uma fonte confiavel das informações do projeto, é nela onde podemos encontrar tudo 
@@ -54,3 +57,37 @@
     foram concluidos. É como se fosse um repositorio de requisitos, no qual armazeno todos os meu requisitos, podendo colocar destrição e classificação, e colocando em colunas 
     como "feito", "a fazer", "fazendo", "soliticitado", como se fosse o kanbam. Mas lembre-se, com BackLog mal escrito, as vezes é melhor nem ter um, pois podemos ter uma 
     direção errada do que fazer ou o que precisa ser feito. 
+23/03/2026
+    Método é um conjunto estruturado de práticas, técnicas e processos que guiam o andamento (seu planejamento, execução e encerramento)de um projeto; é como se fosse um passo a 
+    passo garantindo organização, qualidade e entrega dos resultados. Garante que uma tarefa seja executada corretamente. Não seguir o método pode trazer conseguencias como 
+    troca ou falta de material, etapas desorganizadas e grande quantidade de erros. Agora, a metodologia é o conjunto estruturado do método, processos, regras, tecnicas e 
+    ferramentas orientando a condução do projeto de forma padronizada; a metodologia é a organização de vários métodos e práticas. A metodologia orienta o conjunto de métodos de 
+    uma forma organizada, para diferentes situações. Em resumo, o método ensima como fazer uma tarefa (reduz erros, organiza o trabalho e aumaneta a previsibilidade dos 
+    resultados); a metodologia ensina como organizar e aplicar vários métodos para alcançar resultados consistentes em qualquer projeto (padroniza processos, facilita a 
+    adaptação, garante consistência e aumenta a eficiência na execução de projetos). Em gestão de projetos, temos duas principais metodologias: Cascata (waterfall) e a ágil. Na 
+    cascata as as atividades são executadas sequencialmente (outra tarefa só pode ser executada quantoa a anterior estiver pronta);modelo muito rigido e pouco flexivel; muito 
+    utilizado quando os requisitos são bem definidos e não tem possibilidade de serem alterados; por não ter um feedback constante do cliente, o gerente precisa ter um 
+    engajamento total no projeto. Na ágil é feita a ramificação de tarefas em pequanas partes, assim o cliente pode analisar e entregar feedback regularmente de acordo com o 
+    andamento do projeto; modelo flexivel; os requisitos podem ser alterados em qualquer momento do projeto; pode ter a repetição de etapas de acordo com a necessidade; os 
+    requisitos são evoluidos de acordo com o andamento do proejto e precisam ser revisados diariamente. Diferente do modelo cascata, o ágil pode ter alterações na fase de 
+    testes, sem comprometer o andamento do projeto. Toda metodologia é correta, apenas DEPENDE do projeto que está inserido. (é difícil agradar o cliente de primeira). O 
+    principal pilar da metodologia ágil é a sua adaptabilidade, flexibilidade e colaboratividade. Principais caracteristicas da metodologia ágil: ciclos curto de 
+    desenvolvimento, foco no valor, flexibilidade, comunicação frequente (entre equipe, cliente e outros), cultura de colaboração (ajudar o próximo) e melhoria contínua 
+    (identificar e melhorar os processos e resultados). Os 4 valores da metodologia ágil: indivíduos e interações, software em funcionamento, colaboração com o cliente e 
+    responder a mudanças. Os principios da metodologia ágil: satisfazer o cliente, aberto a mudanças, entregas frequentes, trabalhar em conjunto, confiar e apoiar, conversas 
+    face a face, software funcionando, desenvolvimento sustentavel, atenção contínua, simplicidade, times auto-organizados e refletir e ajustar. O SCRUM possui uma ideia 
+    simples: verifica, em intervalos regulares, se o projeto está indo no caminho certo, e se é aquilo que realmente o cliente quer. Segue dois principais pilares: inspeção e 
+    adaptação. No SCRUM os participantes precisam ter: coragem, foco, comprometimento, repeito e estar aberto a todo trabalho e desafio. O SCRUM foi inspirado em uma formação de 
+    rugby, no qual todos os jogadores estão focados em um só objetivo (a posse de bola). Os principais pilares são: transparência (com o cliente e participantes do grupo), 
+    verificação do projeto constantemente e adaptação. No SCRUM podemos adotar alguns ciclos: PDCA (Planejar, Desenvolver, Checar, Agir) e ShuHaRi (cohencer as regras, dominar 
+    as regras e ignorar as regras). O SCRUM FRAMEWORK segue o seguinte caminho: no backlog geral, há um planejamento para focar em alguns requisitos, assim formando o backlog da 
+    sprint, com o time da sprint, há uma daily diariamente, no qual é uma reunião de 15 minutos para discutir o andamento dos requisitos e sobre dificuldade e afins, depois, há 
+    a sprint reviewm, no qual é uma reunião com o cliente para conversar sobre os requisitos prontos, caso não for do agrado do cliente, há a sprint retrospective (que é uma 
+    reunião da propria equipe sobre como foi o andamento do projeto, pontos a continuar, a melhorar e afins) e depois volta para o backlog da sprint, caso foi do agrado do 
+    cliente, pode incrementar no projeto; quanto todos os requisitos estiver incremetados, o trabalho/sprint/projeto estará pronto. No SCRUM temos alguns papeis: Product Owner 
+    (PO) -> responsavel por falar com o cliente, transforma toda a conversa com o cliente em backlog, decide o que e por que esse requisito será feito, responsavel por controlar 
+    o backlog e suas prioridades; Scrum Master -> fala com a equipe, decide como o requisito será feito, responsavel pelo fluxo e ritmo do trabalho, elimina obstaculos, treina e 
+    intrega a equipe ao Scrum (ele pode treinar a equipe para outros requisitos também, como por exemplo, uma nova linguagem de programação), geralmente, o Scrum Master é o cara 
+    que possui as maiores habilidades tecnicas; time -> quanto menor o time, melhor (entre 6 ou 7 pessoas), transparência e precisar ser autonomo e multifuncional; Cliente -> 
+    parceiro do projeto (traz feedback, recomandação e etc). No SCRUM, todos os integrantes devem saber o que cada um está fazendo, e o que está acontecendo no projeto. O 
+    processo precisa ficar claro para todos, tudo precisa ficar as claras.
