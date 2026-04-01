@@ -91,3 +91,21 @@
     que possui as maiores habilidades tecnicas; time -> quanto menor o time, melhor (entre 6 ou 7 pessoas), transparência e precisar ser autonomo e multifuncional; Cliente -> 
     parceiro do projeto (traz feedback, recomandação e etc). No SCRUM, todos os integrantes devem saber o que cada um está fazendo, e o que está acontecendo no projeto. O 
     processo precisa ficar claro para todos, tudo precisa ficar as claras.
+30/03/2026
+    Em toda reunião com o cliente, antes o PO deve construir uma pauta, relacionando todos os itens a serem a avaliados com o cliente. Na pauta, o PO deve trazer todos os pontos 
+    estruturados, possibilitando o cliente de decidir rapidamente a prioridade de cada requisito. E nesta pauta, o PO mostra na prática o desenvolvimento do projeto, mostrando 
+    desde trello, documentação, até banco de dados e código. O foco é um dos quinco valores do SCRUM (além de comprometimento, coragem, respeito e abertura), no qual direciona 
+    toda a atenção e esforço da equipe naquilo que realmente é de valor ao cliente no momento, ou seja, em um ou mais requisitos que o cliente precisa urgentemente. Esse metodo 
+    concentra a energia e disposição do time naquilo planejado; o Sprint BackLog ajuda no foco pois é nele onde se encontra todos os requisitos para esta sprint. Com o foco, 
+    temos o aumento da proatividade, melhora na qualidade das entregas e reduz o retrabalho. Já dizia David Sanbonmatsu "o ser humano não consegue realizar várias tarefas ao 
+    mesmo tempo". E é o PO aquele que alinha a prioridade dos requisitos junto ao cliente. A estimativa serve para medir o tamanho, esforço ou complexidade de uma tarefa antes 
+    de realizar ela. Ela funciona a paritr de comparação entre tarefas, para saber qual é mais complexa que a outra, e não para calcular horas exatas que uma tarefa irá custar; 
+    mostrando assim para o time quantos requisitos conseguem fazer em uma sprint (é feita pelo time de desenvolvimento, já que são eles que codificam o projeto). Em resumo, uma 
+    estimativa é diferenciar o quão grande uma tarefa é em comparação aos outras. Podemos associoar estimativa com tamanho de roupas, no qual, PP é algo pequeno e simples e GG é 
+    algo muito grande e provavelmente precisa ser dividido. No SCRUM utilizamos a lógica do Fibonacci para traduzir mais "formalmente" a percepção da equipe em relação a 
+    estimativa e esforço. Mesclando a ideia de tamanho de roupas com Fibonacci -> PP = 3 / P = 5 / M = 8 / G = 13 / GG = 21. Planning Poker é uma tecnica usada para estimar o 
+    esforço de um requisito, no qual, cada desenvolvedor terá cartas com os números do Fibonacci para fazer suas estimativas individuais sobre a tarefa, no tempo combinado, 
+    todos jogão as cartas juntos, para evitar influência/comparação; após isso, os desenvoledores discutem e tiram uma média para saber qual será o valor do requisito. A 
+    criação, atualização, priorização e disponibilidade do Product BackLog (ou BackLog "geral") é responsavel pelo PO. Nele encontramos todos os requisitos, funcionalidades, 
+    melhorias e correções identificadas ao longo do desenvolvimento do projeto, de forma clara e organizada. Agora, o Sprint BackLog seria uma seleção de todos os requisitos 
+    para serem realizados na sprint, é nela onde está como e o que deve ser feito até o final da sprint. Mesmo não sendo criado por um modelo ágil, o Burnodwn Chart é muito utilizado por eles, por ser uma ferramenta visual para monitorar a redução progressiva de trabalho ao longo do tempo (mostra a quantidade de trabalho que ainda precisa ser feito em relação ao tempo restante para a entrega). Com ele, podemos ver o ritmo da equipe em relação a linha ideal do ritmo esperado. Obs. : o Burnodwn sempre precisa estar visível para a equipe. 
