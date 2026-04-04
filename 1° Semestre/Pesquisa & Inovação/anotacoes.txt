@@ -1,5 +1,0 @@
-08/02
-    HTML é uma "linguagem de marcação de texto", usada para estrutura um web site, para fazer o esqueleto do site; Permitindo que os usuários finais 
-    interajam e visualize todos os elementos da paǵina. HTML = esqueleto / CSS = embelezamento (cabelo, cores e etc.) / JavaScprit = musculo (o que dá 
-    a vida/movimentação ao site ). Index = começo ; .html = extensão para usar o HTML. Para visualizar um arquivo HTML, eu posso abrir o proprio arquivo
-    que está no meu gerenciador de arquivos, ou copiar e colar o caminho do arquivo.  Tag = bloco de código que faz algo especifico no web site.
