@@ -1,0 +1,52 @@
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cadastro .cadastro_usuario {
+    border: 2px solid black;
+    width: fit-content;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.cadastro .cadastro_usuario input {
+    display: block;
+    margin: 10px 0;
+    width: 200px;
+}
+.cadastro .cadastro_usuario .button_cadastro {
+    width: 200px;
+    margin: 20px auto;
+}
+
+
+/* Estilizando os cards */
+.card {
+    width:500px; 
+	height: fit-content; 
+	background-color: aliceblue; 
+	border: solid 2px navy; 
+	margin: 20px; 
+	padding: 20px;
+    border-radius: 25px;
+}
+#div_resultado .card{
+    display: inline-block;
+}
+.card .img-usuario{
+    width: 100px;
+}
+.card .nome_usuario{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.card .mensagem_usuario{
+    font-style: italic;
+}
+.card .cor-texto{
+    color: navy; 
+}
