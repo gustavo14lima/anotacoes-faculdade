@@ -1,0 +1,30 @@
+verifica se tem algum usuário altentificado na máquia
+    git config --global user.name -> verifica o nome
+    git config --global user.email -> verifica o email
+
+configurar o nome e email do github
+    git config --global user.name NomeDoGitHub -> aqui, estou cadastrando o nome do meu Git Hub
+    git config --global user.email EmailDoGitHub -> estou cadastrando o email do meu Git Hub
+
+README.md -> passo a passo/tudo o que eu preciso saber sobre este repositório
+
+fazendo clone de um repositório remoto para o local
+    git clone (URL do repositório do GitHub -> vai no reposositório no github, clica em "Code" e depois copia a URL)
+    (cria uma copia do repositório remoto para o repositório local, se eu modificar no meu local, não modifica no remoto e vice-versa)
+
+trazendo as alterações do remoto para o local
+    git pull
+	X file, Y insertions 
+	(X file = quantidade de arquivos alterados/mudados | Y insertions = linhas alteradas/mudadas)
+
+enviando um arquivo/projeto do local para o remoto
+    git status -> ver o status dos arquivos, ver alterações, se pode enviar ou não e etc.
+    git add . -> adicionando o arquivo "na caixa"
+	(como usei "." eu adiciono todos os arquivos, para adicionar apenas um, use git add nomeArquivo)
+    git commit -m "mensagem"-> mensagem do commit/ mensagem que irá aparecer no github
+   git push -> publica tudo, publicamente, para o repositório remoto
+	(lembre-se de adquirer ou buscar o token de ativação)
+
+desconectando da conta
+   git config --global --unset user.name
+   git config --global --unset user.email
