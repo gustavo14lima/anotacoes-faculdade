@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 125px;
+}
+
+/* Estilização do header */
+header,
+header nav ul{
+    display: flex;
+    gap: 2rem;
+}
+
+body{
+    background-color: #3A3B3C;
+    color: #DDD;
+}
+
+header{
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2D2E32;
+    color: #DDD;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: 5px solid #D4869C;
+    position: sticky;
+    top: 0;
+}
+header nav ul li a{
+    font-size: 1.25rem;
+    color: #DDD;
+}
+header nav ul li a:hover{
+    color: #FFF;
+    font-size: 1.3rem;
+    transition: 1s;
+}
+
+/* Estilização do container dos gráficos */
+.container-grafico{
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-grafico h2 {
+    font-size: 1.75rem;
+    border-bottom: 2px solid #D4869C;
+    margin-bottom: 20px;
+}
+.container-grafico .grafico {
+    width: 70%;
+    background-color: #EEE;
+    color: #FFF;
+    border: 5px solid #D4869C;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Estilização do KPI's */
+.container-grafico .kpi{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.container-grafico .kpi .card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2D2E32;
+    border: 2px solid #D4869C;
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+.container-grafico .kpi .card h3{
+    margin-top: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.container-grafico .kpi .card h4{
+    font-size: 2rem;
+    color: #FFF;
+    margin: 40px 0;
+}
+
+/* Estilização do footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2D2E32;
+    color: #DDD;
+    height: 150px;
+    border-top: 2px solid #D4869C;
+}
+footer h2 {
+    font-size: 1.35rem;
+}
+footer a {
+    color: #DDD;
+}
+footer a:hover{
+    color: #FFF;
+    font-size: 1.5rem;
+    transition: 1s;
+}

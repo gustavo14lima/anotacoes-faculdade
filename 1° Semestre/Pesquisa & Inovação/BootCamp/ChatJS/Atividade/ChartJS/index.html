@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ChartJS</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Lima's Monitoring</h1>
+        <!-- NavBar -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#temperatura-umidade-hora">
+                        Monitoramento por hora
+                    </a>
+                </li>
+                <li>
+                    <a href="#temperatura-umidade-mes">
+                        Monitoramento por Mês
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Gráfico de linha -->
+    <div class="container-grafico" id="temperatura-umidade-hora">
+        <h2>Monitoramento de temperatura e umidade por hora</h2>
+        <div class="kpi">
+             <div class="card">
+                <h3>Média de temperatura</h3>
+                <h4 id="media_temperatura"></h4>
+            </div>
+            <div class="card">
+                <h3>Média de umidade</h3>
+                <h4 id="media_umidade"></h4>
+            </div>
+        </div>
+        <div class="grafico">
+            <canvas id="grafico-linha"></canvas>
+        </div>
+    </div>
+
+    <!-- Gráfico de Barras -->
+    <div class="container-grafico" id="temperatura-umidade-mes">
+        <h2>Monitoramento média de temperatura e umidade por mês</h2>
+        <div class="kpi">
+             <div class="card">
+                <h3>Mês com maior Temperatura</h3>
+                <h4 id="mes_temperatura"></h4>
+            </div>
+            <div class="card">
+                <h3>Mês com maior umidade</h3>
+                <h4 id="mes_umidade"></h4>
+            </div>
+        </div>
+        <div class="grafico">
+            <canvas id="grafico-barra"></canvas>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h2>&copy; 2026 <a href="https://github.com/gustavoLimaAraujo">gustavoLimaAraujo</a> | Todos os direitos reservados.</h2>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
