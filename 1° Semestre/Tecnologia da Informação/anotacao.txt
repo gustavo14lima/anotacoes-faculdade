@@ -108,4 +108,42 @@
     todos jogão as cartas juntos, para evitar influência/comparação; após isso, os desenvoledores discutem e tiram uma média para saber qual será o valor do requisito. A 
     criação, atualização, priorização e disponibilidade do Product BackLog (ou BackLog "geral") é responsavel pelo PO. Nele encontramos todos os requisitos, funcionalidades, 
     melhorias e correções identificadas ao longo do desenvolvimento do projeto, de forma clara e organizada. Agora, o Sprint BackLog seria uma seleção de todos os requisitos 
-    para serem realizados na sprint, é nela onde está como e o que deve ser feito até o final da sprint. Mesmo não sendo criado por um modelo ágil, o Burnodwn Chart é muito utilizado por eles, por ser uma ferramenta visual para monitorar a redução progressiva de trabalho ao longo do tempo (mostra a quantidade de trabalho que ainda precisa ser feito em relação ao tempo restante para a entrega). Com ele, podemos ver o ritmo da equipe em relação a linha ideal do ritmo esperado. Obs. : o Burnodwn sempre precisa estar visível para a equipe. 
+    para serem realizados na sprint, é nela onde está como e o que deve ser feito até o final da sprint. Mesmo não sendo criado por um modelo ágil, o Burnodwn Chart é muito 
+    utilizado por eles, por ser uma ferramenta visual para monitorar a redução progressiva de trabalho ao longo do tempo (mostra a quantidade de trabalho que ainda precisa ser 
+    feito em relação ao tempo restante para a entrega). Com ele, podemos ver o ritmo da equipe em relação a linha ideal do ritmo esperado. Obs. : o Burnodwn sempre precisa estar 
+    visível para a equipe. 
+06/04/2026
+    O PO é responsável por atribuir uma prioridade para cada requisito, seguindo a ideia de qual requisito gera mais valor ao cliente (quanto mais um requisito é valioso para a 
+    entrega ou gosto do cliente, maior será sua prioridade). Arquitetura de TI (área de Tecnologia da informação) ela analisa as necessidades do negocio, assim planeja e 
+    estrutura, de uma forma estrategia, a alocação e distribuição dos ativos tecnologicos. Ela segue três pilares: conectividade (ex: WIFI), hardware e software. Para preparar 
+    uma arquitetura de TI, deve-se considerar: necessidade do négocio, objetivos e problemas organizacionais, constribuições que a TI pode oferecer (por exemplo, manutenção), 
+    infraestrutura de TI disponível e aplicações existentes e planejadas (um errinho bobo, pode fazer a aplicação cair, como por exemplo, insuficiencia de componentes).A 
+    latência é o tempo em milisegundos da resposta de uma requisição, em determinados projetos, quanto menor a latência, melhor. A infraestrutura de TI tinha seus ambientes 
+    conhecidos por "mainframes", terminais de apenas entrada e saida de informação com o processamento centralizado. Ou seja, um servidor era apenas para um serviço (por 
+    exemplo, um servidor para o banco de dados, um servidor para o RG e etc.). Mesmo se o servidor de um determinado serviço estivesse utilizando pouco de sua capacidade, não 
+    era possível atribuir mais de um serviço em um servidor. Com a chegada da rede (internet), entrou a computação distribúida (onde muitas pessoas poderiam trabalhar no mesmo 
+    servidor, apenas estando na mesma rede). Uma das arquiteturas mais conhecida seria a de cliente/servidor (cliente = computador conectado a rede usadi para acessar recursos 
+    compartilhados na rede / servidor = computador conectado a mesma rede do cliente, oferecendo uma grande variedade de serviços para os clientes). Existem dois tipos de 
+    servidores: os convencionais (computador, hardware) e servidores virtualizados (a partir de um servidor físico, ou seja, convencional, eu posso virtualizar vários outros 
+    servidores virtuais, assim criando ambientes isolados e independentes, a partir de um software específico). Com o modelo de servidor convencional, é necessários hardwares 
+    especificos, há momentos de pico (alta demanda) e de ocilação e ele tem uma capidade de processamento limitada; com o modelo de servidor virtualizado, os serviços podem ser 
+    hospedados localmente ou remotamente, é possível retirar uma máxima eficiência, pois uma máquina pode ter vários serviços e possui uma capidade de crescimento. Uma das 
+    principais vantagens do modelo virtualizado, é a flexibilidade na adminstração do ambiente, a liberdade de criar vários servidores virtuais em apenas um servidor físico e a 
+    redução do custo com TI e aumento de agilidade para atender as necessidades do négocio. A CLOUD surgiu com a ideia de vender partes de um grande servidor que não estava 
+    utilizando sua capacidade máxima (utilizando o modelo virtualizado). Seus principais pilares são a escabilidade e a elasticidade, o valor a ser pago (por utilizar a CLOUD) é 
+    cobrado com base na quantidade de recurso que está utilizando aou invés de um valor fixo (ao invés de pagar $20 em qualquer máquina, a máquina de 20GM é $2 e a de 50GB é $7, 
+    quanto mais recurso, mais caro) e a distribuição geográfica, de onde está os servidores em nuvem, é transparente ao usuário (podendo até escolher). Com isso, a utilização de 
+    servidores ficou dividada em on-premises (seria o modelo convencional) onde o servidor fica na empresa (é importante verificar se há espaço fiísico para sua instalação, 
+    precisa garantir segurança e contar com uma equipe para a manutenção); e servidores em cloud/nuvem que se dividem nos seguintes modelos: IaaS - Infraestrutura como Serviço 
+    (você compra um computador puro, você pode configura-lo como bem entender. Por exemplo, um IaaS é igual a comprar um gabinete com todos os hardwares instalados, você quem 
+    terá que instalar o sistema operacional e seus serviços.), PaaS - Plataforma como Serviço (servidor com a infraestrutura totalmente configurada. Seguindo o exemplo, é como 
+    comprar um computador com o sistema operacional e serviços já instalados, e você ainda terá todo o suporte da empresa que comprou, apenas com o sistema operacional e 
+    serviços. Você deve apenas colocar sua aplicação no servidor, claro você que terá que dar a manutenção da sua aplicação) e o SaaS - Software como Serviço (soluções prontas, 
+    o usuário não precisa se preocupar com nada. No nosso exemplo, é como você comprasse um computador, que já vem com o sistema operacional, serviços e uma aplicação do seu 
+    gosto prontas e funcionando, e a empresa que cuidará de toda a manutenção e ajustes). Um exemplo para a diferenciar é o mercado livre, na visão do vendedor, ele é um PaaS, 
+    por que você atualiza seus produtos, insere novos produtos, pode excluir produtos e tudo mais. Agora, na visão do usuário, ele é um SaaS, um software que você apenas pode 
+    comprar. Outro exemplo é com banco de dados, em um PaaS, eu posso mexer nas linhas (atualizando-as, inserindo novas linhas ou apagando-as), em um SaaS, apenas posso fazer 
+    insert. Lembre-se! Quanto mais eu dependo da nuvem, menos controle eu tenho! Em um IaaS, eu tenho controle total sobre tudo, agora em um SaaS praticamente eu não tenho 
+    controle. Um diagrama em TI é um desenho, mapa ou um plano de alto nível, que representa os recursos tecnológicos e de informação de um projeto, precisa fornecer uma visão 
+    geral de todo o caminho e funcionalidades, precisa ser fácil o entendimento e a organização dos recursos, precisa mosntrar a conexão entre os elementos e permiti a 
+    identificação de problemas e oportunidades.
