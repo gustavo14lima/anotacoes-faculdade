@@ -1,0 +1,76 @@
+<!-- 
+Crie um programa o qual:
+
+a) Tenha uma input e botão para adicionar um elemento no vetor.
+
+b) Tenha um botão que exibe UMA VEZ os itens duplicados do vetor chamado "Exibir Duplicados".
+
+c) Tenha um botão que remove os elementos duplicados do vetor e mantém apenas um item de cada um dos duplicados. Esse botão deve ser chamado "Remover Duplicatas".
+
+d) Ao clicar em qualquer um dos botões exiba o vetor atual com os elementos um em baixo do outro. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar elementos duplicados</title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_adicionar">Insira um elemento para armazena-lo: </label>
+        <input type="text" id="ipt_adicionar">
+    </div>
+    <div id="resultado"></div>
+    <br>
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="verDuplicatas()">Exibir Duplicados</button>
+    <button onclick="removerDuplicatas()">Remover Duplicatas</button>
+    <script>
+        let armazem = [];
+        let duplicatas = [];
+        let novoArmazem = [];
+
+        function exibicaoArrayAtual() {
+            for (let i = 0; i < armazem.length; i++){
+                resultado.innerHTML += `<br>${armazem[i]}`
+            }
+        }
+
+        function adicionar() {
+            let adicionar = ipt_adicionar.value;
+            armazem.push(adicionar);
+
+            resultado.innerHTML = `Item adicionado!`
+            exibicaoArrayAtual()
+        };
+
+        function verDuplicatas() {
+            for(let i = 0; i < armazem.length; i++){
+                for (let j = 1; j < armazem.length; j++){
+                    if (armazem[i] == armazem[j] && !duplicatas.includes(armazem[j])){
+                        duplicatas.push(armazem[j])
+                    }
+                }
+            }
+            resultado.innerHTML = `Itens dúplicados: ${duplicatas}`
+
+            exibicaoArrayAtual()
+        };
+
+        function removerDuplicatas() {          
+            for (let i = 0; i < armazem.length; i++){
+                if (!novoArmazem.includes(armazem[i])){
+                    novoArmazem.push(armazem[i])
+                }
+            }
+
+            resultado.innerHTML = `Duplicatas removidas! Novo armazem: ${novoArmazem}`
+        };
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!-- 
+1.  Valide os campos: ipt_deposito tem que ser maior que zero, ipt_meses que ser inteiro e maior que zero, ipt_juros tem que ser positivo e maior que zero e menor que 10, ipt_sonho tem que possuir ao menos 3 caracteres e ipt_valorSonho tem que ser positivo e maior que ipt_deposito.
+
+2. Se todos campos estiverem validos emitir a linha abaixo, tantas vezes quanto o ipt_meses
+
+Mês = 1 - Valor Inicial = R$ 0.00 - Juros = R$ 0.00 - Depósito = R$ 500.00 - Valor Final = R$ 500.00, sendo que:
+
+·         Mês começa em 1 e vai até o ipt_meses;
+
+·         Valor Inicial é igual ao Valor Final da linha anterior, na primeira linha considerar 0
+
+·         Juros é o Valor Inicial multiplicado pelo ipt_juros
+
+·         Depósito é o valor do ipt_deposito
+
+·         Valor Final é a soma do Valor Inicial com Juros com o Depósito
+
+3.        Após emitir todas as linhas do item 2 emitir uma das duas mensagens abaixo, sendo o valor mostrado a diferença entre o Valor Final e o ipt_valorSono e XXX é o ipt_sonho:
+
+·          Parabéns você é um POUPADOR, além do seu sonho de XXXX ainda sobrou R$ 1050,50 para outras aquisições
+
+·          Você precisa poupar um pouco mais. Para o sonho de XXXX ainda falta R$ 2449,50 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poupança</title>
+</head>
+<body>
+    <h2>Poupança</h2>
+    Entre com o valor mensal de depósito: <input id="ipt_deposito" type="number"> <br>
+    Entre com a quantidade de meses: <input id="ipt_meses" type="number"> <br>
+    Entre com o percentual de juros: <input id="ipt_juros" type="number"> <br> <br>
+    Qual é o seu sonho: <input id="ipt_sonho"> <br>
+    Qual o valor do seu sonho: <input id="ipt_valorSonho" type="number">
+    <button onclick="projetar()">Projetar</button><br> <br>
+    <div id="div_msg"></div>
+</body>
+<script>
+    function projetar() {
+        div_msg.innerHTML = '';
+
+        let deposito = Number(ipt_deposito.value);
+        // deixando o valor de mês como um inteiro
+        let mes = parseInt(ipt_meses.value);
+        let juros = Number(ipt_juros.value);
+        let sonho = ipt_sonho.value;
+        let valorSonho = Number(ipt_valorSonho.value);
+
+        let valorInicial = 0;
+        let valorFinal = 0;
+        let valorJuros = 0;
+
+        if(deposito > 0 && mes > 0 && (juros > 0 && juros < 10) && sonho.length >= 3 && (valorSonho > 0 && valorSonho > juros)){
+            for(let i = 1; i <= mes; i++){
+                valorJuros = (valorInicial * juros) / 100;
+                valorFinal = valorInicial + deposito + valorJuros;
+
+                div_msg.innerHTML += `Mês = ${i} - Valor Inicial = R$ ${valorInicial.toFixed(2)} - Juros = R$${valorJuros.toFixed(2)} - Depósito = R$${deposito.toFixed(2)} - Valor Final = ${valorFinal.toFixed(2)} <br>`
+
+                valorInicial = valorFinal;
+            };
+
+            if(valorFinal >= valorSonho){
+                div_msg.innerHTML += `<br> <p style="color: red;"> Parabéns você é um POUPADOR, além do seu sonho de ${sonho} ainda sobrou R$${(valorFinal - valorSonho).toFixed(2)} para outras aquisições </p>`;
+            } else {
+                div_msg.innerHTML += `<br> <p style="color: red;"> Você precisa poupar um pouco mais. Para o sonho de ${sonho} ainda falta R$${(valorSonho - valorFinal).toFixed(2)} </p>`;
+            }
+
+        } else {
+            div_msg.innerHTML = `Alguns dos valores informados estão incorretos!`
+        }
+    }
+</script>
+</html>

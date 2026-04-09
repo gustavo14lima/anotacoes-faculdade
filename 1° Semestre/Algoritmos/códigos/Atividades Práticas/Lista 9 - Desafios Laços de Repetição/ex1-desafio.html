@@ -1,0 +1,80 @@
+<!-- 
+Crie uma segunda versão do exercício 1a, onde não é permitido usar métodos prontos como: filter, map, reduce, includes, indexOf, lastIndexOf
+
+Use apenas: laços (for, while) e estruturas básicas (arrays, variáveis) 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar elementos duplicados</title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_adicionar">Insira um elemento para armazena-lo: </label>
+        <input type="text" id="ipt_adicionar">
+    </div>
+    <div id="resultado"></div>
+    <br>
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="verDuplicatas()">Exibir Duplicados</button>
+    <button onclick="removerDuplicatas()">Remover Duplicatas</button>
+    <script>
+        let armazem = [];
+        let duplicatas = [];
+        let novoArmazem = [];
+
+        function funcaoIncludes(array, elemento) {
+            for (let i = 0; i < array.length; i++){
+                if(array[i] == elemento){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        function exibicaoArrayAtual() {
+            for (let i = 0; i < armazem.length; i++){
+                resultado.innerHTML += `<br>${armazem[i]}`
+            }
+        }
+
+        function adicionar() {
+            let adicionar = ipt_adicionar.value;
+            armazem[armazem.length] = adicionar;
+
+            resultado.innerHTML = `Item adicionado!`
+            exibicaoArrayAtual()
+        };
+
+        function verDuplicatas() {
+            for(let i = 0; i < armazem.length; i++){
+                for (let j = 1; j < armazem.length; j++){
+                    if (armazem[i] == armazem[j] && !funcaoIncludes(duplicatas, armazem[j])){
+                        duplicatas[duplicatas.length] = armazem[j]
+                    }
+                }
+            }
+            resultado.innerHTML = `Itens dúplicados: ${duplicatas}`
+
+            exibicaoArrayAtual()
+        };
+
+        function removerDuplicatas() {          
+            for (let i = 0; i < armazem.length; i++){
+                if (!funcaoIncludes(novoArmazem, armazem[i])){
+                    novoArmazem[novoArmazem.length] = armazem[i]
+                }
+            }
+
+            resultado.innerHTML = `Duplicatas removidas! Novo armazem: ${novoArmazem}`
+        };
+
+    </script>
+
+</body>
+</html>

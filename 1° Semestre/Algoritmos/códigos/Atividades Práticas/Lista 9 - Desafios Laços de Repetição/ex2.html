@@ -1,0 +1,44 @@
+<!-- 
+Crie um programa o qual:
+
+a) Tenha uma input de texto onde o usuário escreve o texto que deseja inverter.
+
+b) Tenha um botão que inverte o texto e exibe o texto invertido a baixo da input 
+-->
+
+<!-- Este exercício, inconscientemente, sem métodos prontos. Ou seja, foi feito de acordo com os requisitos do desafio -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverter Texto</title>
+</head>
+<body>
+    <div>
+        <label for="ipt_texto">Insira o seu texto: </label>
+        <input type="text" id="ipt_texto">
+        <div id="resultado"></div>
+    </div>
+    <button onclick="inverterTexto()">Inverter texto</button>
+
+    <script>
+        function inverterTexto() {
+            let texto = ipt_texto.value;
+            let novoTexto = '';
+            let contador = 0;
+
+            for(let i = (texto.length - 1); i >= 0; i--){
+                novoTexto += texto[i];
+
+                contador ++;
+            }
+
+            resultado.innerHTML = novoTexto;
+        };
+
+    </script>
+
+</body>
+</html>

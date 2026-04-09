@@ -1,0 +1,71 @@
+<!-- 
+Crie um programa o qual:
+
+a) O usuário tenha um campo para digitar uma palavra;
+
+b) Ao clicar no botão "Validar Palíndromo", deve aparecer na tela a mensagem dizendo se a palavra é um palíndromo ou não. Ex: O nome "Ana" é um palíndromo, porque ao contrário permanece sendo "Ana";
+
+OBS: Ignore letras maiúsculas e minúsculas e também espaços em branco.
+
+Exemplo: Subi no onibus deve ser considerado palindromo
+
+c) Exiba na tela também a palavra digitada pelo usuário escrita ao contrário.
+
+OBS: Um palíndromo é uma palavra, frase, número ou sequência de caracteres que pode ser lida da mesma forma de trás para frente e de frente para trás. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+</head>
+<body>
+
+    <div>
+        <label for="ipt_palavra">Insira o seu palavra: </label>
+        <input type="text" id="ipt_palavra">
+    </div>
+    <button onclick="validarPalindromo()">Validar Palíndromo</button>
+    <div id="resultado"></div>
+
+    <script>
+        function validarPalindromo() {
+            resultado.innerHTML = '';
+
+            let palavra = ipt_palavra.value;
+            let palavraValidade = palavra;
+            let novaPalavra = '';
+            let novaPalavraValidade = '';
+            let contador = 0;
+
+            for(let i = (palavra.length - 1); i >= 0; i--){
+                novaPalavra += palavra[i];
+
+                contador ++;
+            }
+
+            // toda esta validação é para a frase 'Subi no onibus' ser considerada um palindromo
+            // retirando todos os espaços possíveis
+            for (let i = 0; i < palavra.length; i++){
+                palavraValidade = palavraValidade.replace(' ', '');
+            }
+
+            // deixando a palavra em caixa baixa
+            palavraValidade = palavraValidade.toLowerCase();
+
+            for(let i = (palavraValidade.length - 1); i >= 0; i--){
+                novaPalavraValidade += palavraValidade[i]
+
+                contador ++;
+            }
+
+            resultado.innerHTML += `Sua palavra é: ${palavra} <br> Sua palavra ao contraio é: ${novaPalavra} <br>`;
+            novaPalavraValidade == palavraValidade ? resultado.innerHTML += `Sua palavra é palíndromo` : resultado.innerHTML += `Sua palavra não é palíndromo`;
+        };
+
+    </script>
+
+</body>
+</html>
