@@ -42,6 +42,15 @@
         de energia e o GND é a saida, assim a energia circula.
         "barriguinha de chop" virada para fora do Arduino, se não esquenta muito. E as cores dos fios são: 5V = vermelho, entrada analogica = colorido (qualquer um), GND = preto.
 11/03/2026
+    Entrada analógica = captura sinais continuos. Ele pode assumir infinitos valores ao longo do tempo. Por exemplo, a temperatura é um tipo de entrada analogica, pois o seu valor muda de forma fluida.
+    Entrada digital = sinais discretos. Entende apenas estados definidos. Exemplo: interruptor de luz (em outras palavras, essa entrada entende bits).  
+
+    LM35: Medição de temperatura. (sensor de temperatura analógico que mede a temperatura ambiente e a converte em uma tensão elétrica que pode ser lida pelo Arduino.)
+    DHT11: Medição de temperatura e umidade. (sensor digital que mede a temperatura e umidade relativa do ambiente, fornecendo os dados diretamente em formato digital, o que facilita sua leitura pelo Arduino sem necessidade de conversão adicional)
+    LDR: Medição de intensidade luminosa. (sensor analógico que mede a intensidade da luz ambiente, a resistência do LDR diminui quando a intensidade da luz aumenta)
+    MQ-2: Detecção de gases inflamáveis. (sensor analógico que detecta a presença de gases inflamáveis e fumaça no ambiente)
+    Ultrassônico: Medição de distância e detecção de proximidade. (sensor ultrassônico digital utilizado para medir distâncias em projetos de automação e robótica, ele funciona emitindo pulsos ultrassônicos e medindo o tempo que leva para o eco retornar após bater em um objeto)
+    Umidade de Solo: Medição da umidade do solo. (analógica)
     
 18/03/2026
     Bit é a menor unidade que um computador pode armazenar ou pocessar, sendo um valor binário (representa apenas 0 ou 1). Um byte é o conjunto de 8 bits, todo o sistema 
@@ -70,7 +79,7 @@
     e receber a reposta do servidor e entregar para o cliente/aplicação. A API é uma camada de abstração, permitindo uma comunicação organizada entre os sistemas, simplificando 
     o processo de fornecer serviços e de utilizar-los. Em um exemplo, a API recebe os dados de um Arduino (coletados de acordo com o seu sensor) e valida sua integridade, 
     garante a segurança da transação e armazena-os em um banco de dados. 
-08/03/2026 (Anotações referente algumas pares da API dat-acqu-ino)
+08/03/2026 (Anotações referente algumas perguntas da API dat-acqu-ino)
     A variavel valoresSensorAnalogico é uma constante assíncrona, utilizada para armazenar os dados, capturados pelo sensor do arduino, temporariamente em arrays; A biblioteca 
     que gera os gráficos no front-end é a chart.js. A tag localizada no front-end, <canvas id="sensor_analogico"></canvas> é uma tag como se fosse um quadro em branco, em que o 
     javascript é responsável por escrever na tag, e no cenário da API a tag canvas serve para mostrar o gráfico de linha, com os dados do sensor analogica, utilizando a 
