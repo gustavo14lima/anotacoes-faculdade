@@ -73,7 +73,7 @@
     problema de representação de caracteres. O Unicode utiliza um número maior de bits para representar caracteres, mas em contrapartida, ele representa todos os simbolos 
     existente, desde caracteres padrões, simbolos de outras linguas, emojis e simbolos de gráficos e matematicos. 
 25/03/2026
-    Uma API (Interface de Programação de Aplicação) serve para conectar um ponto à outro ponto (por esse modifico ela é fundamental em sistemas, pois possibilita que diferentes 
+    Uma API (Interface de Programação de Aplicação) serve para conectar um ponto à outro ponto (por esse modifico ela é fundamental em sistemas, pois possibilita que entes 
     partes de um sistema ou sistemas completamente distintas trabalhem de forma eficiente), ela é a interface que grante que a comunicação será feita de forma correta e segura. 
     O principal papel da API é pegar o que é pedido pela aplicação, pedido de uma informação ou algo semelhante, tratar ela para que o pedido possa ser entregue para o servidor, 
     e receber a reposta do servidor e entregar para o cliente/aplicação. A API é uma camada de abstração, permitindo uma comunicação organizada entre os sistemas, simplificando 
@@ -93,3 +93,16 @@
     dat-acqu-ino, e uma API em núvem, como por exemplo a chart.js, é nenhuma!). O comando correto para a inicialização do servidor é o node main.js (arquivo que contém a API), o 
     comando npm start é apenas um atalho do npm para fazer o mesmo comando, isso é comprovado no package.json, no qual temos o seguinte código = "scripts": { "start": "node main 
     js" }. Ou seja, o 'start' do npm é apenas um atalho para o 'node main.js'.
+29/03/2026
+    As operações de um computador são quase as mesmas operações que temos na mateḿatica: somar, completar, comparar e mover, mas ao invés de utilizarmos números, utilizamos bits.
+    Os responsáveis por realizarem as operações dentro do computador são os circuitos lógicos, ou mais conhecidos Gates. Os sistemas lógicos são calculados apenas por dois 
+    principais valores: 1 (verdadeiro) ou 0 (falso). Tais valores ao final do dia são convertidos em níveis de tensões eletricas nos circuitos no computador. Em sistemas lógicos 
+    temos 6 principais portas lógicas: AND (a função será verdadeira apenas se todas as variavéis forem verdadeiras) na equação, é representada por um ponto final (.), Exemplo: 
+    S = A . B; OR (a função será verdadeira pelo menos um de todas as variavéis forem verdadeiras), na equação, represetado pelo sinal de adição (+), Exemplo: S = A + B; NOT (a 
+    variavel que estiver junta ao NOT, terá seu valor invertido, se é 0 vira 1 e vice-versa), na equação é represetada pelo ponto de exclamação (!), Exemplo: S = !A; NAND (é a 
+    junção das portas lógicas NOT e AND, o resultado da porta AND, terá seu valor invertido pelo NOT), Exemplo: S = !(A + B); NOR (junção das portas NOT e OR, inverte o 
+    resultado da porta OR), Exemplo: S = !(A + B); XOR (a função é verdadeira se, e somente se, um dos valores é verdadeiro, ou seja, quando tempos dois valores diferentes). Em 
+    sistemas lógicas, para testar e analisar todos os resultados lógicos de uma equação, por exemplo, eu defino todos os valores possíves para duas variavéis e os resultados de 
+    acordo com suas portas lógicas. Para definir a quantidade de valores verdadeiro ou falso, utilizamos o expoente de 2, por exemplo, em uma tabela verdade com duas variavéis, 
+    a primeira terá apenas um valor verdadeiro ou falso (2⁰) e a segunda variavel terá dois valores para verdadeiro ou falso (2¹), e assim segue de acordo com a quantidade de 
+    variavéis.Por fim, quando temos algum sistema com mais de uma porta lógica, podemos decompor a equação, criando uma variavel apenas para o resultado daquela porta lógica.
