@@ -64,3 +64,16 @@
     fazer mais nada com o usuário, como por exemplo, não consegue excluir ele, pois ele está dentro de uma sessão, mesmo se eu não esteja utilizando ela). A solução para este 
     problema seria, ao invés de toda vez que for trocar de usuário, ao invés de utilizar o su, utilize o exit (ele sai da sessão, e volta uma sessão. Caso esteje na sessão 2, 
     ele volta para a sessão 1), assim trabalhando com no máximo duas sessões. 
+29/04/2026
+    A arquitetura de cliente/servidor é um modelo de computação que se consiste em: um cliente, aquele que solicitam/fazem a requisição de algum recursos, e um servidor, aquele
+    que processa a solicitado e fornece/servi os recursos solicitado pelo cliente. A comunicação entre um cliente e servidor ocorre geralmente dentro de uma rede, como por 
+    exemplo, a internet (podendo ser via cabo ou até mesmo WIFI). Em resumo, a arquitetura cliente/servidor funciona basicamente através de requisição e resposta, no qual o 
+    cliente é responsável por fazer a requisição e o servidor faz o processamento e entrega a resposta ao cliente. A grande vantagem desta arquitetura é a sua fácil escabilidade
+    podendo adicionar mais clientes e mais servidores com base o sistema se adapta a uma maior quantidade de usuários, além de ter uma fácil atualização e manutenção, sendo 
+    feitas sem afetar os clientes. Além de claro, a centralização de dados e recursos e melhor desempenho. Em contra partida, seus desafios estão relacionados a segurança 
+    (trazer uma segurança de alto nível, por causa das transferencias de dados entre o servidor e cliente), disponibilidade (no qual, caso uma parte do servidor caia, toda a 
+    aplicação irá cair), sobrecarga de servidor (um grande número de requisição pode fazer o servidor travar ou até mesmo desligar por auto nível de aquecimento) e complexidade 
+    (a implementação e gestão geralmente são complexas, especialmente em grande sistemas). Por fim, a diferença entre um Servidor para um Servidor Web é que: um Servidor é um 
+    computador ou sistema que fornece serviços, ele está sendo representado em um ambito geral, ou seja, existe vários tipos de servidores, sendo web, banco de dados, nuvem e 
+    etc., agora, Servidor Web é um tipo específico de Servidor projetado para hospedar páginas webs na internet, utilizando o protocolo HTTP para comunicar com os navegadores 
+    para carregar as páginas web. 
