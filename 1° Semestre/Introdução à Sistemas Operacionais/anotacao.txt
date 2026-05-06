@@ -77,3 +77,31 @@
     computador ou sistema que fornece serviços, ele está sendo representado em um ambito geral, ou seja, existe vários tipos de servidores, sendo web, banco de dados, nuvem e 
     etc., agora, Servidor Web é um tipo específico de Servidor projetado para hospedar páginas webs na internet, utilizando o protocolo HTTP para comunicar com os navegadores 
     para carregar as páginas web. 
+06/05/2026
+    A internet surgiu com o objetivo de realizar a comunicação entre dois ou mais dispositivos, sendo eles computadores, celulares e etc. Assim, reduzindo a taxa de informações 
+    duplicadas, dados desatualizados, compartilhamento de informações por meio de pendrives e retrabalho contante. Apenas com a comunicação a paritr de uma rede, foi possível 
+    resolver tal problema. Em redes, toda a comunicação é feita a paritr de pacotes, ou seja, a informação ou o que quer que seja é dividida em pacotes (cada pacote com uma 
+    parte do 100%). Ele é entregue a partir do endereço IP (Internet Protocol), que seria como se fosse o CEP de uma casa para os correios realizar a entrega de um produto. Um 
+    pacote é entregue a paritr de uma requisição que o seu computador faz para o seu roteador, com isso o roteador vai fazer a requisição para o servidor no qual o que você 
+    deseja se encontra. Assim, o servidor entregando a resposta para o roteador e por usa vez, o roteador entrega a resposta para o seu computador. Vale resaltar, que está 
+    comunicação (requisição e resposta), é feita graças ao IP público, que faz com que cada endereço possa interragir/conversar com outros endereços. O IP do computador é um IP 
+    privado, ou seja, apenas dispositivos na mesma rede que o computador pode conversar com ele; para que ele faça uma requisição para a internet ou em outra rede privada, ele 
+    terá que passar pelo roteador, que com isso, o IP público do roteador irá fazer todo o trajeto da requisição do IP privado do computador. Além dos dispositivos terem um 
+    endereço IP, toda aplicação também possui um endereço IP (por causa que toda aplicação está localizada em um servidor ou máquina). Para não decorrar todo o endereço IP de 
+    uma aplicação, utilizamos o DNS (Domain Name System), que sua principal função é abstrair o endereço IP da aplicação para uma url para melhor memorização e mais 
+    sustentabilidade. Assim, quando você escreve 'youtube.com' no navegador, você faz uma requisição para o roteador, que o mesmo com o IP público vai para um servidor DNS mais 
+    próximo para procurar o endereço IP do 'youtube.com', que com este endereço vai até o servidor no qual se encontra a aplicação do youtube.com. Quando mais próximo o servidor 
+    que sua aplicação se encontra, melhor será a experiencia do usuário, evitando demora, travamentos e páginas carregadas incompletamentes (exemplo: moodle). O endereço IP 
+    possui duas versões: a versão 4 que armazena até 32bits (4 grupos de 8bits) de endereço (ou seja, 2³² endereços diferentes) e a versão 6, que armazena até 128 bits (8 grupos 
+    de 16 bits) de endereço (ou seja, 2¹²⁸). A principal diferença entre o IPv4 e o IPv6 seria o seu sistema númerico, enquanto o IPv4 utiliza binário, o IPv6 utiliza o 
+    hexadecimal. Vale resaltar que o IPv4 acabou, ou seja, todos os seus endereços já estão atributos a provedores de internet e a ideia do IPv6 seria que cada dispositivo teria 
+    o seu próprio endereço IP, ou seja, cada dispositivo terá um endereço IPv6 fixo. Agora, existem duas maneiras de um dispositivo ter um endereço IP: tendo um endereço IP fixo 
+    (aquele dispositivo terá apenas aquele IP, sem trocas e relacionados. Ele é configurado pela equipe de rede, e esta tecnica é normalmente atribuita a servidores e serviços 
+    que não mudam o IP) ou tendo um endereço IP dinâmico (o dispositivo terá um IP diferente para cada vez que ele entrar em uma rede, sendo ela nova ou já acessada 
+    anteriormente). O DHCP (Dynamic Host Configuration Protocol) é responsável por atribuir endereços IP automaticamente para os dispositivos que possuem seu endereço IP 
+    dinâmico, ele é aplicado especialmente para redes que não precisam de um endereço IP fixo. Uma porta é um ponto virtual responsável por determinar o inicio e o fim de uma 
+    comunicação na rede. As portas são baseadas em softwares (serviços e servidores) e gerenciado pelo sistema operacional do computador. Todo protocolo e serviço específico 
+    possui uma porta! As portas permitem que os computadores cada serviços facilmente, assim, não misturando informações de serviços ou protocolos, por exemplo: os e-mails vão 
+    para uma porta diferente daquela das páginas web. Exemplo de portas: 80 ou 8080 é o HTTP, 3306 é o MySql, 443 é o HTTPS e o 22 é o SSH. Existem 65535 portas, e a paritr da 
+    porta 49152 você pode utilizar para o que bem entender, pois são portas dinâmicas, nenhum software ou protocolo está utilizando ela. Vale resultar que algumas portas entre 0 
+    e 49151 também estão indisponivéis!
