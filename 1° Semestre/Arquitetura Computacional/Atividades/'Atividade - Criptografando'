@@ -1,0 +1,27 @@
+1. Observei cada caractere da palavra, se o número do caractere for par, peguei o caractere sucessor do escolhido, se por sua vez for ímpar, peguei o antecessor do caractere do escolhido. 
+
+    Exemplo: Bola -> Apkb 
+
+2. Inverti a posição do caractere na tabela ASCII (a última tabela do slide 2.1. ASCII 128 códigos, da aula Tabela ASCII do dia 18/03/2026) 
+
+    Exemplo: Se o seu caractere for a segunda linha da terceira tabela, pegue a penúltima linha da primeira tabela. 
+
+    Exemplo: Se o seu caractere for a terceira linha da segunda tabela, pegue a antepenúltima linha da segunda tabela.  
+
+    Exemplo: Se o seu caractere for a primeira linha da primeira tabela, pegue a última linha da terceira tabela. 
+
+3. Transformei em binário 
+
+4. Inverti a polaridade 
+
+5. Escrevi ao contrário. O último bit virou o primeiro. 
+
+    Exemplo: 1011 0111 -> 1110 1101 
+
+6. Escrevi os conjuntos de bits separados por hexadecimal e escreva ao contrário. 
+
+    Exemplo: 0110 1000 0101 0101 -> 0001 0110 1010 1010 
+
+7. Inverti a polaridade mais uma vez 
+
+Resultado: 0011 1101 0010 1110 0011 1010 0101 0101 
