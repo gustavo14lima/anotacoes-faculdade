@@ -69,7 +69,7 @@
     utilizado quando os requisitos são bem definidos e não tem possibilidade de serem alterados; por não ter um feedback constante do cliente, o gerente precisa ter um 
     engajamento total no projeto. Na ágil é feita a ramificação de tarefas em pequanas partes, assim o cliente pode analisar e entregar feedback regularmente de acordo com o 
     andamento do projeto; modelo flexivel; os requisitos podem ser alterados em qualquer momento do projeto; pode ter a repetição de etapas de acordo com a necessidade; os 
-    requisitos são evoluidos de acordo com o andamento do proejto e precisam ser revisados diariamente. Diferente do modelo cascata, o ágil pode ter alterações na fase de 
+    requisitos são evoluidos de acordo com o andamento do projeto e precisam ser revisados diariamente. Diferente do modelo cascata, o ágil pode ter alterações na fase de 
     testes, sem comprometer o andamento do projeto. Toda metodologia é correta, apenas DEPENDE do projeto que está inserido. (é difícil agradar o cliente de primeira). O 
     principal pilar da metodologia ágil é a sua adaptabilidade, flexibilidade e colaboratividade. Principais caracteristicas da metodologia ágil: ciclos curto de 
     desenvolvimento, foco no valor, flexibilidade, comunicação frequente (entre equipe, cliente e outros), cultura de colaboração (ajudar o próximo) e melhoria contínua 
@@ -147,3 +147,160 @@
     controle. Um diagrama em TI é um desenho, mapa ou um plano de alto nível, que representa os recursos tecnológicos e de informação de um projeto, precisa fornecer uma visão 
     geral de todo o caminho e funcionalidades, precisa ser fácil o entendimento e a organização dos recursos, precisa mosntrar a conexão entre os elementos e permiti a 
     identificação de problemas e oportunidades.
+04/05/2026
+    O ciclo de desenvolvimento de um software é um processo sequencial que define as etapas de criação e implementação de um software, forncendo uma estrtura para o 
+    gerenciamento do projeto de software de forma eficiente e eficaz, garantindo que o produto seja entregue atendendo os requisitos do cliente. Em resumo, ele é um passo a 
+    passo, um processo padronizado para a criação de um software. O ciclo de desenvolvimento de um software é um plano de trabalho que conclui o projeto dentro dos limites de tempo e orgamento, explicando como planejar, construir e manter o software de alta qualidade. O ciclo se consiste em sete etapas:
+        Análise de requisitos: a primeira etapa do ciclo, e se consiste na captura das diretrizes do projeto. Ou seja, é aqui onde eu faço o levantamento de requisitos para o  
+            projeto. Todos os integrantes do projeto trabalham aqui (todos mesmo), desde o vendedor até o desenvolvedor, trabalhando juntos para coletar informações relevantes 
+            para o andamento do projeto (lembre-se, quanto mais detalhado um requisito for, melhor). Algumas informações essenciais para um bom levantamento de requisitos, são 
+            aquelas que fazem parta da documentação, restrições, recursos necessários, escopo, opinião do cliente e etc. 
+        Estudo de Viabilidade: Uma das etapas mais importantes e pode ser realizada junto com a etapa anterior. Nesta etapa é onde analisamos se o projeto desenvolvido consegue 
+            "parar de pé" (ou seja, se mantar após o seu lançamento). Aqui analisamos se ele é viavel tecnicamente (é muito complicado de fazer? precisaria de mais 
+            desenvoledores?),se é viavel economicamente (vai trazer lucro para o usuário? a solução que eu estou trazendo ao usuário, vale o preço?), é viavel operacionalmente 
+            (eu vou ter mais trabalho que o normal para fazer este projeto? vou precisar de mais desenvoledores?) e é viavel judicialmente (é legal esse software? me tratara dor 
+            de cabeça com a justiça?). Em resumo, está parte confere se o projeto compensa ou não.
+        Design: é nesta etapa onde a equipe começa a juntar todos os requisitos coletados para criar um esqueleto do projeto. Em resumo, nesta parte onde a equipe começa a criar 
+            a prototipação (figma), onde define todos os requisitos, inputs, outputs, formulários e relacionados, e todas as suas especificações, tamanho, cor, margin e etc., e 
+            a documentação dos requisitos. Aqui é onde define a arquitetura geral do sistema e descreve todas as informações para os desenvolvedores começarem a trabalhar no 
+            produto. 
+            Existem dois tipos de documentos de design: 
+                Alto nível: Em resumo, é uma breve apresentação do projeto, mostrando todo o seu fluxo, incluindo algumas partes de banco de dados, do desenvolvimento e 
+                    relacionados, mas nada muito tecnico. Podemos dizer que temos uma visão macro, vemos o software de uma maneira de cima (mais simplificado). Podemos assimilar 
+                    que esta parte é como se fosse uma apresentação para o seu cliente, mostrando de forma não muito tecnica, mas mostrando tudo o que o projeto tem/tudo o que 
+                    ele precisa saber. Muito utilizado para encontrar problemas antecipadamente, para que a qualidade do software possa ser melhor garantida.
+                Baixo nível: é um documento mais tecnico, onde mostra toda a lógica por trás do projeto. Aqui é mostrado todo o fluxo, todas as relações, tudo mesmo, de forma 
+                    mais detalhada e tecnica. Podemos assimilar que está parte é um documento para a equipe de desenvolvimento, por causa da sua visão mais especifica e tecnica 
+                    sobre o projeto.
+        Codificação: parte mais longa do ciclo. Aqui é onde tiramos o projeto do papel e colocamos a mão na massa. 
+        Teste: uma parte especifica da equipe testa toda a aplicação. Certa de 40% de todo o custo do projeto é destinado para a área de teste. Uma explicação para isso é a 
+            rapidez de como as informações são transmitidas atualmente, um erro pode arruinar a imagem do cliente ou da empresa em minutos. Sendo a parte de teste a salvadora de 
+            muitas reputações. Os testes são feitos em vários ambientes, por várias pessoas e utilizando várias estratégias. 
+            Diferença entre Teste/QA para Homolocação:
+                QA: alguém da equipe com o papel de testar, encontrar falhas, simular o usuário, utilizando a aplicação
+                Homolocação: o próprio cliente ou um QA de confiação do cliente utiliza a aplicação. 
+                (no fimal do dia, fazem quase as mesmas coisas, apenas muda a pessoa)
+            Alguns tipos de testes:
+                Teste de performance: como a aplicação reage a uma quantidade grande de usuários estão navegando nela simultaneamente. Mede o tempo de resposta.
+                Teste de carga: como a aplicação reage quando uma quantidade grande (um pouco maior que o esperado) utiliza a aplicação simultaneamente. 
+                Teste de stress: como a aplicação reage estando além dos limites, assim forçando falhas para analisar a resiliência e recuperação
+        Instalação e Deploy: lanço a minha aplicação mundo a fora e vejo como o mercado irá reagir com minha aplicação. Lançamento da versão final. Nesta fase, a equipe prepara 
+            todo o procedimento para enviar a aplicação para a internet, organizando o software para como ele deve se comportar e fica atento a qualquer feedback de usuários, 
+            tando de problemas quanto se está de acordo com as suas expectativas. 
+        Manutenção: após o lançamento do projeto, esta fase é responsável por corrigir falhas de acordo com a utilização dos usuários. Adiciona correções, adiciona 
+            especificações (leves e basicas) novas, atualiza para versões mais recentes e etc.
+    Governança ela assegura que todas as políticas e estratégias da empresa sejam efetivamente aplicadas e que os processos definidos sejam corretamente executados. Envolve 
+    desde a atribuitção de papeis e resposnabilidades de cada membro da equipe até o suporte e monioramento, além da criação de ações corretivas para resolver problemas que 
+    podem surgir no futuro. A Governança de TI nada mais é do que tudo o que foi dito sobre Governança (atribuitção de papeis, assegurar as politicas e estratégias, garantir que 
+    todos os processos sejam feitos e relacionados), mas na área de tecnologia da informação. Ela estabele normas e politica, direciona processos, promove a transformação 
+    digital, estabelece objetivos estrategicos e monitora se todos estão cumprindo as regras estabelecidas, tudo isso no setor de TI. Um empresa precisa de uma governança de TI 
+    por causa que falhas em TI podem colocar em risco a creadibilidade da empresa, ou seja, falhas em TI possuem impactos grandes e significativos. Acidentes em TI pode afetar a 
+    segurança da informação e confidencialidade de processos. Além de altos prejuizos financeiros para o negócio. A Governança de TI entra em campo para solucionar problemas de 
+    alinhamento organizacional em relação a TI e às estratégias do negócio. Os principais indicadores para verificar se uma empresa possui uma boa governança de TI é: 
+    Alinhamento Estratégico, Entrega de valor, Gestão de risco, Gestão de recursos e Mensuração de desempenho. Além da importância de gerenciar os riscos que o negócio está 
+    exposto e também direcionar a tomada de decisões da melhor forma possível. No final do dia, a grande importancia para a governança de TI é agragar valor ao negócio e 
+    continuadade do negócio. O ITIL é um dos framework para a gestão da governança de TI, servindo para organizar os seus processos e orientar a todos os profissionais a fazerem 
+    suas funções com eficiencia. O ITIL é um guia de boas práticas (orientações) para criar e gerenciar um serviço de TI com qualidade, abordando desde qualidades até 
+    habilidades necessárias para o gerenciamento de serviços de TI. O ITIL é público, não precisa pagar ou coloca-lo em plataforma ou coisa do genero, você adapta e implementa 
+    no seu negócio. O ITIL é uma biblioteca com 5 principais livros que mostram como gerenciar o ciclo de vida de um serviço, sendo eles:
+        Estratégia de Serviço
+        Desenho de Serviço
+        Transição de Serviço
+        Operação de Serviço
+        Melhoria Contínua de Serviço
+11/05/2026
+    A central de serviços de TI (ou mais conhecido como Service Desk de acordo com as boas práticas do ITIL) é a camada/canal principal em que estabelece a comunicação entre o 
+    usuário e a equipe/área de TI. O papel do Service Desk é registrar, acompanhar e resolver incidentes, requisições e dúvidas, garantindo que a TI apoie o negócio de forma 
+    eficiente e organizada, ou seja, garanti a continuedade do projeto/serviços de TI, por ser o cerébro da operação (tudo passa por ele, por ser o intermediador entre o cliente 
+    e a equipe de TI. Ele é a inteligencia da operação, tento um efeito em cascata, ou seja, se o Service Desk erra, todos os outros setores erram). Alguns dos seus principais 
+    papeis:
+        Restaura serviços rapidamente quando há falhas;
+        Reduz o impacto de indecidentes no negócio;
+        Centraliza e padroniza o atendimento ao cliente;
+        Aumenta a satisfação e confiança dos usuários nos serviços de TI.
+    As principais funções do Service Desk é:
+        Receber, registrar, classificar e priorizar todas as solicitações (incidente, problemas ou requisições);
+        Diagnóstico e investigação no primeiro nível;
+        Resolver incidentes e requisições de serviços que a Central de Serviços está preparada;
+        Escalar incidentes de acordo com o nível de serviço;
+        Manter usuários informados sobre o progresso (de acordo com o indecidente);
+        Fechar todos os incidentes, requisições e outros tipos de chamados;
+        Atualizar a Base de Conhecimento (a partir do momento em que se consegue resolver um incidente ou problema, eles criam um material ou relacionado, para que a resolução do problema seja mais rápida)
+    Um breve resumo: A partir do relato de uma ocorrencia feita pelo o usuário, por meio de um canal de comunicação, o usuário entra em contato com o Service Desk, que por sua 
+    vez registra, classifica, prioriza a ocorrencia do usuário, além de dar diagnosticos e soluções para o usuário. E por fim, dependendo da situação ele escala a ocorrencia 
+    para níveis e reporte gestão (grupos de suporte especializados para Aplicação, Infraestrutura,Segurança e dentre outros). Além de criar uma base de conhecimento.
+    A principal diferença entre o incidente e o problema é que no incidente eu não sei a causa que ocorreu a interrupção não planejada do serviço, enquanto no problema é a causa 
+    raiz desconhecida de um ou mais incidentes recorrentes. O foco do incidente é restaurar o serviço o mais rápido possível, enquanto o problema foca em indetifica e eliminar a 
+    causa raiz. Além disso, o objetivo são diferentes, enquanto o incidente quer minimizar o tempo de inatividade,  problema quer melhorar a qualidade e escabilidade do serviço. 
+    No incidente, temos um processo para fazer a gestão deste incidente:
+        Identificação e Classificação (eu confirmo se realmente é um incidente, ou seja, não consigo achar uma causa raiz o mais rápido possível e confirmo seu impacto e o seu tipo de ocorrencia);
+        Registro (registro o incidente no sistema, com data, usuário, local, serviço afetado, descrição e tudo mais);
+        Categorização (eu defino qual item foi afetado, se foi um hardware, software, rede entre outros)
+        Priorização (eu determino a ordem de atendimento do cliente seguindo os seguintes parametros de Matriz de Impacto x Urgênciade, de acordo com a SLA: "quantas pessoas estão sendo afetadas" e "qual é tempo limite que eu posso ficar sem o sistema?")
+        Diagnóstico, Resolução e Recuperação (começo a investigar a causa do ocorrido junto ao níveis do Service Desk, caso seja resolvido, valido com o usuário e restaurar o serviço)
+        Encerramento (registro a solução aplicada, confirmação com o usuário e atualização na base de conhecimento para evitar ocorrencias posteriores)
+    Um problema nasce a partir da repetição ou conjunto de incidentes, mas em determinadas situações, nem todo o incidente acaba virando um problema. No problema, temos dois 
+    seotres trabalhando nele, o Gerenciamento de Incidentes trabalha para restaurar o serviço rapidamente, enquanto o Gerenciamento de Problemas é responsável por identificar, 
+    eliminar e prevenir as causas que geram esses incidentes (documentar soluções permanentes). O processo de gestão de problemas se resume em:
+        Detecção (eu identifico incidentes recorrentes ou falhas sem uma raiz conhecida)
+        Registro (crio um registro de problema, detalhando todo o problema, com data, local e etc.)
+        Classificação (classifico o tipo de impacto, se é no software, hardware, segurança e etc.)
+        Priorização (estabelece a ordem de tratamento seguindo a SLA considerando impacto e urgência)
+        Solução de Contorno (prioriza a solução temporaria até achar a causa raiz do incidente. Caso tenha algo na base de conhecimento, pode ser utilizada nesta parte)
+        Resolução do Problema (investigo e identifico a causa raiz do problema)
+        Encerramento (Finalização do registro, validação da solução e atualização da Base de Conhecimento)
+    Um requisito de serviço é um pedido formal do usuário para a equipe de TI realize uma ação ou forneça algo ao usuário, eles representam demandas rotineiras de suporte ou 
+    atendimento. O processo da gestão de um requisito é:
+        Identificação e Classificação (veriico se o pedido do usuário é realmente um requisição de serviço, e não um problema ou incidente)
+        Registro (registro a requisção no sistema, com todos os dados do usuário)
+        Categorização (eu defino o tipo de solicitação, ajudando na organização e direcionamento correto do atendimento)
+        Priorização (defini a ordem e prazo de atendimento conforme a Matriz de Impacto x Urgênciade, acordo com a SLA)
+        Resolução (executo a solicitação do usuário, caso necessário, eu passo para o outro nível de suporte)
+        Encerramento (concluo a solicitação e atualizo a base de conhecimento, além de registrar a solução aplicada)
+    O acordo de nívels de serviço (ou SLA) é mais do que um documento que defino prazos e resoluções, ele é um acordo formal entre o provedor de serviço (equipe de TI) e o 
+    usuário, seja interno ou externo. Definindo expectativas, responsabilidades e padrões de qualidade para a entrega dos serviços. 
+    O processo é um conjunto estruturado de atividades que utilizam entradas, passam por transformações e geram saídas que podem ser produtos, serviços ou resultados. Essas 
+    atividades são interligadas por objetivos comuns e possuem mecanismos de controle e avaliação para garantir a qualidade e a eficiência. 
+    Um fluxograma é uma representação gráfica das etapas de um processo, mostrando como as atividades se relacionam e como o trabalho flui de uma etapa para outra. Por meio dele 
+    é possível visualizar o caminho que as tarefas percorrem, as decisões envolvidas e as entradas e saídas de cada fase. 
+18/05/2026
+    Mudança é qualquer modificação (acréscimo, remoção e etc.) feita que pode acarretar em um impacto no serviço de TI. Mudanças podem acontecer em qualquer área de TI, 
+    infraestrutura, sistema, aplicações, processos ou configurações. Um grande exemplo de Mudança é a implementação de um novo serviço. O gerenciamento de Mudança (GMUD) é o 
+    processo que controla o ciclo de vida de uma mudança, eles garantem que uma mudança seja planejada, avaliada e implementada com o menor ou mínimo impacto possível. O seu 
+    papel principal é reduzir riscos e interrupções, além de fazer com que as mudanças tragam benéficios reais para o serviço. Na prática, o GMUD funciona da seguinte maneira:
+        Solicitação da mudança (RDM) (é um registro formal do pedido).
+        Avaliação de impacto e risco.
+        Planejamento e aprovação.
+        Implementação controlada.
+        Revisão pós-implantação.
+    O objetivo da GMUD é garantir estabilidade, confiabilidade e previsibilidade nos processos de mudanças de TI, assim reduzindo ao máximo os riscos e interrupções. Isso só é 
+    possível por que a GMUD analisa toda mudança antes de ser implementada, considerando:
+        Benefícios esperados e riscos potenciais;
+        Impactos técnicos e operacionais;
+        Necessidade de testes prévios para validar a alteração;
+        Plano de retorno (rollback), que permite restaurar o ambiente ao estado anterior caso algo saia do esperado.
+    O GMUD classifica as mudanças em três principais pilares, de acordo com o seu nível de risco, urgência e nencessidade de aprovação:
+        Emergencial (mudança crítica ou urgente, aplicada rapidamente para correções de falhas ou ameaças de segurança - avaliada por um Comitê de Mudanças Emergenciais)
+        Normal (passa pela avaliação, planejamento e aprovação antes da execução - avaliada por um Comitê de Mudanças para garantir controle e segurança)
+        Padrão (é uma mudança pré-aprovada e de baixo risco, é um processo "recorrente" de mudança, ou seja, já é conhecido e documentado. É executado sem nenhuma aprovação)
+    Comitê de mudanças é um grupo formado por representantes de cada área da mundaça (ou de todas as áreas da empresa). Eles são responsáveis por analisar, avaliar riscos, 
+    validar benefícios e aprovar (ou reprovar) mudanças antes que elas sejam implementadas. O objetivo é garantir que todas as decisões considerem o impacto no negócio, a 
+    viabilidade técnica e a continuidade dos serviços de TI.
+    Freezing é um periodo definido que nenhuma mudança é permitida no ambiente de produção (apenas mudanças emergenciais podem ser autorizadas — e ainda assim, sob avaliação 
+    rigorosa). Ele é feita com base nos momentos mais "quentes" da empresa, por exemplo, quando tem mais acesso de usuários, quando tem mais transferencias monetárias e etc. 
+    Nesse momento crítico, não se faz nenhuma mudança com o objetivo de garantir a estabilidade e evitar riscos enormes. 
+    A requisição de mudança é um documento formal que tem como objetivo realizar um pedido de mudança. Descrevendo o que será feito, por que será feito, como será feito, quando 
+    será feito, por quem será feito e quais são os riscos de implementar está mudança. Assim, garanti um controle, viabilidade e segurança dependendo do pedido de mudança. Na 
+    RFC (que é a requisição de mudança) deve ter:
+        Dados da Mudança (informações iniciais e essencias para a identificação da mudança, por exemplo, responsável pela abertura, motivo da mudança (por que ela é necessária), 
+        data e hora planejadas, classificação (normal, padrão ou emergencial) e avaliação de risco)
+        Descrição da Mudança (explica o que será feito na mudança)
+        Impacto Esperado / Possíveis Impactos (explica o que pode ser afetado pela mundaça, ou seja, são os riscos da mundaça)
+        Plano de Execução (Passo a Passo / Checklist) (lista de todas as atividades necessárias para efetuar a mudança, em uma ordem cronológica e com um cronograma. Nesta lista 
+        inclui: descrição das tarefas,dependências entre atividades, ferramentas necessárias e responsáveis por cada etapa)
+        Responsáveis pela Mudança (mostro quem será responsável por cada coisa)
+        Cronograma e Janela da Mudança (mostro o período de tempo exato em que a mudança será realizada, aqui é necessário especificar a janela de inicio e fim da mudança)
+        Procedimento de Escalação (caso ocorra algum problema, aqui é definido quem deve ser chamado e por quando deve ser chamado. Aqui coloca-se o contado de todos os 
+        participantes: equipe técnica, gestores, responsáveis pelos testes, CAB / Comitê de Mudanças)
+        Plano de Reversão (Rollback / Backup) (aqui, é descrito todos os passos para reverter o ambiente para o estado anterior caso algo de errado. Aqui incliu: backups 
+        necessários, comandos de reversão, responsáveis pelo retorno e validação após a restauração)
