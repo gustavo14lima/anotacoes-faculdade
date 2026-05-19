@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="buscarCEP01()">Pesquisar 01</button>
+    <button onclick="buscarCEP02()">Pesquisar 02</button>
+
+    <script>
+        function buscarCEP01() {
+            console.log(`Início da função`);
+
+            // fetch returna uma promessa (uma Promisse). Uma Promisse é um objeto
+            // Promisse é uma promessa, ele vai retornar o resultado, mas ele pode demorar um pouco. 
+            // Ele tem esse comportamento, por causa que ele precisa sair da rede para buscar a informação pela internet
+            // Requisição externa
+
+            // .then() -> recebe o retorno da promessa. Ele pega o retorno da promessa antes de seguir as demais linhas
+            let retorno_api = fetch(`https://viacep.com.br/ws/08140290/json`)
+            // função de seta
+                // retornoPronto é o parametro da função de seta
+            .then((retornoPronto) => {
+                // só uso o retorno da promessa quando ela estiver pronta
+                // console.log(`Returno: ${retornoPronto}`);
+
+                return retornoPronto.json();
+            })
+            .then((retornoProntoConvertido) => {
+                console.log(`Retorno: ${retornoProntoConvertido}`);
+            })
+            // pega o erro da promessa, se tiver
+            .catch((erro) => {
+                console.log(`Deu erro: ${erro}`);
+            })
+
+            console.log(`Fim da função`);
+        };
+
+        // estou criando uma funcção assincrona. 
+        async function buscarCEP02() {
+            // await -> espera que a promessa seja comprida
+            let retorno_api = await fetch(`https://viacep.com.br/ws/08140290/json`)
+
+            let retornoProntoConvertido = await retorno_api.json();
+            console.log(`Retorno: ${retornoProntoConvertido}`);
+        };
+
+    </script>
+
+</body>
+</html>

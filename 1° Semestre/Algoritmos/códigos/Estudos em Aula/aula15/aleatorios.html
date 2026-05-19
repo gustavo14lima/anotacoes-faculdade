@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // função matematica que gera um número de 0 até 0.999. (maior que 0 e menor que 1, ou seja, 0 < x > 1)
+        let aleatorio = Math.random();
+
+        console.log(`Número aleatório: ${aleatorio}`);
+
+        let min = 3;
+        let max = 7;
+
+        // gerando um número aleatório com um intervalo de números especifico
+        let aleatorio_intervalo = aleatorio * (max - min) + min;
+        console.log(`Número aleatório com intervalo: ${aleatorio_intervalo}`);
+
+        // função de arredondamento de números (metodo de arredondamento universal, quando aparece 5, ele arredonda para cima)
+        aleatorio_intervalo = Math.round(aleatorio * (max - min) + min); // caso eu queira adicionar o 7 no "sorteio", adicione um dentro dos paranteses
+        console.log(`Número aleatório arredondado: ${aleatorio_intervalo}`);
+        
+        // (max - min) -> pega a quantidade de números que pode "sortear"
+        // + min -> causa do deslocamento caso tire o 0, ou seja, ele é como se fosse o começo para sortear os números
+            // O + min, é responsavel por gerar os números a partir da especificação que foi digitada  
+
+        // função para transformar qualquer número em um número inteiro. Ele "corta" a parte da virgula praticamente
+            // Exemplo: 5.6865 --(Transformação com o parseInt)--> 5
+        aleatorio_intervalo = parseInt(aleatorio * (max - min) + min);
+        console.log(`Número aleatório transforado em número inteiro: ${aleatorio_intervalo}`);
+
+        // Math.floor -> arredonda para baixo
+        let arredondamentoBaixo = Math.floor((Math.random() * 20) + 1);
+        console.log(`Número aleatório arredondado para baixo: ${aleatorio_intervalo}`);
+
+    </script>
+
+</body>
+</html>

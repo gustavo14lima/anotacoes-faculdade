@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="ipt_falta">
+    <button onclick="lancarFalta()">Atualizar</button>
+
+    <div id="resultado"></div>
+    
+    <script src="funcoes_uteis.js"></script>
+    <script>
+        let faltas = [];
+
+        function lancarFalta() {
+            let faltaDia = Number(ipt_falta.value);
+
+            faltas.push(faltaDia);
+
+            resultado.innerHTML = `A média das faltas é: ${calcularMedia(faltas)}`
+        };
+
+    </script>
+
+</body>
+</html>
