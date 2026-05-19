@@ -105,3 +105,11 @@
     para uma porta diferente daquela das páginas web. Exemplo de portas: 80 ou 8080 é o HTTP, 3306 é o MySql, 443 é o HTTPS e o 22 é o SSH. Existem 65535 portas, e a paritr da 
     porta 49152 você pode utilizar para o que bem entender, pois são portas dinâmicas, nenhum software ou protocolo está utilizando ela. Vale resultar que algumas portas entre 0 
     e 49151 também estão indisponivéis!
+13/06/2026
+    A conexão SSH é um protocolo que define como conduzir uma comunicação segura entre duas ou mais máquina dentro de uma rede. Funcionando a partir de três pilares basicos: autentificação, criptografia e integridade. Em resumo, a conexão SSH acessa o shell de outro computador, definindo como conduzir uma comunicação segura entre esses dois ou mais comptuadores. Para realizar a comunicação, o protocolo utiliza a arquitetura cliente/servidor. Para realizar a conexão, basta utilizar o comando:
+        ssh usuario@ip -p 22
+            ssh -> o comando para utilizar o protocolo ssh
+            usuario -> usuário da máquina no qual você irá entrar
+            ip -> seria o IP da máquina que você irá entrar
+            -p 22 -> eu estou definindo que irei utilizar a porta 22 (que é a porta para a comunicação SSH)
+    Lembre-se sempre de verificar se ambos os computadores (tanto o cliente, tanto o servidor) estão na mesma rede. Caso queira fazer uma comunicação ssh com uma máquina virtual que se localiza na sua máquina fisica, apenas utilize 127.0.0.1 ou localhost no lugar do IP, assim você utiliza o seu IP local.
