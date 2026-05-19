@@ -1,0 +1,31 @@
+<!-- 
+
+a) Tenha um botão "jogar dado";  
+
+b) Ao clicar nele, sorteie um dos 20 números de um dado D20 (Google) e exiba o número sorteado em um quadrado com fundo preto, contendo a letra branca e o número centralizado dentro do quadrado (100px de largura e altura é suficiente); 
+ 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    
+    <button onclick="jogarDado()">jogar dado</button>
+
+    <div style="background-color: black; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+        <p id="resultado" style="color: white; font-weight: bolder; font-size: 20px;"></p>
+    </div>
+
+    <script>
+        function jogarDado() {
+            resultado.innerHTML = parseInt(Math.random() * (20 - 1 + 1) + 1);
+        };
+
+    </script>
+
+</body>
+</html>

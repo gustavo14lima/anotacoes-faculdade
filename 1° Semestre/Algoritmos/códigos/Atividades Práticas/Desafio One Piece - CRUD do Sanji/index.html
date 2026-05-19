@@ -70,7 +70,6 @@
 
         function verificarEstoque() {
             div_exibicao.innerHTML = ``
-
             
             if (estoque.length < 3){
                 div_resultado.innerHTML = `Desse jeito, o Luffy devora até o navio`;
@@ -146,7 +145,6 @@
 
             if(estoque.indexOf(comidaDeletar) >= 0){
                 for (let i = estoque.length; i > 0; i--){
-                    alert(estoque)
                     if (estoque[i] == comidaDeletar){
                         estoque.splice(i, 1);
                         div_resultado.innerHTML = `A comida '${comidaDeletar}' foi removida do estoque.`;

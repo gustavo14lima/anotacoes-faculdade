@@ -1,0 +1,85 @@
+<!-- 
+1. Ficha de Aluno
+
+Crie um objeto JSON chamado aluno com as propriedades: nome, ra, curso e semestre. Exiba cada propriedade em um parágrafo diferente na tela no seguinte formato:
+
+Nome: Ana Silva
+RA: 1234567
+Curso: Ciência da Computação
+Semestre: 1 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - Ficha de Aluno</title>
+</head>
+<body>
+    
+    <h1>Ficha de Aluno</h1>
+    <div>
+        <label for="ipt_nome">Insira o nome do aluno: </label>
+        <input type="text" id="ipt_nome" placeholder="Ex: Marcus">
+    </div>
+    <div>
+        <label for="ipt_ra">Insira o RA do aluno: </label>
+        <input type="text" id="ipt_ra" placeholder="Ex: 0426125">
+    </div>
+    <div>
+        <label for="ipt_curso">Insira o Curso do aluno: </label>
+        <input type="text" id="ipt_curso" placeholder="Ex: CCO">
+    </div>
+    <div>
+        <label for="ipt_semestre">Insira o semestre do aluno: </label>
+        <input type="number" id="ipt_semestre" placeholder="Ex: 1">
+    </div>
+
+    <button onclick="cadastarAluno()">Cadastrar Aluno</button>
+    <div id="resultado"></div>
+
+    <script>
+        let alunos = [];
+
+        function cadastarAluno() {
+            resultado.innerHTML = "";
+
+            let nomeAluno = ipt_nome.value;
+            let raAluno = ipt_ra.value;
+            let cursoAluno = ipt_curso.value;
+            let semestreAluno = Number(ipt_semestre.value);
+
+            if(
+                nomeAluno == "" ||
+                raAluno == "" ||
+                cursoAluno == "" ||
+                semestreAluno <= 0
+            ){
+                resultado.innerHTML = "Os campos não podem ser nulos!";
+            } else {
+                let aluno = {
+                    nome: nomeAluno,
+                    ra: raAluno,
+                    curso: cursoAluno,
+                    semestre: semestreAluno
+                };
+
+                alunos.push(aluno);
+
+                for(let i = 0; i < alunos.length; i++){
+                    resultado.innerHTML += `
+                    <br>
+                    Nome: ${alunos[i].nome} <br>
+                    RA: ${alunos[i].ra} <br>
+                    Curso: ${alunos[i].curso} <br>
+                    Semestre: ${alunos[i].semestre} <hr>
+                    `;
+                }
+            }
+        };
+
+    </script>
+
+</body>
+</html>

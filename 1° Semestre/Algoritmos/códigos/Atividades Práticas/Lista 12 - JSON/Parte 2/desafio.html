@@ -1,0 +1,96 @@
+<!-- 
+🏆 Desafio — Agenda de Contatos com CRUD
+
+Crie uma agenda de contatos usando um objeto JSON como HashMap, onde a chave é o telefone (único) e o valor é um objeto com nome e email.
+
+A aplicação deve permitir:
+
+    ➕ Adicionar um novo contato (nome, telefone, e-mail)
+    🔍 Buscar um contato pelo telefone
+    ❌ Remover um contato pelo telefone
+    📋 Listar todos os contatos cadastrados
+
+Exiba mensagens de erro caso o usuário tente adicionar um telefone já existente ou buscar/remover um que não existe. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio — Agenda de Contatos com CRUD</title>
+</head>
+<body>
+    
+    <h1>Desafio — Agenda de Contatos com CRUD</h1>
+
+    <div>
+        <h2>Adicionar um novo contato</h2>
+        <div>
+            <label for="ipt_nome">Insira o nome para o novo contato: </label>
+            <input type="text" id="ipt_nome" placeholder="Ex: Caio">
+        </div>
+        <div>
+            <label for="ipt_telefone">Insira o telefone para o novo contato: </label>
+            <input type="text" id="ipt_telefone" placeholder="Ex: 1199999-99">
+        </div>
+        <div>
+            <label for="ipt_email">Insira o email para o novo contato: </label>
+            <input type="text" id="ipt_email" placeholder="Ex: caio@email.com">
+        </div>
+
+        <button onclick="cadastrarContato()">Cadastrar</button>
+    </div>
+
+    <div>
+        <h2>Buscar um contato pelo telefone</h2>
+        <div>
+            <label for="ipt_telefone_busca">Insira um telefone para buscar um contato: </label>
+            <input type="text" id="ipt_telefone_busca" placeholder="Ex: 1199999-99">
+
+            <button onclick="buscarContato()">Buscar Contato</button>
+        </div>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script>
+        let contatos = [];
+
+        function cadastrarContato() {
+            let nomeContato = ipt_nome.value;
+            let telefoneContato = ipt_telefone.value;
+            let emailContato = ipt_email.value;
+
+            if(
+                nomeContato == "" ||
+                telefoneContato == "" ||
+                emailContato == ""
+            ){
+                resultado.innerHTML = "Os campos não pode ser vazio!"
+            } else {
+                let contato = contatos[telefoneContato] = {
+                        nome: nomeContato,
+                        email: emailContato
+                    }
+
+                contatos.push(contato);
+                console.log(contatos);
+                resultado.innerHTML = `Novo contato cadastrado!`;
+            }
+        };
+
+        function buscarContato() {
+            let telefone = ipt_telefone_busca.value;
+
+            if(telefone == ""){
+                resultado.innerHTML = "Os campos não pode ser vazio!"
+            } else{
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>

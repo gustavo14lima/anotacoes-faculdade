@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Dona Matilde</title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_cadastrar">Insira um item para cadastrar: </label>
+        <input type="text" id="ipt_cadastrar">
+    </div>
+    <button onclick="cadastrarAntiguidade()">Cadastrar</button>
+    <button onclick="verificarEstoque()">Verificar Estoque</button>
+
+    <div>
+        <label for="ipt_pesquisa">Insira um item para pesquisar no estoque: </label>
+        <input type="text" id="ipt_pesquisa">
+    </div>
+    <button onclick="pesquisarItem()">Pesquisar</button>
+
+    <div>
+        <label for="ipt_nome_atual">Insira o nome atual: </label>
+        <input type="text" id="ipt_nome_atual">
+
+        <label for="ipt_nome_novo">Insira o nome nome: </label>
+        <input type="text" id="ipt_nome_novo">
+    </div>
+    <button onclick="alterarNome()">Alterar Nome</button>
+
+    <div>
+        <label for="ipt_remover">Insira um item para remove-lo: </label>
+        <input type="text" id="ipt_remover">
+    </div>
+    <button onclick="removerItem()">Remover item</button>
+
+    <button onclick="itensDuplicados()">Itens Duplicados</button>
+
+    <br> <br>
+    <div id="resultado"></div>
+
+    <script>
+        let armazem = [];
+
+        function cadastrarAntiguidade() {
+            let cadastar = ipt_cadastrar.value;
+            armazem.push(cadastar)
+
+            resultado.innerHTML = "Item cadastrado com sucesso!"
+        };
+
+        function verificarEstoque() {
+            let tamanhoLista = armazem.length;
+
+            if(tamanhoLista < 3){
+                resultado.innerHTML = "A loja está quase vazia, precisamos de mais peças raras!";
+            } else if(tamanhoLista < 8){
+                resultado.innerHTML = "Temos algumas peças, mas ainda podemos melhorar o acervo";
+            } else if (tamanhoLista < 11){
+                resultado.innerHTML = "Ótimo! A loja já está bem interessante para os clientes";
+            } else {
+                resultado.innerHTML = "Excelente! Nossa loja está cheia de relíquias incríveis!";
+            }
+        };
+
+        function pesquisarItem() {
+            let pesquisa = ipt_pesquisa.value;
+            let contador = 0;
+
+            if(armazem.indexOf(pesquisa) >= 0){
+                for (let i = 0; i < armazem.length; i++){
+                    if(armazem[i] == pesquisa){
+                        contador ++;
+                    }
+                }
+                resultado.innerHTML = `Temos o item ${pesquisa} e há ${contador} ${contador > 1 ? 'unidades' : 'unidade'} dele na loja`;
+            }else {
+                resultado.innerHTML = `Não encontramos o item ${pesquisa}, talvez seja hora de procurar essa raridade!`
+            }
+        };
+
+        function alterarNome() {
+            let nomeAtual = ipt_nome_atual.value;
+            let nomeNovo = ipt_nome_novo.value;
+
+            for(let i = 0; i < armazem.length; i++){
+                if(armazem[i] == nomeAtual){
+                    armazem[i] = nomeNovo;
+                    resultado.innerHTML = `O item ${nomeAtual} foi atualizado para ${nomeNovo}` 
+                } else {
+                    resultado.innerHTML = `O item ${nomeAtual} não foi encontrado na loja.`
+                }
+            }
+        };
+
+        function removerItem() {
+            let remover = ipt_remover.value;
+
+            for(let i = armazem.length; i >= 0; i--){
+                if (armazem[i] == remover){
+                    armazem.splice(i, 1)
+                    resultado.innerHTML = `O item ${remover} foi removido do estoque.`
+                }else {
+                    resultado.innerHTML = `O item ${remover} não está no estoque`
+                }
+            }
+        };
+
+        function itensDuplicados() {
+            let comidasDuplicadas = [];
+            let texto = "";
+            
+            for(let i = 0; i < armazem.length; i++){
+                let contador = 0;
+
+                for(let j = 0; j < armazem.length; j++){
+                    if(armazem[i] == armazem[j]){
+                        contador ++;
+                    }
+                }
+                if(!comidasDuplicadas.includes(armazem[i])){
+                    texto += `${armazem[i]} (${contador} ${contador > 1 ? 'unidades' : 'unidade'}) <br>`;
+                    comidasDuplicadas.push(armazem[i])
+                } else {
+                    texto = `Não há itens duplicados no estoque, cada peça é única!`
+                }
+            }
+
+            resultado.innerHTML = texto;
+        }
+
+    </script>
+
+</body>
+</html>

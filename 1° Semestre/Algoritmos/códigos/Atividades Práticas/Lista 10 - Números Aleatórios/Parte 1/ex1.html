@@ -1,0 +1,36 @@
+<!-- 
+
+a) Ao clicar em um botão "Sortear", apareça na página um número aleatório, entre 0 e 0.9999;  
+
+b) Se esse número for maior que 0.5, exibir, abaixo, a frase "Eu arredondaria para 1".  Caso contrário, exiba "Eu arredondaria para 0". 
+ 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    
+    <button onclick="numeroAleatorio()">Sortear</button>
+    <div id="resultado"></div>
+
+    <script>
+        function numeroAleatorio() {
+            let aleatorio = (Math.random()).toFixed(1); 
+
+            resultado.innerHTML = `Seu número foi: ${aleatorio} <br>`;
+
+            if (aleatorio > 0.5){
+                resultado.innerHTML += `Eu arredondaria para 1`
+            } else {
+                resultado. innerHTML += `Eu arredondaria para 0`
+            }
+        };
+
+    </script>
+
+</body>
+</html>

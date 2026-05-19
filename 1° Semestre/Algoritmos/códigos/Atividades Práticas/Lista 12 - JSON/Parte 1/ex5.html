@@ -1,0 +1,44 @@
+<!-- 
+5. Lista de Contatos
+
+Crie um array JSON com ao menos 4 contatos, cada um com: nome e telefone. Percorra o array com um for e exiba todos os contatos na tela em formato de lista. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Lista de Contatos</title>
+</head>
+<body>
+    
+    <div id="resultado"></div>
+
+    <script>
+        let contatos = [
+            {
+                nome: "Luiz Phelipe",
+                telefone: "1197668-8598"
+            },
+            {
+                nome: "Carlos Eduardo",
+                telefone: "1195650-1168"
+            },
+            {
+                nome: "Enzo Martins",
+                telefone: "1195610-8983"
+            },
+            {
+                nome: "Gustavo Lima",
+                telefone: "1197497-3858"
+            }
+        ];
+
+        for(let i = 0; i < contatos.length; i++){
+            resultado.innerHTML += `Nome: ${contatos[i].nome} | Telefone: ${contatos[i].telefone} <hr>`
+        }
+    </script>
+
+</body>
+</html>

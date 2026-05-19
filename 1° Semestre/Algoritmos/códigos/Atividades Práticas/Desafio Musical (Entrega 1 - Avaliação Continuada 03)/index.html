@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Musical</title>
+</head>
+
+<style>
+    body{
+        display: flex;
+    }
+    div{
+        width: 50%;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+</style>
+
+<body>
+    
+    <div>
+        <!-- Adicionar uma nova música à playlist -->
+        <h1>Adicionar uma nova música à playlist</h1>
+
+        <label for="ipt_titulo">Insira o título da música:</label>
+        <input type="text" id="ipt_titulo"> <br>
+        <label for="ipt_banda">Insira o nome da banda da música: </label>
+        <input type="text" id="ipt_banda"> <br>
+        <label for="ipt_duracao">Insira a duração da música em minutos: </label>
+        <input type="number" id="ipt_duracao"> <br>
+        <label for="ipt_ano_lancamento">Insira o ano de lançamento da música: </label>
+        <input type="number" id="ipt_ano_lancamento"> <br>
+        <label for="ipt_avaliacao">Insira a avaliação da música <br> (insira todas as avaliações separados por virgula e utilize ponto para separar as casas decimais): </label>
+        <input type="text" id="ipt_avaliacao"> <br>
+        <label for="ipt_integrantes">Insira os nomes dos integrantes da banda (insira todos separads por virgula): </label>
+        <input type="text" id="ipt_integrantes"> <br>
+        <br>
+        <button onclick="adicionarMusica()">Adicionar nova música</button>
+
+        <!-- Listar todas as músicas -->
+        <h1>Listar todas as músicas</h1>
+        <p>Click aqui para ver sua playlist completa</p>
+        <button onclick="listarMusicas()">Listar todas as músicas</button>
+
+        <!-- Remover uma música pelo título -->
+        <h1>Remover uma música pelo título</h1>
+        <label for="ipt_titulo_remover">Insira o título da música para você remove-la: </label>
+        <input type="text" id="ipt_titulo_remover"> <br>
+        <button onclick="removerMusica()">Remover música</button>
+
+        <!-- Atualizar o ano de lançamento de uma música pelo título -->
+        <h1>Atualizar o ano de lançamento de uma música pelo título</h1>
+        <label for="ipt_titulo_atualizar_ano">Insira o título da música para atualizar o seu ano de lançamento</label>
+        <input type="text" id="ipt_titulo_atualizar_ano"> <br>
+        <label for="ipt_novo_ano">Insira o novo ano de lançamento: </label>
+        <input type="number" id="ipt_novo_ano"> <br>
+        <button onclick="atualizarAnoLancamento()">Atualizar ano de lançamento</button>
+        
+        <!-- Calcular a média das avaliações de uma música -->
+        <h1>Calcular a média das avaliações de uma música</h1>
+        <label for="ipt_titulo_avaliacao">Insira um título para buscar a média da avaliação da música: </label>
+        <input type="text" id="ipt_titulo_avaliacao"> <br>
+        <button onclick="mediaAvaliacoes()">Calcular média</button>
+
+        <!-- Descobrir em qual banda está determinado integrante -->
+        <h1>Descobrir em qual banda está determinado integrante</h1>
+        <label for="ipt_integrante_busca">Insira o nome de um integrante para descobrir em que banda ele está: </label>
+        <input type="text" id="ipt_integrante_busca"> <br>
+        <button onclick="buscarBandaPorIntegrante()">Buscar banda por integrante</button>
+    </div>
+    <div>
+        <h1>Resultados</h1>
+        <span id="resultado"></span>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

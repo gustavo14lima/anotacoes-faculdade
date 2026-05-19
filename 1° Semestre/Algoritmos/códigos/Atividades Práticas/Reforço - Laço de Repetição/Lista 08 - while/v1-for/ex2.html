@@ -1,0 +1,37 @@
+<!-- 
+Crie um programa o qual: 
+ 
+
+a) Tenha um botão "Diga algo sobre a matéria de Algoritmos";  
+
+b) Ao clicar nele, mostre na própria página 7 vezes uma frase a sua escolha, uma abaixo da outra.   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Frase Repetitiva</title>
+</head>
+<body>
+    <div>
+        <label for="ipt_frase">Insira uma frase: </label>
+        <input type="text" id="ipt_frase">
+    </div>
+    <button onclick="mostrarFrase()">Diga algo sobre a matéria de Algoritmos</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        function mostrarFrase() {
+            let frase = ipt_frase.value;
+
+            for (let i = 1; i <= 7; i++){
+                div_resultado.innerHTML += `${frase} <br>`
+            }
+        };
+
+    </script>
+    
+</body>
+</html>

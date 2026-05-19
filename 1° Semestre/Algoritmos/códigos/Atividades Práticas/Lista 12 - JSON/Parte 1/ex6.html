@@ -1,0 +1,76 @@
+<!-- 
+6. Média da Turma
+
+Crie um array JSON com ao menos 5 alunos, cada um com: nome e nota. Calcule e exiba:
+
+    A média da turma
+    O nome do aluno com a maior nota
+    O nome do aluno com a menor nota
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Média da Turma</title>
+</head>
+<body>
+    
+    <div id="resultado"></div>
+
+    <script>
+        let alunos = [
+            {
+                nome: "Carlos Eduardo",
+                nota: 6
+            },
+            {
+                nome: "Enzo Martins",
+                nota: 7
+            },
+            {
+                nome: "Gustavo Lima",
+                nota: 10
+            },
+            {
+                nome: "Luiz Phelipe",
+                nota: 2.35
+            },
+            {
+                nome: "Thiago Emidio",
+                nota: 6.7
+            }
+        ];
+
+        let somaNotas = 0;
+        let maiorNota = 0;
+        let nomeAlunoMaiorNota = "";
+        let menorNota = 10;
+        let nomeAlunoMenorNota = "";
+
+        for(let i = 0; i < alunos.length; i++){
+            somaNotas += alunos[i].nota; 
+
+            if(alunos[i].nota > maiorNota){
+                maiorNota = alunos[i].nota
+                nomeAlunoMaiorNota = alunos[i].nome;
+            }
+            
+            if(alunos[i].nota < menorNota){
+                menorNota = alunos[i].nota
+                nomeAlunoMenorNota = alunos[i].nome;
+            }
+        };
+
+        resultado.innerHTML = `
+            A média da turma: ${(somaNotas/ 4).toFixed(2)} <br>
+            O nome do aluno com a maior nota: ${nomeAlunoMaiorNota} <br>
+            O nome do aluno com a menor nota: ${nomeAlunoMenorNota} <br>
+        `;
+
+    </script>
+
+</body>
+</html>

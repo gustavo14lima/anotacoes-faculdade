@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - Gerenciador de Playlist</title>
+</head>
+
+<body>
+    <h1>Gerenciador de Playlist Musical</h1>
+    <p>Sistema para cadastrar, listar, remover e consultar músicas com avaliações e integrantes.</p>
+
+    <div>
+        <h2>Adicionar Música</h2>
+        <label for="ipt_titulo">Título</label>
+        <input id="ipt_titulo" type="text" placeholder="Ex: Midnight City">
+        <br>
+
+        <label for="ipt_banda">Banda</label>
+        <input id="ipt_banda" type="text" placeholder="Ex: M83">
+        <br>
+
+        <label for="ipt_duracao">Duração (minutos)</label>
+        <input id="ipt_duracao" type="number" min="1" step="0.1" placeholder="Ex: 4.2">
+        <br>
+
+        <label for="ipt_ano">Ano de lançamento</label>
+        <input id="ipt_ano" type="number" min="1900" max="2100" placeholder="Ex: 2011">
+        <br>
+
+        <label for="ipt_avaliacoes">Avaliações (1 a 5, separadas por vírgula)</label>
+        <input id="ipt_avaliacoes" type="text" placeholder="Ex: 5, 4, 3, 5">
+        <br>
+
+        <label for="ipt_integrantes">Integrantes (separados por vírgula)</label>
+        <input id="ipt_integrantes" type="text" placeholder="Ex: Bob, Tom, Mel, Dan">
+        </br>
+
+        <button onclick="adicionarMusica()">Adicionar Música</button>
+        <button onclick="listarMusicas()">Listar Músicas</button>
+
+    </div>
+
+    <div>
+        <h2>Operações</h2>
+
+        <label for="ipt_titulo_remover">Título para remover</label>
+        <input id="ipt_titulo_remover" type="text" placeholder="Digite o título">
+        <button onclick="removerMusica()">Remover Música</button>
+        <br>
+
+        <label for="ipt_titulo_atualizar">Título para atualizar ano</label>
+        <input id="ipt_titulo_atualizar" type="text" placeholder="Digite o título">
+        <label for="ipt_novo_ano">Novo ano</label>
+        <input id="ipt_novo_ano" type="number" min="1900" max="2100" placeholder="Ex: 2026">
+        <button onclick="atualizarAnoLancamento()">Atualizar Ano</button>
+        <br>
+
+        <label for="ipt_titulo_media">Título para média das avaliações</label>
+        <input id="ipt_titulo_media" type="text" placeholder="Digite o título">
+        <button onclick="mediaAvaliacoes()">Calcular Média</button>
+        <br>
+
+        <label for="ipt_integrante_busca">Integrante para buscar banda</label>
+        <input id="ipt_integrante_busca" type="text" placeholder="Digite o nome do integrante">
+        <button onclick="buscarBandaPorIntegrante()">Buscar Banda</button>
+
+        <br><br>
+        <div id="mensagem"></div>
+        <br>
+        <div id="resultado"></div>
+    </div>
+
+
+    <script>
+        let playlist = [];
+        
+        function converterTextoEmLista(texto) {
+            let lista = texto.split(",");
+            
+            let listaLimpa = [];
+            for (let i = 0; i < lista.length; i++) {
+                lista[i] = lista[i].trim();
+                if (lista[i].length > 0) {
+                    listaLimpa.push(lista[i]);
+                }
+            }
+            return listaLimpa;
+        }
+        
+        function adicionarMusica() {
+            let musicaRepetida = false;
+
+            let titulo = ipt_titulo.value.trim();
+            let banda = ipt_banda.value.trim();
+            let duracao = Number(ipt_duracao.value);
+            let anoLancamento = Number(ipt_ano.value);
+            let avaliacoesTexto = ipt_avaliacoes.value.trim();
+            let integrantesTexto = ipt_integrantes.value.trim();
+
+            if(
+                titulo == "" ||
+                banda == "" ||
+                duracao == "" ||
+                anoLancamento == "" ||
+                avaliacoesTexto == "" ||
+                integrantesTexto == "" 
+            ){
+                mensagem.textContent = `Preencha todos os campos para adicionar a música.`;
+            } else {
+                let avaliacoesListaTexto = converterTextoEmLista(avaliacoesTexto);
+                let avaliacoes = [];
+                for (let i = 0; i < avaliacoesListaTexto.length; i++) {
+                    if(avaliacoesListaTexto[i] > 5 || avaliacoesListaTexto[i] < 1){
+                        mensagem.textContent = `Todas as avaliações devem ser números entre 1 e 5.`;
+                        avaliacoes = [];
+                        break;
+                    } else {
+                        avaliacoes.push(Number(avaliacoesListaTexto[i]));
+                    }
+                }
+                let integrantes = converterTextoEmLista(integrantesTexto);
+    
+                if(avaliacoes.length <= 0 || integrantes.length <= 0){
+                    mensagem.textContent = `Informe ao menos uma avaliação e um integrante.`;
+                } else {
+                    let musica = {
+                        titulo,
+                        banda,
+                        duracao,
+                        anoLancamento,
+                        avaliacoes,
+                        integrantes
+                    };
+        
+                    for(let i = 0; i < playlist.length; i++){
+                        if(playlist[i].titulo == titulo){
+                            musicaRepetida = true;
+                        }
+                    }
+                    
+                    if(musicaRepetida){
+                        mensagem.textContent = `Já existe uma música com este título.`;
+                        resultado.innerHTML = "";
+                    } else {
+                        playlist.push(musica);
+                        mensagem.textContent = `Música "${titulo}" adicionada com sucesso.`;
+                        listarMusicas();
+                    }
+
+                }
+            }
+        }
+
+        function listarMusicas() {
+            let html = "";
+
+            if(playlist.length <= 0){
+                mensagem.innerHTML = `<p>Nenhuma música cadastrada.</p>`;
+            } else {
+                for (let i = 0; i < playlist.length; i++) {
+                    let musica = playlist[i];
+                    html += `
+                        <div>
+                            <strong>${musica.titulo}</strong><br>
+                            Banda: ${musica.banda}<br>
+                            Duração: ${musica.duracao} min<br>
+                            Ano de lançamento: ${musica.anoLancamento}<br>
+                            Avaliações: ${musica.avaliacoes.join(", ")}<br>
+                            Integrantes: ${musica.integrantes.join(", ")}
+                        </div>
+                    `;
+                }
+    
+                resultado.innerHTML = html;
+            }
+        }
+
+        function removerMusica() {
+            let musicaExiste = false;
+            let tituloBusca = ipt_titulo_remover.value.trim().toLowerCase();
+            let indice = -1;
+
+            if(tituloBusca == ""){
+                mensagem.textContent = `Informe o título para remover.`;
+            } else {
+                for (let i = 0; i < playlist.length; i++) {
+                    if (playlist[i].titulo.toLowerCase() == tituloBusca) {
+                        musicaExiste = true;
+                        indice = i;
+                        break;
+                    }
+                }
+
+                if(musicaExiste){
+                    let tituloRemovido = playlist[indice].titulo;
+                    playlist.splice(indice, 1);
+                    mensagem.textContent = `Música "${tituloRemovido}" removida com sucesso.`;
+                    listarMusicas();
+                } else {
+                    mensagem.textContent = `Música não encontrada para remoção.`;
+                    resultado.innerHTML = "";
+                }
+            }
+        }
+
+        function atualizarAnoLancamento() {
+            let musicaExiste = false;
+            let tituloBusca = ipt_titulo_atualizar.value.trim().toLowerCase();
+            let novoAno = Number(ipt_novo_ano.value);
+
+            if(
+                tituloBusca == "" ||
+                novoAno == ""
+            ){
+                mensagem.textContent = `Informe o título e o novo ano.`;
+            } else {
+                let musica = "";
+                for (let i = 0; i < playlist.length; i++) {
+                    if (playlist[i].titulo.toLowerCase() == tituloBusca) {
+                        musicaExiste = true;
+                        musica = playlist[i];
+                        playlist[i].anoLancamento = novoAno;
+                        break;
+                    }
+                }
+        
+                if(musicaExiste){
+                    mensagem.textContent = `Ano de lançamento de "${musica.titulo}" atualizado para ${novoAno}.`;
+                    listarMusicas();
+                } else {
+                    mensagem.textContent = `Música não encontrada para atualização.`;
+                    resultado.innerHTML = "";
+                }
+            }
+
+        }
+
+        function mediaAvaliacoes() {
+            let musicaExiste = false;
+            let tituloBusca = ipt_titulo_media.value.trim().toLowerCase();
+
+            if(tituloBusca == ""){
+                mensagem.textContent = `Informe o título para calcular a média.`;
+            } else {
+                let musicaEncontrada = null;
+                let soma = 0;
+                for (let i = 0; i < playlist.length; i++) {
+                    if (playlist[i].titulo.toLowerCase() == tituloBusca) {
+                        musicaExiste = true;
+                        musicaEncontrada = playlist[i];
+                        for (let j = 0; j < musicaEncontrada.avaliacoes.length; j++) {
+                            soma += musicaEncontrada.avaliacoes[j];
+                        }
+                        break;
+                    }
+                }
+    
+                if(musicaExiste){
+                    let media = soma / musicaEncontrada.avaliacoes.length;
+                    mensagem.textContent = `A média das avaliações de "${musicaEncontrada.titulo}" é ${media.toFixed(2)}.`;
+                } else {
+                    mensagem.textContent = `Música não encontrada para calcular média.`;
+                    resultado.innerHTML = "";
+                }
+            }
+        }
+
+        function buscarBandaPorIntegrante() {
+            let integranteExiste = false;
+            let integranteBusca = ipt_integrante_busca.value.trim().toLowerCase();
+
+            if(integranteBusca == ""){
+                mensagem.textContent = `Informe o integrante para buscar a banda.`;
+            } else {
+                let musicaEncontrada = null;
+                for (let i = 0; i < playlist.length; i++) {
+                    for (let j = 0; j < playlist[i].integrantes.length; j++) {
+                        if (playlist[i].integrantes[j].toLowerCase() == integranteBusca) {
+                            musicaEncontrada = playlist[i];
+                            integranteExiste = true;
+                            break;
+                        }
+                    }
+                }
+
+                if(integranteExiste){
+                    mensagem.textContent = `O integrante informado está na banda "${musicaEncontrada.banda}".`;
+                } else {
+                    mensagem.textContent = `Integrante não encontrado nas bandas cadastradas.`;
+                    resultado.innerHTML = "";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

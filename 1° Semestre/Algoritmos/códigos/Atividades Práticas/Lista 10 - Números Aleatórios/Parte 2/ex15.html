@@ -1,0 +1,52 @@
+<!-- 
+
+a) Tenha no topo da página, o seguinte texto:  
+
+   Números pares: 0  
+
+   Números ímpares: 0  
+
+b) Ao clicar no botão "Sortear número", deve sortear um número entre -30 e -9 e exibir o número sorteado abaixo do botão 
+
+c) Aumente um dos contadores do item a) conforme ele seja par ou ímpar 
+
+OBS: o contador deve ser cumulativo, ou seja 
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    
+    <p>Número pares: <span id="numero_par">0</span></p>
+    <p>Número ímpares: <span id="numero_impar">0</span></p>
+
+    <button onclick="sortearNumero()">Sortear número</button>
+
+    <script>
+        let numeroPar = 0;
+        let numeroImpar = 0;
+        
+        function sortearNumero() {
+
+            let numero = parseInt(Math.random() * ((-30) - (-9)) + (-9));
+
+            if(numero % 2 == 0){
+                numeroPar ++;
+            } else {
+                numeroImpar ++;
+            }
+
+            numero_par.innerHTML = numeroPar;
+            numero_impar.innerHTML = numeroImpar;
+        };
+        
+    </script>
+
+</body>
+</html>

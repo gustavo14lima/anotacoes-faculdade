@@ -1,0 +1,33 @@
+<!-- 
+Crie um programa o qual:
+ 
+
+a) Ao clicar num botão "Contar"...   
+
+b) Exiba, debaixo do botão, os números de 1 a 15, um embaixo do outro.   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Contagem Simples</title>
+</head>
+<body>
+    <button onclick="contar()">Contar...</button>
+    <div id="div_resultado"></div>
+    
+    <script>
+        function contar() {
+            contador = 1;
+
+            while(contador <= 15){
+                div_resultado.innerHTML += `Contador = ${contador} <br>`
+                contador ++;
+            };
+        };
+
+    </script>
+</body>
+</html>

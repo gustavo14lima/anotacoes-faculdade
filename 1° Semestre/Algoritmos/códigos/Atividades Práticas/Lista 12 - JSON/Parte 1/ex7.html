@@ -1,0 +1,72 @@
+<!-- 
+7. Filtro de Produtos
+
+Crie um array JSON com 6 produtos, cada um com: nome, categoria e preco. Crie um <input> onde o usuário digita uma categoria (ex: "eletronico") e um botão Filtrar que exibe na tela apenas os produtos daquela categoria. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - FIltro de Produtos</title>
+</head>
+<body>
+    
+    <h1>Filtro de Produtos</h1>
+    <label for="ipt_categoria">Insira uma categoria: </label>
+    <input type="text" id="ipt_categoria" placeholder="Ex: Eletrodomestico">
+
+    <button onclick="filtrar()">Filtrar</button>
+    <div id="resultado"></div>
+
+    <script>
+        let produtos = [
+            {
+                nome: "Cebola",
+                categoria: "Legume",
+                preco: 6.50
+            },
+            {
+                nome: "Yakult",
+                categoria: "Bebida",
+                preco: 2.89 
+            },
+            {
+                nome: "Fogão",
+                categoria: "Eletrodomestico",
+                preco: 700
+            },
+            {
+                nome: "Geladeira",
+                categoria: "Eletrodomestico",
+                preco: 1200
+            },
+            {
+                nome: "Carne Moída",
+                categoria: "Alimento",
+                preco: 37.99
+            },{
+                nome: "Peito de Frango",
+                categoria: "Alimento",
+                preco: 27.99
+            }
+        ];
+
+        function filtrar() {
+            let categoria = ipt_categoria.value;
+            categoria = categoria.toLowerCase();
+            categoria = categoria.trim();
+
+            for(let i = 0; i < produtos.length; i++){
+                if(produtos[i].categoria.toLowerCase() == categoria){
+                    resultado.innerHTML += `
+                    Nome: ${produtos[i].nome} | Categoria: ${produtos[i].categoria} | Preço: ${produtos[i].preco} <br>
+                    `
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Funções de Lista</title>
+</head>
+<body>
+
+    <div>
+        <h2>Adicionar no Final</h2>
+        <input type="text" id="ipt_adicionar_fim" placeholder="Insira algo para adicionar no fim lista">
+        <button onclick="adicionar_fim()">Adicionar</button>
+        <div id="resultado_adicionar_fim"></div>
+    </div>
+
+    <div>
+        <h2>Remover do Final</h2>
+        <button onclick="remover_fim()">Clique aqui para remover o último elemento do array</button>
+        <div id="resultado_remover_fim"></div>
+    </div>
+
+    <div>
+        <h2>Remover do Inicio</h2>
+        <button onclick="remover_inicio()">Clique aqui para remover o primeiro elemento do array</button>
+        <div id="resultado_remover_inicio"></div>
+    </div>
+
+    <div>
+        <h2>Adicionar no Início</h2>
+        <input type="text" id="ipt_adicionar_inicio" placeholder="Insira algo para adicionar na início lista">
+        <button onclick="adicionar_inicio()">Adicionar</button>
+        <div id="resultado_adicionar_inicio"></div>
+    </div>
+
+    <div>
+        <h2>Alterar Lista</h2>
+        <input type="text" id="ipt_posicao" placeholder="Insira a posição inicial onde a alteração será feita">
+        <input type="text" id="ipt_quantidade" placeholder="Insira a quantidade de elementos que devem ser removidos">
+        <input type="text" id="ipt_novo_elemento" placeholder="OPCIONAL - Insira um elemento que será adicionado">
+        <button onclick="alterar()">Alterar</button>
+        <div id="resultado_alterar"></div>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <script>
+        let array = [];
+
+        function adicionar_fim() {
+            resultado_adicionar_fim.innerHTML = `Nova lista: ${adicionarNoFinal(array, ipt_adicionar_fim.value)}`
+        };
+
+        function remover_fim() {
+            resultado_remover_fim.innerHTML = `Sua nova lista é: ${removerDoFinal(array)}`
+        };
+
+        function remover_inicio() {
+            resultado_remover_inicio.innerHTML = `Sua nova lista é: ${removerDoInicio(array)}`
+        };
+
+        function adicionar_inicio() {
+            resultado_adicionar_inicio.innerHTML = `Nova lista: ${adicionarNoInicio(array, ipt_adicionar_inicio.value)}`
+        };
+
+        function alterar() {
+            resultado_alterar.innerHTML = `A nova lista é: ${alterarLista(array, ipt_posicao.value, ipt_quantidade.value, ipt_novo_elemento.value)}`
+        }
+
+    </script>
+</body>
+</html>

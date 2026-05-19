@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de funções Matemáticas</title>
+</head>
+<body>
+    
+    <h1>Biblioteca de funções Matemáticas</h1>
+
+    <div>
+        <h2>Somar dois números</h2>
+        <input type="text" id="ipt_numero1_soma" placeholder="Insira o primeiro número">
+        <input type="text" id="ipt_numero2_soma" placeholder="Insira o segundo número">
+        <button onclick="soma(ipt_numero1_soma.value, ipt_numero2_soma.value, resultado_soma)">Somar</button>
+        <div id="resultado_soma"></div>
+    </div>
+
+    <div>
+        <h2>Cálcular distância entre dois pontos</h2>
+        <input type="text" id="ipt_distacia1" placeholder="Insira a primeira distância">
+        <input type="text" id="ipt_distacia2" placeholder="Insira a segunda distância">
+        <input type="text" id="ipt_distacia3" placeholder="Insira a terceira distância">
+        <input type="text" id="ipt_distacia4" placeholder="Insira a quarta distância">
+        <button onclick="calcularDistancia(ipt_distacia1.value, ipt_distacia2.value, ipt_distacia3.value, ipt_distacia4.value, resultado_distancia)">Calcular</button>
+        <div id="resultado_distancia"></div>
+    </div>
+
+    <div>
+        <h2>Converter segundos para hora:minuto:segundo</h2>
+        <input type="text" id="ipt_segundos" placeholder="Insira uma quantidade em segundos: ">
+        <button onclick="converterParaHoraMinutoSegundo(ipt_segundos.value, resultado_hora)">Calcular</button>
+        <div id="resultado_hora"></div>
+    </div>
+
+    <div>
+        <h2>Validar número primo</h2>
+        <input type="text" id="ipt_primo" placeholder="Insira um número primo: ">
+        <button onclick="ePrimo(ipt_primo.value, resultado_primo)">Calcular</button>
+        <div id="resultado_primo"></div>
+    </div>
+
+    <div>
+        <h2>Calcula fatoria de um número</h2>
+        <input type="text" id="ipt_numero_fatorial" placeholder="Insira um número para saber seu fatorial">
+        <button onclick="calcularFatorial(ipt_numero_fatorial.value, resultado_fatorial)">Calcular</button>
+        <div id="resultado_fatorial"></div>
+    </div>
+
+    <div>
+        <h2>Calcular média</h2>
+        <input type="text" id="ipt_adicionar_numero" placeholder="Insira números para calcular a média">
+        <button onclick="adicionarNumero(Number(ipt_adicionar_numero.value), arrayMedias, resultado_media)">Adicionar</button>
+        <button onclick="calcularMedia(arrayMedias, resultado_media)">Calcular média</button>
+        <button onclick="resetarVetor(arrayMedias, resultado_media)">Resetar vetor</button>
+        <div id="resultado_media"></div>
+    </div>
+
+    <div>
+        <h2>Calcular média ponderada</h2>
+        <input type="text" id="ipt_adicionar_valores" placeholder="Insira os valores para calcular a média ponderada">
+        <input type="text" id="ipt_adicionar_pesos" placeholder="Insira os pesos para calcular a média ponderada">
+        <button onclick="adicionarNumero(Number(ipt_adicionar_valores.value), arrayValores, resultado_media_ponderada)">Adicionar valor</button>
+        <button onclick="adicionarNumero(Number(ipt_adicionar_pesos.value), arrayPesos, resultado_media_ponderada)">Adicionar peso</button>
+        <button onclick="resetarVetor(arrayMedias, resultado_media_ponderada)">Resetar vetor valor</button>
+        <button onclick="resetarVetor(arrayPesos ,resultado_media_ponderada)">Resetar vetor peso</button>
+
+        <button onclick="calcularMediaPonderada(arrayValores, arrayPesos, resultado_media_ponderada)">Calcular média</button>
+
+        <div id="resultado_media_ponderada"></div>
+    </div>
+
+    <script src="./matematica.js"></script>
+
+    <script>
+        let arrayMedias = [];
+        let arrayValores = [];
+        let arrayPesos = [];
+
+        function adicionarNumero(numero, array, campoSaida) {
+            if(numero != ""){
+                array.push(numero);
+            }
+
+            campoSaida.innerHTML = `Valor ${numero} inserido!`
+        };
+
+        function resetarVetor(array, campoSaida) {
+            array = [];
+
+            campoSaida.innerHTML = `Vetor resetado`
+        };
+
+    </script>
+</body>
+</html>

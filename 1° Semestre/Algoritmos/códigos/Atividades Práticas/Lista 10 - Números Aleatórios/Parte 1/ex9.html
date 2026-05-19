@@ -1,0 +1,54 @@
+<!-- 
+a) Tenha um botão "Gerar uma nota de aluno entre 3 e 10" que faz aparecer, abaixo dele, a nota gerada  
+
+b) Tenha um botão "Gerar uma frequência de aluno entre 50 e 100" que faz aparecer, abaixo dele, a frequência gerada  
+
+c) Deixe todos os valores com 1 casa decimal na tela  
+
+d) Ao clicar no botão “Ver Aprovação”, exiba na tela uma mensagem como a abaixo, de acordo com a situação do aluno: 
+
+    "Com nota X e frequência Y, o aluno está Z!" 
+
+Onde X é a nota, Y a frequência e Z a situação do aluno (aprovado ou reprovado), sendo que para a aprovação, o aluno deve possuir nota a partir de 6 e frequência a partir de 75%.  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    
+    <button onclick="gerarNota()">Gerar uma nota de aluno entre 3 e 10</button>
+    <div id="nota_aluno"></div>
+
+    <button onclick="gerarFrequencia()">Gerar uma frequência de aluno entre 50 e 100</button>
+    <div id="frequencia_aluno"></div>
+
+    <button onclick="verAprovacao()">Ver Aprovação</button>
+    <div id="mensagem"></div>
+
+    <script>
+        let nota = 0;
+        let frequencia = 0;
+
+        function gerarNota() {
+            nota = (Math.random() * (10 - 3) + 3).toFixed(1);
+            nota_aluno.innerHTML = `A nota foi: ${nota}`;
+        };
+
+        function gerarFrequencia() {
+            frequencia = (Math.random() * (100 - 50) + 50).toFixed(1);
+            frequencia_aluno.innerHTML = `A frequência foi: ${frequencia}`
+        };
+
+        function verAprovacao() {
+            mensagem.innerHTML = `Com nota ${nota} e frequência ${frequencia}, o aluno está ${nota >= 6 && frequencia >= 75 ? `Aprovado` : `Reprovado`}!`
+        };
+
+    </script>
+
+</body>
+</html>

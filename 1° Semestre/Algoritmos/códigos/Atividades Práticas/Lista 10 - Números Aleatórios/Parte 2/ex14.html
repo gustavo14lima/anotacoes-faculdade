@@ -1,0 +1,45 @@
+<!-- 
+a) Ao clicar no botão "Ver a Lua", sorteie um dia do mês entre 1 e 31 e exiba o número sorteado na página  
+
+b) Mostre uma fase da lua, de acordo com o dia sorteado, conforme estes critérios (pode baixar e deixar as imagens locais, se preferir):  
+
+   "Lua nova", caso o dia do mês esteja entre 1 e 7  
+
+   "Lua cheia", caso o dia do mês esteja entre 8 e 16  
+
+   "Lua minguante", caso o dia do mês esteja entre 17 e 22  
+
+   "Lua crescente", caso o dia do mês esteja entre 23 e 31  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    
+    <button onclick="sortearDia()">Ver a Lua</button>
+    <div id="resultado"></div>
+
+    <script>
+        function sortearDia() {
+            let dia = parseInt(Math.random() * (31 - 1) + 1);
+
+            if(dia <= 7){
+                resultado.innerHTML = `Lua nova`
+            } else if(dia <= 16){
+                resultado.innerHTML = `Lua cheia`
+            } else if (dia <= 22){
+                resultado.innerHTML = `Lua minguante`
+            } else {
+                resultado.innerHTML = `Lua crescente`
+            }
+        };
+
+    </script>
+    
+</body>
+</html>

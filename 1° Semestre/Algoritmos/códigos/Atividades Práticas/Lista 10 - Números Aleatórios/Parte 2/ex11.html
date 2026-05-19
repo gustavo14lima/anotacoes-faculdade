@@ -1,0 +1,53 @@
+<!-- 
+a) Ao clicar no botão "Avaliar". Esse botão vai gerar uma avaliação aleatória entre 0 e 5 (números reais com uma casa decimal)  
+
+b) Mostra, abaixo, a nota da avaliação. Ex: "Nota recebida: 4.5"  
+
+c) De acordo com a avaliação aleatória recebida, mostre um emoji, segundo os seguintes critérios (pode baixar e deixar as imagens locais, se preferir):  
+
+   "Muito Triste", caso a nota seja entre 0 e 0.5  
+
+   "Meio Triste", caso a nota seja mais de 0.5 até 1.5  
+
+   "Neutro", caso a nota seja mais de 1.5 até 3.5  
+
+   "Feliz", caso a nota seja mais de 3.5 até 4.5  
+
+   "Muito Feliz", caso a nota seja mais de 4.5  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+
+    <button onclick="gerarNumeroAleatorio()">Avaliar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function gerarNumeroAleatorio() {
+            let numero = (Math.random() * (5 - 0) + 0);
+
+            resultado.innerHTML = `Nota recebida: ${numero.toFixed(1)} <br>`;
+
+            if(numero <= 0.5) {
+                resultado.innerHTML += `Muito Triste`;
+            } else if(numero <= 1.5) {
+                resultado.innerHTML += `Meio Triste`;
+            } else if(numero <= 3.5) {
+                resultado.innerHTML += `Neutro`;
+            } else if(numero <= 4.5){
+                resultado.innerHTML += `Feliz`;
+            } else {
+                resultado.innerHTML += `Muito Feliz`;
+            }
+        };
+
+    </script>
+    
+</body>
+</html>

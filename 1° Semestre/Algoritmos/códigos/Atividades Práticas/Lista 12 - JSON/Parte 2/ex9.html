@@ -1,0 +1,55 @@
+<!-- 
+Crie um objeto JSON onde cada chave é o nome do dia em inglês e o valor é o nome em português:
+
+const dias = {
+   "monday":    "Segunda-feira",
+   "tuesday":   "Terça-feira",
+   ...
+ };
+
+Crie um <input> onde o usuário digita o dia em inglês e um botão que exibe a tradução. Se o dia não existir, exiba "Dia não encontrado". 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - Tradutor de Dias da Semana</title>
+</head>
+<body>
+    
+    <h1>Tradutor de Dias da Semana</h1>
+    <label for="ipt_dia">Insira um dia da semana em inglês: </label>
+    <input type="text" id="ipt_dia" placeholder="Ex: monday">
+
+    <button onclick="exibirDia()">Exibir dia</button>
+    <div id="resultado"></div>
+
+    <script>
+        const dias = {
+            "monday": "Segunda-feira",
+            "tuesday": "Terça-feira",
+            "wednesday": "Quarta-feira",
+            "thursday": "Quinta-feira",
+            "friday": "Sexta-feira",
+            "saturday": "Sábado",
+            "sunday": "Domingo"
+        };
+
+        function exibirDia() {
+            let diaSemana = ipt_dia.value;
+            diaSemana = diaSemana.trim();
+            diaSemana = diaSemana.toLowerCase();
+
+            if(dias[diaSemana] != undefined){
+                resultado.innerHTML = `O dia da semana digitado é: ${dias[diaSemana]}`
+            } else{
+                resultado.innerHTML = "Dia não encontrado"
+            }
+        };
+
+    </script>
+
+</body>
+</html>

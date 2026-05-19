@@ -1,0 +1,46 @@
+<!-- 
+Crie um programa o qual:
+ 
+
+a) Receba um número (tem que estar entre 0 e 200);  
+
+b) Ter um botão chamado "Viva o 7!"   
+
+c) Ao clicar nesse botão, devem aparecer todos os múltiplos de 7 entre 0 e o número informado em a)   
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7. Viva o 7!</title>
+</head>
+<body>
+    
+    <div>
+        <label for="ipt_numero">Insira um número entre 0 e 200: </label>
+        <input type="number" id="ipt_numero">
+    </div>
+    <button onclick="multiplicarSete()">Viva o 7!</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        function multiplicarSete() {
+            let numero = Number(ipt_numero.value);
+
+            if(numero < 0 || numero > 200){
+                alert('Você estourou o escopo! Coloque outro número!')
+            } else{
+                for(let i = 0; i <= numero; i ++){
+                    i % 7 == 0 ? div_resultado.innerHTML += `Dividor de 7: ${i} <br>` : div_resultado.innerHTML += `` 
+                };
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!-- 
+Tente fazer uma pequena simulação do famoso jogo "jo ken po" (pedra, papel e tesoura) em HTML/JS:  
+
+a) Ao clicar no botão "Jogar", deve aparecer abaixo dele ou a figura de uma pedra, de uma folha de papel ou de uma tesoura (seja qual for a imagem, ela deve ter 200px de altura). 
+
+b) Abaixo das imagens, exiba quem venceu e exiba/atualize o placar de vitórias como abaixo: 
+
+     O jogador 1 venceu!  
+
+     Jogador 1: 1 vitória(s) 
+
+     Jogador 2: 0 vitória(s)  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<style>
+    img{
+        height: 200px;
+    }
+</style>
+
+<body>
+    
+    <button onclick="jogar()">Jogar</button>
+    <div id="resultado"></div>
+
+    <script>
+        let vitoriasJogador1 = 0;
+        let vitoriasJogador2 = 0;
+
+        function jogar(){
+            /*
+                0 = pedra
+                1 = tesoura
+                2 = papel
+            */
+
+            let imagems = [
+                "https://cdn-icons-png.flaticon.com/512/5461/5461378.png",
+                "https://cdn-icons-png.flaticon.com/512/4697/4697553.png",
+                "https://cdn-icons-png.flaticon.com/512/82/82100.png"
+            ]
+
+            let jogador1 = parseInt(Math.random() * (3 - 0) + 0);
+            let jogador2 = parseInt(Math.random() * (3 - 0) + 0); 
+
+            if(jogador1 == jogador2){
+                resultado.innerHTML = `Empate`
+            } else if(jogador1 == 0 && jogador2 == 1){
+                resultado.innerHTML = `Jogador 1 venceu`
+                vitoriasJogador1 ++;
+            } else if(jogador1 == 1 && jogador2 == 2){
+                resultado.innerHTML = `Jogador 1 venceu`
+                vitoriasJogador1 ++;
+            } else if(jogador1 == 2 && jogador2 == 1){
+                resultado.innerHTML = `Jogador 1 venceu`
+                vitoriasJogador1 ++;
+            } else {
+                resultado.innerHTML = `Jogador 2 venceu`
+                vitoriasJogador2 ++;
+            }
+
+            resultado.innerHTML += `
+            <div style = "display: flex; align-items: center;">
+                <img src="${imagems[jogador1]}"> X <img src="${imagems[jogador2]}">     
+            </div>
+
+            <br>
+            Jogador 1: ${vitoriasJogador1} vitória(s) 
+            <br>    
+            Jogador 2: ${vitoriasJogador2} vitória(s)
+             `
+        };
+
+    </script>
+
+</body>
+</html>

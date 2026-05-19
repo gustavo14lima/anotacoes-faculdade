@@ -1,0 +1,38 @@
+<!-- 
+Refaça o programa anterior de tal forma que, antes de cada frase apareça um contador. Ex: Se a frase digitada foi “Boa Tarde” a página ficará assim:   
+
+   1. Boa tarde   
+
+   2. Boa tarde   
+
+   ...   
+
+   7. Boa tarde  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Frase Numerada</title>
+</head>
+<body>
+    
+    <button onclick="mostrarFrase()">Diga algo sobre a matéria de Algoritmos</button>
+    <div id="div_resultado"></div>
+
+    <script>
+        function mostrarFrase() {
+            let contador = 1;
+
+            while(contador <= 7){
+                div_resultado.innerHTML += `${contador}. Sejam superiores ou inferiores, os irmãos mais velhos são modelos para seus irmãos mais novos. Se o irmão mais velho toma o caminho errado, os irmãos mais novos podem evitá-lo. E se eu tomar o caminho certo, meus irmãos mais novos podem seguir atrás <br>`
+
+                contador ++;
+            };
+        };
+
+    </script>
+</body>
+</html>

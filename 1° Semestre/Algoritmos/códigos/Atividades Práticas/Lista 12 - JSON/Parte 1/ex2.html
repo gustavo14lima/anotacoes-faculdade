@@ -1,0 +1,70 @@
+<!-- 
+2. Produto no Carrinho
+
+Crie um objeto JSON chamado produto com: nome, preco e quantidade. Calcule e exiba o valor total (preço × quantidade) na tela.
+
+Exemplo: Produto: Caderno | Preço: R$ 15,00 | Quantidade: 3 | Total: R$ 45,00 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - Produto no Carrinho</title>
+</head>
+<body>
+    
+    <h1>Produto no Carrinho</h1>
+
+    <div>
+        <label for="ipt_nome">Insira o nome do produto: </label>
+        <input type="text" id="ipt_nome" placeholder="Ex: Detergente">
+    </div>
+    <div>
+        <label for="ipt_preco">Insira o preço do produto: </label>
+        <input type="number" id="ipt_preco" placeholder="Ex: 67.99">
+    </div>
+    <div>
+        <label for="ipt_quantidade">Insira a quantidade do produto: </label>
+        <input type="number" id="ipt_quantidade" placeholder="Ex: 5">
+    </div>
+
+    <button onclick="cadastrarProduto()">Cadastar Produto</button>
+    <div id="resultado"></div>
+
+    <script>
+        let produtos = [];
+
+        function cadastrarProduto() {
+            let nomeProduto = ipt_nome.value;
+            let precoProduto = Number(ipt_preco.value);
+            let quantidadeProduto = Number(ipt_quantidade.value);
+
+            if(
+                nomeProduto == "" ||
+                precoProduto == "" ||
+                quantidadeProduto == ""
+            ){
+                resultado.innerHTML = "Os campos não podem ser nulos!";
+            } else {
+                let produto = {
+                    nome: nomeProduto,
+                    preco: precoProduto,
+                    quantidade: quantidadeProduto
+                };
+
+                produtos.push(produto);
+
+                for(let i = 0; i < produtos.length; i++){
+                    resultado.innerHTML += `
+                    Produto: ${produtos[i].nome} | Preço: R$ ${(produtos[i].preco).toFixed(2)} | Quantidade: ${produtos[i].quantidade} | Total: R$ ${(produtos[i].preco * produtos[i].quantidade).toFixed(2)}
+                    `
+                }
+            }
+        };
+
+    </script>
+    
+</body>
+</html>

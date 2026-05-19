@@ -1,0 +1,60 @@
+<!-- 
+8. Cardápio de Restaurante
+
+Crie um array JSON com 5 pratos, cada um com: nome, tipo ("entrada", "principal" ou "sobremesa") e preco. Exiba os pratos agrupados por tipo na tela. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8 - Cardápio de Restaurante</title>
+</head>
+<body>
+    
+    <div id="resultado"></div>
+
+    <script>
+        let tipos = ["entrada", "principal", "sobremesa"]
+        let pratos = [
+            {
+                nome: "Macarronada",
+                tipo: "principal",
+                preco: 27.99
+            },
+            {
+                nome: "Atum",
+                tipo: "entrada",
+                preco: 19.99
+            },
+            {
+                nome: "Salmão",
+                tipo: "entrada",
+                preco: 20.00
+            },
+            {
+                nome: "Lasanha",
+                tipo: "principal",
+                preco: 39.99
+            },
+            {
+                nome: "Milkshake",
+                tipo: "sobremesa",
+                preco: 17.99
+            }
+        ];
+
+        for(let i = 0; i < tipos.length; i++){
+            for(let j = 0; j < pratos.length; j++){
+                if(pratos[j].tipo == tipos[i]){
+                    resultado.innerHTML += `Nome do Prato: ${pratos[j].nome} | Tipo do prato: ${pratos[j].tipo} | Preço do prato: R$ ${(pratos[j].preco).toFixed(2)} <br> `
+                }
+            }
+            resultado.innerHTML += "<hr>"
+        }
+
+    </script>
+
+</body>
+</html>

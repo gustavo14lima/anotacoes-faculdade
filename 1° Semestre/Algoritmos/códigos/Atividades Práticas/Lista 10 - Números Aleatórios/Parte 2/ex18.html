@@ -1,0 +1,56 @@
+<!-- 
+
+a) Tenha o seguinte texto:  
+
+   Jogador 1: 0  
+
+   Jogador 2: 0  
+
+   Empate: 0  
+
+b) Ao clicar no botão “Jogar”, sorteie um valor de 1 a 6 para o Jogador 1 e outro valor para o Jogador 2 e some 1 no placar do item a) de acordo com o resultado.  
+
+c) Após atualizar o placar, emita a mensagem "O jogador X está vencendo!", onde X é o jogador que está vencendo. Caso o jogo esteja empatado, a mensagem será "O jogo está empatado!" 
+ -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18</title>
+</head>
+<body>
+    
+    <p>Jogador 1: <span id="jogador1">0</span></p>
+    <p>Jogador 2: <span id="jogador2">0</span></p>
+    <p>Empate: <span id="empate">0</span></p>
+
+    <button onclick="jogar()">Jogar</button>
+
+    <script>
+        let placarJogador1 = 0;
+        let placarJogador2 = 0;
+        let placarEmpate = 0;
+
+        function jogar() {
+            let dadoJogador1 = parseInt(Math.random() * (6 - 1) + 1);
+            let dadoJogador2 = parseInt(Math.random() * (6 - 1) + 1);
+
+            if(dadoJogador1 > dadoJogador2){
+                placarJogador1 ++;
+            } else if(dadoJogador1 < dadoJogador2){
+                placarJogador2 ++;
+            } else {
+                placarEmpate ++;
+            }
+
+            jogador1.innerHTML = placarJogador1;
+            jogador2.innerHTML = placarJogador2;
+            empate.innerHTML = placarEmpate;
+        };
+
+    </script>
+
+</body>
+</html>

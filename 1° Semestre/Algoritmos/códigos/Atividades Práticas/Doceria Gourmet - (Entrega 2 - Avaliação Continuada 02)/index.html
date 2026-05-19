@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria Gourmet</title>
+</head>
+<body>
+    
+    <div>
+        <label>Insira a quantidade de doce a ser vendido: </label> <br>
+        <input type="number" id="ipt_qtd_macaron" placeholder="Quantidade de Macaron">
+        <input type="number" id="ipt_qtd_brigadeiros" placeholder="Quantidade de Brigadeiros">
+        <input type="number" id="ipt_qtd_cupcakes" placeholder="Quantidade de Cupcakes">
+        <input type="number" id="ipt_qtd_cheesecakes" placeholder="Quantidade de Cheesecakes">
+    </div>
+    <div>
+        <label>Insira o proço unitário de cada doce: </label> <br>
+        <input type="number" id="ipt_valor_macaron" placeholder="Valor do Macarons">
+        <input type="number" id="ipt_valor_brigadeiros" placeholder="Valor dos Brigadeiros">
+        <input type="number" id="ipt_valor_cupcakes" placeholder="Valor dos Cupcakes">
+        <input type="number" id="ipt_valor_cheesecakes" placeholder="Valor dos Cheesecakes">
+    </div>
+
+    <button onclick="verificarVendas()">Verificar Vendas</button>
+    <div id="resultado"></div>
+
+    <script>
+        function verificarVendas() {
+            let qtdMacaron = Number(ipt_qtd_macaron.value);
+            let qtdBrigadeiro = Number(ipt_qtd_brigadeiros.value);
+            let qtdCupcake = Number(ipt_qtd_cupcakes.value);
+            let qtdCheesecake = Number(ipt_qtd_cheesecakes.value);
+            
+            let valorMacaron = Number(ipt_valor_macaron.value);
+            let valorBrigadeiro = Number(ipt_valor_brigadeiros.value);
+            let valorCupcake = Number(ipt_valor_cupcakes.value);
+            let valorCheesecake = Number(ipt_valor_cheesecakes.value);
+            
+            resultado.innerHTML = ``;
+            let contador = 1;
+            let valorTotal = 0;
+
+            if (qtdMacaron < 0 || qtdBrigadeiro < 0 || qtdCupcake < 0 || qtdCheesecake < 0 || valorMacaron < 0 || valorBrigadeiro < 0 || valorCupcake < 0 || valorCheesecake < 0) {
+                alert('Erro encontrado! Um dos valores dos campos é negativo!')
+            } else {
+                for (let i = 0; i < qtdMacaron; i++){
+                    resultado.innerHTML += `Venda ${contador} - <img src="https://guiadacozinha.com.br/wp-content/uploads/2021/08/macaron.jpg" width="80px"> - R$${valorMacaron.toFixed(2)} <br>`
+                    contador ++;
+                    valorTotal += valorMacaron
+                }
+                for (let i = 0; i < qtdBrigadeiro; i++){
+                    resultado.innerHTML += `Venda ${contador} - <img src="https://cdn.awsli.com.br/2500x2500/179/179835/produto/356598951/brigadeiro-belga-splits-gourmet-charmm-ym97lqb8n8.png" width="80px"> - R$${valorBrigadeiro.toFixed(2)} <br>`
+                    contador ++;
+                    valorTotal += valorBrigadeiro
+                }
+                for (let i = 0; i < qtdCupcake; i++){
+                    resultado.innerHTML += `Venda ${contador} - <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMIkNmO8N3MbQ1MSSUu6-5NVlLmfZ6Jcrtmg&s" width="80px"> - R$${valorCupcake.toFixed(2)} <br>`
+                    contador ++;
+                    valorTotal += valorCupcake
+                }
+                for (let i = 0; i < qtdCheesecake; i++){
+                    resultado.innerHTML += `Venda ${contador} - <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmINscfm3x1FFohrWKigDr8SdxfbVMmpRkhK0N1Jq5h-I7_z4fshn-p-OO0-virxx-zP6w3z46GIwA4fbssvb5b_V5VvPytLYjgX3PZK3KB6AWkd2zxcLoE-XlDr8J7lACXf-H0eZDzndWiZ8eTKCYMnbqFRqiDOVGJ2fnTBHMqN2Sct65vQIXo0CK/s2000/cheesecake-de-ricota-com-chocolate.jpg" width="80px"> - R$${valorCheesecake.toFixed(2)} <br>`
+                    contador ++;
+                    valorTotal += valorCheesecake;
+                }
+                resultado.innerHTML += `<br> Com a quantidade de ${qtdMacaron} Macarons, ${qtdBrigadeiro} Brigadeiros, ${qtdCupcake} Cupcakes e ${qtdCheesecake} Cheesecakes, a venda totalizará R$${valorTotal.toFixed(2)}`;
+            }
+        };
+
+    </script>
+
+</body>
+</html>

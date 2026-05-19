@@ -1,0 +1,85 @@
+<!-- 
+12. Cardápio por Código
+
+Uma lanchonete identifica seus produtos por um código de 3 letras. Crie um objeto JSON com pelo menos 5 produtos:
+
+const cardapio = {
+   "HAM": { nome: "Hambúrguer Clássico", preco: 25.90 },
+   "ACA": { nome: "Açaí 500ml",          preco: 18.00 },
+   ...
+ };
+
+Crie um sistema de pedido: o usuário digita um código, clica em Adicionar e o item vai para uma lista de pedidos na tela. Ao clicar em Fechar Pedido, exiba o total a pagar. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12 - Cardápio por Código</title>
+</head>
+<body>
+    
+    <h1>Cardápio por Código</h1>
+    <label for="ipt_codigo">Insira um código de um pedido: </label>
+    <input type="text" id="ipt_codigo" placeholder="Ex: HAM">
+
+    <button onclick="adicionarPedido()">Adicionar Pedido</button>
+    <button onclick="fecharPedido()">Fechar Pedido</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        let pedidos = [];
+
+        const cardapio = {
+            "HAM": { 
+                nome: "Hambúrguer Clássico", 
+                preco: 25.90 
+            },
+            "ACA": { 
+                nome: "Açaí 500ml",
+                preco: 18.00 
+            },
+            "PIZ": {
+                nome: "Pizza de Mussarela",
+                preco: 45.00 
+            }, 
+            "CHU": {
+                nome: "Churros de Doce de Leite",
+                preco: 3.00
+            },
+            "CAF": {
+                nome: "Café com Açúcar",
+                preco: 3.00
+            }
+        };
+
+        function adicionarPedido() {
+            let codigo = ipt_codigo.value;
+
+            if(cardapio[codigo] != undefined){
+                pedidos.push(codigo)
+                resultado.innerHTML = "O pedido foi cadastrado!"
+            } else{
+                resultado.innerHTML = "O pedido não está cadastrado!"
+            }
+        };
+
+        function fecharPedido() {
+            let total = 0;
+            resultado.innerHTML += `Todos os prontos cadastrados foram: <br>`
+
+            for(let i = 0; i < pedidos.length; i++){
+                resultado.innerHTML += `${i + 1}° - ${cardapio[pedidos[i]].nome} <br>`
+                total += cardapio[pedidos[i]].preco
+            }
+
+            resultado.innerHTML += `O total a pagar é: R$ ${total.toFixed(2)}`
+        };
+
+    </script>
+
+</body>
+</html>

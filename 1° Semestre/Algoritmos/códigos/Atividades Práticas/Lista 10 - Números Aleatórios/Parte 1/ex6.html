@@ -1,0 +1,43 @@
+<!-- 
+a) Ao clicar no botão "Sortear momento do dia". Esse botão vai gerar uma hora aleatória entre 0 e 23 (apenas números inteiros).  
+
+b) Em seguida, mostre na tela uma dessas frases:  
+
+     "Bom dia, flor do dia, são Xh!" (caso o horário for entre 0 e 11)  
+
+     "Boa tarde, já vai tarde! São Xh!" (caso o horário for entre 12 e 17)  
+
+     "Boa noite, durma bem! São Xh!" (caso o horário for entre 18 e 23) 
+
+Onde X é um número inteiro sorteado, sem casas decimais.  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+</head>
+<body>
+    
+    <button onclick="sortearMomento()">Sortear momento do dia</button>
+    <div id="resultado"></div>
+
+    <script>
+        function sortearMomento() {
+            let horaAleatoria = parseInt(Math.random() * (23 - 0) + 0);
+
+            if(horaAleatoria <= 11){
+                resultado.innerHTML = `Bom dia, flor do dia, são ${horaAleatoria}h!`
+            } else if(horaAleatoria <= 17){
+                resultado.innerHTML = `Boa tarde, já vai tarde! São ${horaAleatoria}h!`
+            } else {
+                resultado.innerHTML = `Boa noite, durma bem! São ${horaAleatoria}h!`
+            }
+        };
+
+    </script>
+
+</body>
+</html>

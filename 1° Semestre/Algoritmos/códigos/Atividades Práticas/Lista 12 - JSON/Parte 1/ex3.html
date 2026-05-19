@@ -1,0 +1,41 @@
+<!-- 
+3. Objeto Aninhado (Endereço)
+
+Crie um objeto JSON chamado cliente com as propriedades: nome, idade e endereco. A propriedade endereco deve ser outro objeto JSON contendo: rua, numero e cidade. Exiba todas as informações formatadas na tela. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Objeto Aninhado</title>
+</head>
+<body>
+
+    <div id="resultado"></div>
+
+    <script>
+        let cliente = {
+            nome: "Gustavo",
+            idade: 18,
+            endereco: {
+                rua: "Logo Ali",
+                numero: 67,
+                cidade: "Atrás de lá" 
+            }
+        }
+
+        resultado.innerHTML = `
+        Nome: ${cliente.nome} | Idade: ${cliente.idade} <br>
+        Endereço: <br>
+        <ul>
+            <li>Rua: ${cliente.endereco.rua} </li>
+            <li>Número: ${cliente.endereco.numero} </li>
+            <li>Cidade: ${cliente.endereco.cidade} </li>
+        </ul>
+        `
+    </script>
+
+</body>
+</html>

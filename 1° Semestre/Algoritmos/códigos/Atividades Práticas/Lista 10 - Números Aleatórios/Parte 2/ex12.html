@@ -1,0 +1,55 @@
+<!-- 
+a) Tenha um botão "Verificar Média" que quando clicado, mostre abaixo da última avaliação a média de todas as avaliações realizadas. Ex: "Média geral: 3.9"  
+
+b) Mostrar também o emoji de acordo com a média.  
+
+OBS: Essa média é a soma de todas as avaliações dividida pela quantidade de avaliações realizadas 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+
+    <button onclick="gerarNumeroAleatorio()">Avaliar</button>
+    <button onclick="verificarMedia()">Verificar Média</button>
+    
+    <div id="resultado"></div>
+    <div id="resultado_media"></div>
+
+    <script>
+        let contador = 0;
+        let armazenamento_numero = 0;
+
+        function gerarNumeroAleatorio() {
+            contador ++;
+
+            let numero = (Math.random() * (5 - 0) + 0);
+            armazenamento_numero += numero;
+            resultado.innerHTML = `Nota recebida: ${numero.toFixed(1)} <br>`;
+
+            if(numero <= 0.5) {
+                resultado.innerHTML += `Muito Triste`;
+            } else if(numero <= 1.5) {
+                resultado.innerHTML += `Meio Triste`;
+            } else if(numero <= 3.5) {
+                resultado.innerHTML += `Neutro`;
+            } else if(numero <= 4.5){
+                resultado.innerHTML += `Feliz`;
+            } else {
+                resultado.innerHTML += `Muito Feliz`;
+            }
+        };
+
+        function verificarMedia() {
+            resultado_media.innerHTML = `Média geral: ${(armazenamento_numero / contador).toFixed(1)}`
+        };
+
+    </script>
+
+</body>
+</html>
