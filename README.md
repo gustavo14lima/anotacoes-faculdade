@@ -13,6 +13,8 @@ Abaixo, deixei a listadas das disciplinas com links direcionados para cada respe
   - [Introdução à Sistemas Operacionais](./1%C2%B0%20Semestre/Introdu%C3%A7%C3%A3o%20%C3%A0%20Sistemas%20Operacionais)
   - [Pesquisa & Inovação](./1%C2%B0%20Semestre/Pesquisa%20%26%20Inova%C3%A7%C3%A3o)
   - [Tecnologia da Informação](./1%C2%B0%20Semestre/Tecnologia%20da%20Informa%C3%A7%C3%A3o)
+- [2° Semestre](./2%C2%B0%20Semestre)
+  - [Pesquisa & Inovação](./2%C2%B0%20Semestre/Pesquisa%20%26%20Inova%C3%A7%C3%A3o)
 
 ## Objetivo
 
