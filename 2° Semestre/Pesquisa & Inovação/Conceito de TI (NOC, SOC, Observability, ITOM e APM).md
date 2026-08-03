@@ -1,3 +1,5 @@
+# Conceito de TI (NOC, SOC, Observability, ITOM e APM)
+
 Antes de dissertar sobre cada um deles separadamente, a principal semelhança entre o NOC, SOC, Observability, ITOM e APM, além de garantir que a tecnologia funcione com excelência, seria a todos dependem da coleta continua de dados (como logs, alertas e métricas) para dar visibilidade sobre o ambiente de TI. Essa coleta de dados faz com que os analistas saem do "achismo" e possam ter uma melhor tomada de decisão. 
 
 Começando pelo o ITOM (IT Operations Management), ele é mais que uma ferramente, mas sim um conjunto de práticas e processos voltadas para supervisionar a infraestrutura tecnológica, automatizar processos e garantir o desempenho de toda a infraestrutura de TI de uma empresa. Seu papel é identificar falhas e lentidões antes que afete o usuário.  Com a automatização, pode-se resolver problemas comuns e executar alguns comandos de rotina sem que tenha nenhuma interferencia humana. 
