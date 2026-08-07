@@ -14,6 +14,8 @@ Abaixo, deixei a listadas das disciplinas com links direcionados para cada respe
   - [Pesquisa & Inovação](./1%C2%B0%20Semestre/Pesquisa%20%26%20Inova%C3%A7%C3%A3o)
   - [Tecnologia da Informação](./1%C2%B0%20Semestre/Tecnologia%20da%20Informa%C3%A7%C3%A3o)
 - [2° Semestre](./2%C2%B0%20Semestre)
+  - [Análise de Sistemas](./2%C2%B0%20Semestre/An%C3%A1lise%20de%20Sistemas)
+  - [Cálculo Computacional e Estatística](./2%C2%B0%20Semestre/C%C3%A1lculo%20Computacional%20e%20Estat%C3%ADstica)
   - [Pesquisa & Inovação](./2%C2%B0%20Semestre/Pesquisa%20%26%20Inova%C3%A7%C3%A3o)
 
 ## Objetivo
