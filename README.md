@@ -18,6 +18,7 @@ Abaixo, deixei a listadas das disciplinas com links direcionados para cada respe
   - [Cálculo Computacional e Estatística](./2%C2%B0%20Semestre/C%C3%A1lculo%20Computacional%20e%20Estat%C3%ADstica)
   - [Linguagem de Programação](./2%C2%B0%20Semestre/Linguagem%20de%20Programa%C3%A7%C3%A3o)
   - [Pesquisa & Inovação](./2%C2%B0%20Semestre/Pesquisa%20%26%20Inova%C3%A7%C3%A3o)
+  - [Sistemas Operacionais em Nuvem](./2%C2%B0%20Semestre/Sistemas%20Operacionais%20em%20Nuvem)
 
 ## Objetivo
 
