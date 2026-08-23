@@ -1,4 +1,4 @@
-## 2.1 Virtualização
+## 2.5 Virtualização
 
 A virtualização, nada mais é, do que você representar algo virtual em seu próprio computador. Um dos grandes exemplos é a virtualização de componentes físicos (componente de armazenamento, memória, rede e processamento) para a virtualização de um sistema operacional.
 
@@ -14,7 +14,7 @@ Existema alguns tipos de virtualização, um deles é a virtualização isolamen
 - Isolmento parcial - Seria um tipo de arquitetura chamada WSL, que seria Um subsistema Linux para Windows. Ele é um ambiente linux que roda junto com o sistema windows.
 
 
-## 2.2 WSL
+## 2.6 WSL
 
 A WSL (Windows Subsystem for Linux) é um recurso Windows que possibilita que você utilize e execute um ambiente linux em uma máquina/computador que possue um sistema operacional Windows, sem que precise utilizar uma máquina virtual ou utilizar o demido dual boot. O seu objetivo principal foi permitir que um desenvolvedor possa utiliizar o windows junto com o linux ao mesmo tempo, sem interfêrencia ou perca de performance, eficiência e etc.
 
@@ -37,7 +37,7 @@ O WSL 2 é mais recomendado que o WSL 1, mas em alguns momentos, é recomendado 
 - O projeto precisa acessar alguma porta serial ou a porta USB
 - Quando você possui requisitos de memórias mais rigidos 
 - Quando o projeto que você está trabalhando, precisa que o mesmo endereço IP da sua máquina windows, seja da sua distruição Linux. Como o WSL 2 trabalha com máquina virtual, acaba ocorrendo uma distruição de IP para essa máquina virtual. 
-## 2.3 Ambientes
+## 2.7 Ambientes
 
 Ambientes são tudo aquilo que um projeto precisa para ser desevolvido, implementado, testado e no final de tudo, sair funcionando. Nos ambientes encontramos processos, orientações, ferramentas, modelos e a infraestrutura, tudo para melhorar a criação ou manutenção de um software.
 Uma infraestrutura se resumo em três grandes ambientes:
@@ -45,7 +45,7 @@ Uma infraestrutura se resumo em três grandes ambientes:
 - Ambiente de Homologação - É aqui onde acontece todo os testes do código desenvolvidor pelos desenvolvedores. Aqui testamos se o software está de acordo com as regras de performance, disponibilidade e as regras da empresa.
 - Ambiente de Produção - É aqui no qual o software fica disponivel para todos acessarem, especialmente o cliente.
 
-## 2.4 Bônus Professor
+## 2.8 Bônus Professor
 
 A diferença entre distribuição stable e rolling release:
 - Distribuição stable são distruições estáveis, são distruições testaveis e oficiais, caso receba alguma atualização, geralmente é apenas com o intuito de corrigir bugs e patchs de segurança, e não novas funcionalidades.

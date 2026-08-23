@@ -1,3 +1,5 @@
+# 2 - Gerência de Recursos
+
 ## 2.1 Definição
 
 Na programção de computadores, o gerenciamento de recursos são as técnicas utilizadas para gerênciar recursos de um computador, aqueles componentes com disponibilidade limitada. Alguns programas de computadores podem realizar esse gerenciamento de seus próprios recursos, utilizando recursos expostos por linguagens de programação ou até mesmo por um host, ou seja, o sistema operacional ou uma máquina virtual gerenciando recursos de um computador.
