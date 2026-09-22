@@ -38,7 +38,7 @@ while True:
                         # Pegando todas as porcentagens: Memória RAM, Memória em Disco e CPU
                         porcentagem_cpu = round(psutil.cpu_percent(interval=1), 2)
                         porcentagem_memoria_ram = round((memoria_ram_total - memoria_ram_disponivel) / memoria_ram_total * 100, 2)
-                        porcentagem_disco = round(disco.percent, 2)
+                        porcentagem_disco = round(disco.percent, 2) 
 
                         lista_csv.append([data_hora_formatada, porcentagem_cpu, porcentagem_memoria_ram, porcentagem_disco])
 
