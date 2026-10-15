@@ -4,6 +4,10 @@
 
 DER é uma ferramenta de apoio ao levantamento e entedimento dos requisitos, utilizado para modelar como serão armazenados os dados e, caso tenha, como será o relacionamento entre eles.
 
+Vale ressaltar que o DER é a minha ferramente que eu tenho validar, com o cliente e com a minha equipe, todos dados que eu tenho necessidade e possuem valor no meu software, para ai sim eu armazenar ele. 
+
+Além disso, eu não foco em apenas uma persona ou ator para montar o meu DER, eu preciso montar o diagrama com base nas necessidades que o meu sistema possue, ou seja, uma necessidade que todos os usuários do meu sistema possuem, com isso, todos os dados que eu irei estar armazenando, precisar possuir valor para ajudar e solucionar ou melhorar a necessidade do meu usuário.
+
 ## 6.2 Modelagem de Dados
 
 A modelagem de dados possui cinco etapas, sendo elas:
