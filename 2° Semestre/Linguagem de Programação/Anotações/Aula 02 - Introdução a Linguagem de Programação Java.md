@@ -1,4 +1,3 @@
-
 # Aula 02 - Intrudoção a Linguagem de Programação Java
 
 ## 2.1 Nomenclaturas
@@ -9,7 +8,7 @@ Em Java utilizaremos alguns tipos de nomenclaturas, cada nomenclatura terá uma 
 - camelCase - utilizada para nomear varáveis e pacotes
 - SNAKE-CASE - utilizada para nomear constantes
 
-## 2.2 Pacotes
+## lazaro2.2 Pacotes
 
 Um pacote é uma caixa de organização, usada praa separa classes, ou seja, um pacote possui classes de uma determinada finalidade.  Podemos assimilar ele a uma pasta que agrupa um conjunto de classes. O primeiro pacote criado em um projeto Java, geralmente é usado o padrão web e o seu nome geralmente é o nome de dóminio da empresa que você está trabalhando. Por exemplo, caso você esteja trabalhando na São Paulo Tech School, o nome do seu primeiro pacote será: school.sptech. Padrão web = youtube.com -> com.youtube.
 
