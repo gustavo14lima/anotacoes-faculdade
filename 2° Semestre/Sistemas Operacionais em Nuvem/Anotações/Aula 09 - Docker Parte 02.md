@@ -91,12 +91,13 @@ O processo é o seguinte:
 Vale deixar claro, que para criar um Dockerfile, eu preciso criar um arquivo chamado ***Dockerfile***, sem nenhuma extensão e exatamente com esse nome 
 
 Para criar um Dockerfile, utilizamos alguns prefixos para a criação da nossa estrutura básica:
-- **FROM imagem** - específico qual será a imagem base desse meu Dockerfile
+- **FROM** - específico qual será a imagem base desse meu Dockerfile
 - **WORKDIR** - caso eu queira, eu posso criar um diretório no qual todos os meus arquivos estarão armazenados nele
-- **COPY** - específico quais arquivos do meu host eu gostaria de copiar no meu container
-- **RUN/CMD** - específico alguns comandos de execução do meu container
+- **COPY** - específico quais arquivos do meu host eu gostaria de copiar no meu container e também especifico qual será o local que eu irei armazenar essas copias.
+- **RUN** - eu especifico alguns comandos que rode a instalação dos pacotes dentro do container
 - **ENV** - posso criar algumas variáveis de ambiente para o meu container
 - **EXPOSE** - eu específico uma porta no qual eu gostaria de deixar exposta para a internet acessar
+- **CMD** - comando final que é executado quando Docker run
 
 Após toda a configuração do meu Dockerfile, eu posso simplesmente criar uma imagem a partir do meu Dockerfile:
 - **docker build –t nomeImagem .** - esse comando constrói uma imagem a partir do Dockerfile que estiver no meu diretório atual (por isso do **.**), com o nome **"nomeImagem"**.
@@ -117,7 +118,21 @@ A partir da criação de arquivos para as minhas imagens, isso me possibilita si
 - **docker save -o arquivo.tar imagem** - Com esse arquivo, eu transformo uma imagem existente na minha máquina (apenas substituindo **imagem** pela imagem de preferencia) em um arquivo .tar (apenas substituindo **arquivo.tar** para o nome da sua preferencia). 
 - **docker load -i arquivo.tar** - Eu pego o meu arquivo .tar (representado por **arquivo.tar**) e eu "descompacto" ele, assim, transformando o arquivo em uma imagem novamente. 
 
-## 9.5 Extras
+## 9.5 Docker Hub
+
+Docker Hub é uma plataforma semelhante ao GitHub, mas ao invés de armazenar códigos ou relacionados, ele centraliza e armazena imagens, tanto as imagens bases criados e gerenciados por grandes empresas, quantos imagens especificas criadas por desenvolvedores.
+
+O Docker Hub é bem intuitivo e semelhante ao GitHub, pois, você precisa configurar sua conta, criar um repositório para a sua imagem, deixar público (o Docker Hub disponibiliza um repositório private e ilimitados repositórios públicos) e você pode colocar sua imagem dentro do Docker Hub via linha de comando.
+
+### 9.5.1 Comandos Docker Hub
+
+- **docker image tag nomeImagem:1.0 meuUsuarioDocker/meuRepositorioDocker**
+	- Fazer o "tag" na minha imagem docker permite além de especificar qual será o destino da imagem (como no exemplo, o repositório de qual usuário), permitir versionamento de imagens, por exemplo, 1.0, 1.1, desta forma eu posso voltar versões. Caso eu não coloque um tag, minha imagem será "latest", o que me impede de fazer versionamento.
+- **docker login** - eu faço login com a minha conta docker, a partir do navegador ou linha de comando. 
+- **docker push imagemDocker/repositorioDocker:tag** - eu especifico qual imagem de qual repositório eu quero "pegar".
+- **docker pull imagemDocker/repositorioDocker:tag** - eu especifico qual imagem e para qual repositório eu quero mandar. 
+
+## 9.6 Extras
 
 - **docker run -d ...** -  O **-d**  server para desanexar os logs de inicialização do container no terminal (sem ele, toda vez que eu inicializar um container, terá todos os logs dele). Por exemplo, caso eu tirei ele, irá aparecer mensagens mostrando a situação e o que está acontecendo durante a instalação ou criação de um container.
 - **docker exec -it nomeContainer** -  A partir desse ponto, qualquer comando que ser executado estará utilizando o terminal do meu container.
