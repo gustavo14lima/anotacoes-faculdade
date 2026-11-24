@@ -115,6 +115,6 @@ As associações ternárias são úteis para demonstrar associações complexas.
 
 #### 9.5.9.3 Interface
 
-O formato é semelhante ao de uma classe, mas é descrito o texto <<Interface>> e depois o nome da interface, ao invés de ter o nome da classe. 
+O formato é semelhante ao de uma classe, mas é descrito o texto "Interface" e depois o nome da interface, ao invés de ter o nome da classe. 
 
-	Interface normalmente não tem atributos, apenas métodos.
+Interface normalmente não tem atributos, apenas métodos.
