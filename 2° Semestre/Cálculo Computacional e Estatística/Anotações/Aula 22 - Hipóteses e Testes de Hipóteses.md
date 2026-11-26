@@ -58,7 +58,7 @@ Além de que, é sempre bom estar observando e analisando o andamento dos testes
 
 ### 22.4.1 Tipo de Erro I
 
-Ocorre quando você rejeita a hipótese nula, sendo que ela é verdadeira. Você conclui que existe um efeito ou diferença quando, n**tribunalístico**a realidade, não há nada.
+Ocorre quando você rejeita a hipótese nula, sendo que ela é verdadeira. Você conclui que existe um efeito ou diferença quando, na realidade, não há nada.
 
 ### 22.4.2 Tipo de Erro II
 
